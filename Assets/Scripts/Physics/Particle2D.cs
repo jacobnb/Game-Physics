@@ -9,15 +9,19 @@ public class Particle2D : MonoBehaviour
         POS_EULER,
         POS_KINEMATIC,
         ROT_EULER,
-        ROT_KINEMATIC
+        ROT_KINEMATIC,
+        NONE
     }
+    [SerializeField]
+    bool shouldFollowSine_X, shouldFollowSine_Y;
     [SerializeField]
     protected Vector2 position, velocity, acceleration; // 1
     [SerializeField]
-    protected Vector2 rotation, rot_vel, rot_accel;
+    protected Vector2 rotation, angular_vel, angular_accel;
 
     [SerializeField]
-    protected Algorithm algorithm;
+    protected Algorithm algorithm, secondAlgorithm;
+    
     // 2
     void updatePositionsExplicitEuler(float dt)
     {
@@ -36,14 +40,14 @@ public class Particle2D : MonoBehaviour
 
     void updateRotationEulerExplicity(float dt)
     {
-        rotation = rotation + rot_vel * dt;
-        rot_vel = rot_vel + rot_accel * dt;
+        rotation = rotation + angular_vel * dt;
+        angular_vel = angular_vel + angular_accel * dt;
     }
 
     void updateRotationKinematic(float dt)
     {
-        rotation = rotation + rot_vel * dt + 0.5f * rot_accel * dt * dt;
-        rot_vel = rot_vel + acceleration * dt;
+        rotation = rotation + angular_vel * dt + 0.5f * angular_accel * dt * dt;
+        angular_vel = angular_vel + acceleration * dt;
     }
 
     // we don't actually need to keep them below 360, but this should keep it to human readable.
@@ -57,36 +61,67 @@ public class Particle2D : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (shouldFollowSine_X)
+        {
+            velocity.x = -2;
+            if(secondAlgorithm < Algorithm.ROT_EULER)
+            {
+                velocity.x -= 2;
+            }
+        }
+        if (shouldFollowSine_Y)
+        {
+            velocity.y = -2;
+            if (secondAlgorithm < Algorithm.ROT_EULER)
+            {
+                velocity.y -= 2;
+            }
+        }
+        if(position.x == 0 && position.y == 0)
+        {
+            position = gameObject.transform.position;
+        }
     }
 
     void FixedUpdate()
     {
+        Algorithm[] algArray = { algorithm, secondAlgorithm }; // turns out var doesn't work with arrays.
         // 3 choose integrator
-        switch (algorithm)
+        foreach(Algorithm alg in algArray)
         {
-            case Algorithm.POS_EULER:
-                updatePositionsExplicitEuler(Time.fixedDeltaTime);
-                break;
-            case Algorithm.POS_KINEMATIC:
-                updatePositionKinematic(Time.fixedDeltaTime);
-                break;
-            case Algorithm.ROT_EULER:
-                updateRotationEulerExplicity(Time.fixedDeltaTime);
-                break;
-            case Algorithm.ROT_KINEMATIC:
-                updateRotationKinematic(Time.fixedDeltaTime);
-                break;
-            default:
-                break;
+            switch (alg)
+            {
+                case Algorithm.POS_EULER:
+                    updatePositionsExplicitEuler(Time.fixedDeltaTime);
+                    break;
+                case Algorithm.POS_KINEMATIC:
+                    updatePositionKinematic(Time.fixedDeltaTime);
+                    break;
+                case Algorithm.ROT_EULER:
+                    updateRotationEulerExplicity(Time.fixedDeltaTime);
+                    break;
+                case Algorithm.ROT_KINEMATIC:
+                    updateRotationKinematic(Time.fixedDeltaTime);
+                    break;
+                default:
+                    break;
+            }
         }
+        
         // update transform
         transform.position = position;
         transform.eulerAngles = rotation;
         reduceRotationAngles();
         // 4
         // test by faking motion along a curve
-        acceleration.y = -Mathf.Sin(Time.time);
-        acceleration.x = Mathf.Sin(Time.time);
+        if (shouldFollowSine_X)
+        {
+            acceleration.x = 2*Mathf.Sin(Time.time);
+        }
+        if (shouldFollowSine_Y)
+        {
+            acceleration.y = 2 * Mathf.Sin(Time.time);
+        }
+        
     }
 }
