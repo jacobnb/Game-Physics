@@ -1,0 +1,15 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Physics.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\jacob.biederman\Documents\Lab1\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"C:\Users\jacob.biederman\Documents\Lab1\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\Physics.cpp.obj"
+"C:\Users\jacob.biederman\Documents\Lab1\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\PhysicsGameModeBase.cpp.obj"
+"C:\Users\jacob.biederman\Documents\Lab1\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\Physics.init.gen.cpp.obj"
+"C:\Users\jacob.biederman\Documents\Lab1\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\PhysicsGameModeBase.gen.cpp.obj"
+"C:\Users\jacob.biederman\Documents\Lab1\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\PCLaunch.rc.res"
+/OUT:"C:\Users\jacob.biederman\Documents\Lab1\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.lib"

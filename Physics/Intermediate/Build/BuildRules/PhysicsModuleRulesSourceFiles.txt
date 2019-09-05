@@ -1,0 +1,3 @@
+C:\Users\jacob.biederman\Documents\Lab1\Physics\Source\Physics\Physics.Build.cs
+C:\Users\jacob.biederman\Documents\Lab1\Physics\Source\Physics.Target.cs
+C:\Users\jacob.biederman\Documents\Lab1\Physics\Source\PhysicsEditor.Target.cs
