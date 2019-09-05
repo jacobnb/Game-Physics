@@ -18,9 +18,15 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	FVector2D position, velocity, acceleration, rotation, angular_vel, angular_accel;
+	void updatePositionsExplicitEuler(float dt);
+	void updatePositionKinematic(float dt);
+	void updateRotationEulerExplicit(float dt);
+	void updateRotationKinematic(float dt);
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
 
 };
