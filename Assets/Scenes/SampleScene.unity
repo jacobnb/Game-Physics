@@ -460,11 +460,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: shouldFollowSine_X
@@ -495,6 +490,11 @@ PrefabInstance:
       propertyPath: angular_accel.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe0d4211394d48048bea788f75998bb0, type: 3}
 --- !u!1001 &1195187205
@@ -564,11 +564,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: shouldFollowSine_X
@@ -582,7 +577,7 @@ PrefabInstance:
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: secondAlgorithm
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
@@ -592,13 +587,18 @@ PrefabInstance:
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: angular_accel.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: angular_accel.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe0d4211394d48048bea788f75998bb0, type: 3}
 --- !u!1001 &1464692191
@@ -696,7 +696,7 @@ PrefabInstance:
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: angular_accel.y
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe0d4211394d48048bea788f75998bb0, type: 3}
@@ -866,11 +866,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: shouldFollowSine_X
@@ -901,6 +896,11 @@ PrefabInstance:
       propertyPath: angular_accel.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe0d4211394d48048bea788f75998bb0, type: 3}
 --- !u!1001 &1928066269
@@ -1069,11 +1069,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
-        type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8443242292465437443, guid: fe0d4211394d48048bea788f75998bb0,
         type: 3}
       propertyPath: shouldFollowSine_X
@@ -1104,5 +1099,10 @@ PrefabInstance:
       propertyPath: angular_accel.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8443242292465437444, guid: fe0d4211394d48048bea788f75998bb0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe0d4211394d48048bea788f75998bb0, type: 3}

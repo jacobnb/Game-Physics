@@ -47,7 +47,7 @@ public class Particle2D : MonoBehaviour
     void updateRotationKinematic(float dt)
     {
         rotation = rotation + angular_vel * dt + 0.5f * angular_accel * dt * dt;
-        angular_vel = angular_vel + acceleration * dt;
+        angular_vel = angular_vel + angular_accel * dt;
     }
 
     // we don't actually need to keep them below 360, but this should keep it to human readable.
