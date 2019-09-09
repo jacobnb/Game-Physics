@@ -46,9 +46,15 @@
     <ClInclude Include="..\..\Source\Physics\Particle2D.h">
       <Filter>Source\Physics</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Physics\ForceGenerator.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\Physics\Particle2D.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Physics\ForceGenerator.cpp">
       <Filter>Source\Physics</Filter>
     </ClCompile>
   </ItemGroup>

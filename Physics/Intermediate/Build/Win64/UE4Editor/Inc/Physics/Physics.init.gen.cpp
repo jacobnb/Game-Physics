@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodePhysics_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/Physics",
 				PKG_CompiledIn | 0x00000000,
-				0x4478CF65,
-				0x8B025020,
+				0xE196E735,
+				0x80CE9855,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

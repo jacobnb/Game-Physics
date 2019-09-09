@@ -506,8 +506,10 @@
     <None Include="..\..\Config\DefaultEngine.ini" />
     <None Include="..\..\Config\DefaultGame.ini" />
     <None Include="..\..\Source\Physics\Physics.Build.cs" />
+    <ClCompile Include="..\..\Source\Physics\ForceGenerator.cpp" />
     <ClCompile Include="..\..\Source\Physics\Particle2D.cpp" />
     <ClCompile Include="..\..\Source\Physics\Physics.cpp" />
+    <ClInclude Include="..\..\Source\Physics\ForceGenerator.h" />
     <ClInclude Include="..\..\Source\Physics\Particle2D.h" />
     <ClInclude Include="..\..\Source\Physics\Physics.h" />
     <ClCompile Include="..\..\Source\Physics\PhysicsGameModeBase.cpp" />

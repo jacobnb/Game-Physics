@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Particle2D.h"
-
+#include "Kismet/GameplayStatics.h"
 // Sets default values
 AParticle2D::AParticle2D()
 {
@@ -9,6 +9,24 @@ AParticle2D::AParticle2D()
 	PrimaryActorTick.bCanEverTick = true;
 
 }
+
+void AParticle2D::SetMass(float newMass)
+{
+	mass = newMass > 0 ? newMass : 0.0;
+	massInv = mass > 0.0 ? 1.0 / mass : 0.0f;
+}
+void AParticle2D::AddForce(FVector2D newForce)
+{
+	force += newForce;
+}
+
+void AParticle2D::UpdateAcceleration()
+{
+	acceleration = force * massInv;
+	// reset b/c force coming back next frame
+	force.Set(0, 0);
+}
+
 
 // Called when the game starts or when spawned
 void AParticle2D::BeginPlay()
@@ -18,7 +36,7 @@ void AParticle2D::BeginPlay()
 	rotation = FVector2D(0, 0);
 	position = FVector2D(this->GetActorLocation());
 
-	velocity.X = -2;
+	velocity.X = -200;
 }
 
 void AParticle2D::updatePositionsExplicitEuler(float dt)
@@ -51,12 +69,17 @@ void AParticle2D::updateRotationKinematic(float dt)
 // Called every frame
 void AParticle2D::Tick(float DeltaTime)
 {
+	//UWorld* world = GetWorld();
 	Super::Tick(DeltaTime);
-	updatePositionsExplicitEuler(DeltaTime);
-	float realtimeSeconds = UGameplayStatics::GetRealTimeSeconds(GetWorld());;
-	acceleration.X = 2 * sin(UGameplayStatics::GetRealTimeSeconds(GetWorld()));
+	//updatePositionsExplicitEuler(DeltaTime);
+	//float realtimeSeconds = UGameplayStatics::GetTimeSeconds(dynamic_cast<UObject*>(world));
+	//acceleration.X = 200 * sin(realtimeSeconds);
+	//this->SetActorLocationAndRotation(FVector(position, 10), FRotator(rotation.X, rotation.Y, 0));
 
-	this->SetActorLocationAndRotation(FVector(position, 0), FRotator(rotation.X, rotation.Y, 0));
+
+	////lab 2 test
+	//FVector2D f_gravity = mass * FVector2D(0.0, -9.8);
+	//AddForce(f_gravity);
 }
 
 
