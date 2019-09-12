@@ -17,8 +17,8 @@ public class Particle2D : MonoBehaviour
     [SerializeField]
     protected Vector2 position, velocity, acceleration; // 1
     [SerializeField]
-    protected Vector2 rotation, angular_vel, angular_accel;
-
+    protected float rotation, angular_vel, angular_accel;
+    
     [SerializeField]
     protected Algorithm algorithm, secondAlgorithm;
     
@@ -53,9 +53,7 @@ public class Particle2D : MonoBehaviour
     // we don't actually need to keep them below 360, but this should keep it to human readable.
     void reduceRotationAngles()
     {
-        rotation.x = rotation.x > 360 ? rotation.x - 360 : rotation.x;
-        rotation.y = rotation.y > 360 ? rotation.y - 360 : rotation.y;
-
+        rotation = rotation > 360 ? rotation - 360 : rotation;
     }
 
     // Start is called before the first frame update
@@ -110,7 +108,7 @@ public class Particle2D : MonoBehaviour
         
         // update transform
         transform.position = position;
-        transform.eulerAngles = rotation;
+        transform.eulerAngles = new Vector3(0.0f, 0.0f, rotation);
         reduceRotationAngles();
         // 4
         // test by faking motion along a curve
