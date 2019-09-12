@@ -323,15 +323,15 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_angular_accel_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_angular_accel;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_angular_accel;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_angular_vel_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_angular_vel;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_angular_vel;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rotation_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_rotation;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_rotation;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_acceleration_MetaData[];
 #endif
@@ -401,21 +401,21 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		{ "ModuleRelativePath", "Particle2D.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel = { UE4CodeGen_Private::EPropertyClass::Struct, "angular_accel", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000005, 1, nullptr, STRUCT_OFFSET(AParticle2D, angular_accel), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel = { UE4CodeGen_Private::EPropertyClass::Float, "angular_accel", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000005, 1, nullptr, STRUCT_OFFSET(AParticle2D, angular_accel), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel_MetaData[] = {
 		{ "Category", "Particle2D" },
 		{ "ModuleRelativePath", "Particle2D.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel = { UE4CodeGen_Private::EPropertyClass::Struct, "angular_vel", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000005, 1, nullptr, STRUCT_OFFSET(AParticle2D, angular_vel), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel = { UE4CodeGen_Private::EPropertyClass::Float, "angular_vel", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000005, 1, nullptr, STRUCT_OFFSET(AParticle2D, angular_vel), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation_MetaData[] = {
 		{ "Category", "Particle2D" },
 		{ "ModuleRelativePath", "Particle2D.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation = { UE4CodeGen_Private::EPropertyClass::Struct, "rotation", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000005, 1, nullptr, STRUCT_OFFSET(AParticle2D, rotation), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation = { UE4CodeGen_Private::EPropertyClass::Float, "rotation", RF_Public|RF_Transient|RF_MarkAsNative, (EPropertyFlags)0x0020080000000005, 1, nullptr, STRUCT_OFFSET(AParticle2D, rotation), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_acceleration_MetaData[] = {
 		{ "Category", "Particle2D" },
@@ -480,7 +480,7 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AParticle2D, 2099716919);
+	IMPLEMENT_CLASS(AParticle2D, 893323833);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AParticle2D(Z_Construct_UClass_AParticle2D, &AParticle2D::StaticClass, TEXT("/Script/Physics"), TEXT("AParticle2D"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AParticle2D);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

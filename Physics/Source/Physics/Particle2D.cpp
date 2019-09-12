@@ -33,7 +33,7 @@ void AParticle2D::BeginPlay()
 {
 	Super::BeginPlay();
 	// Hardcoded start.
-	rotation = FVector2D(0, 0);
+	rotation = 0;
 	position = FVector2D(this->GetActorLocation());
 
 	velocity.X = -200;
@@ -74,7 +74,7 @@ void AParticle2D::Tick(float DeltaTime)
 	//updatePositionsExplicitEuler(DeltaTime);
 	//float realtimeSeconds = UGameplayStatics::GetTimeSeconds(dynamic_cast<UObject*>(world));
 	//acceleration.X = 200 * sin(realtimeSeconds);
-	//this->SetActorLocationAndRotation(FVector(position, 10), FRotator(rotation.X, rotation.Y, 0));
+	//this->SetActorLocationAndRotation(FVector(position, 10), FRotator(0, 0, rotation));
 
 
 	////lab 2 test

@@ -45,11 +45,11 @@ protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		FVector2D acceleration;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
-		FVector2D rotation;
+		float rotation;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
-		FVector2D angular_vel;
+		float angular_vel;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
-		FVector2D angular_accel;
+		float angular_accel;
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void updatePositionsExplicitEuler(float dt);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
