@@ -3134,3 +3134,290 @@ Script call stack:
 [2019.09.15-20.26.22:122][960]LogUObjectHash: Compacting FUObjectHashTables data took   4.25ms
 [2019.09.15-20.26.22:666][ 18]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Particle2D_Gravity" FILE="../../../../../../Documents/Game-Physics/Physics/Content/Blueprints/Particle2D_Gravity.uasset" SILENT=true
 [2019.09.15-20.26.22:692][ 18]LogSavePackage: Moving '../../../../../../Documents/Game-Physics/Physics/Saved/Particle2D_Gravity91F54EF84D970249A6FBB89CF2DC863E.tmp' to '../../../../../../Documents/Game-Physics/Physics/Content/Blueprints/Particle2D_Gravity.uasset'
+[2019.09.15-20.28.21:872][469]BlueprintLog: New page: Compile Particle2D_Blueprint
+[2019.09.15-20.28.22:182][469]LogUObjectHash: Compacting FUObjectHashTables data took   4.75ms
+[2019.09.15-20.28.23:007][562]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Particle2D_Blueprint" FILE="../../../../../../Documents/Game-Physics/Physics/Content/Blueprints/Particle2D_Blueprint.uasset" SILENT=true
+[2019.09.15-20.28.23:032][562]LogSavePackage: Moving '../../../../../../Documents/Game-Physics/Physics/Saved/Particle2D_BlueprintD90E781642BF1FA6B696C4960D99E6E1.tmp' to '../../../../../../Documents/Game-Physics/Physics/Content/Blueprints/Particle2D_Blueprint.uasset'
+[2019.09.15-20.32.06:023][323]LogUObjectHash: Compacting FUObjectHashTables data took   5.16ms
+[2019.09.15-20.32.06:024][323]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lab2" FILE="../../../../../../Documents/Game-Physics/Physics/Saved/Autosaves/Game/Levels/Lab2_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2019.09.15-20.32.06:285][323]LogSavePackage: Moving '../../../../../../Documents/Game-Physics/Physics/Saved/Lab2_Auto18B50DDA74EEC628301CE4F9468831872.tmp' to '../../../../../../Documents/Game-Physics/Physics/Saved/Autosaves/Game/Levels/Lab2_Auto1.umap'
+[2019.09.15-20.32.06:287][323]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/Lab2' took 0.315
+[2019.09.15-20.32.06:287][323]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.315
+[2019.09.15-20.34.56:412][227]Candidate modules for hot reload:
+[2019.09.15-20.34.56:412][227]  Physics
+[2019.09.15-20.34.56:412][227]Launching UnrealBuildTool... [D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,9328 Win64 Development -TargetType=Editor -Project="D:/Documents/Game-Physics/Physics/Physics.uproject" "D:/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.15-20.34.56:415][227]Warning: Starting HotReload took  0.0s.
+[2019.09.15-20.35.05:914][421]CompilerResultsLog: New page: Compilation - Sep 15, 2019, 12:35:05 PM
+[2019.09.15-20.35.05:914][421]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\Game-Physics).
+[2019.09.15-20.35.05:914][421]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.15-20.35.05:914][421]CompilerResultsLog:   Running UnrealHeaderTool "D:\Documents\Game-Physics\Physics\Physics.uproject" "D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.15-20.35.05:915][421]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.2298669 seconds
+[2019.09.15-20.35.05:915][421]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (D:\ProgramFiles\VisualStudio2017\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.15-20.35.05:915][421]CompilerResultsLog: Distributing 5 actions to XGE
+[2019.09.15-20.35.05:915][421]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2019.09.15-20.35.05:915][421]CompilerResultsLog: License is invalid:
+[2019.09.15-20.35.05:915][421]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2019.09.15-20.35.05:916][421]CompilerResultsLog:     This build will run in standalone mode.
+[2019.09.15-20.35.05:916][421]CompilerResultsLog: 
+[2019.09.15-20.35.05:916][421]CompilerResultsLog: -------------------------------------------------------------------------------
+[2019.09.15-20.35.05:916][421]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2019.09.15-20.35.05:916][421]CompilerResultsLog: ForceGenerator.cpp (0:00.53 at +0:00)
+[2019.09.15-20.35.05:916][421]CompilerResultsLog: Error: d:\documents\game-physics\physics\source\physics\ForceGenerator.h(15) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+[2019.09.15-20.35.05:916][421]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(34) : error C2352: 'ForceGenerator::Vector2DProj': illegal call of non-static member function
+[2019.09.15-20.35.05:917][421]CompilerResultsLog: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(17): note: see declaration of 'ForceGenerator::Vector2DProj'
+[2019.09.15-20.35.05:917][421]CompilerResultsLog: 
+[2019.09.15-20.35.05:917][421]CompilerResultsLog: Error executing D:\ProgramFiles\Epic Games\UE_4.23\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2019.09.15-20.35.05:917][421]CompilerResultsLog: Particle2D.cpp (0:01.15 at +0:00)
+[2019.09.15-20.35.05:917][421]CompilerResultsLog: ---------------------- Done ----------------------
+[2019.09.15-20.35.05:917][421]CompilerResultsLog: 
+[2019.09.15-20.35.05:917][421]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2019.09.15-20.35.05:918][421]CompilerResultsLog: 
+[2019.09.15-20.35.05:918][421]CompilerResultsLog: 1 build system warning(s):
+[2019.09.15-20.35.05:918][421]CompilerResultsLog:    - License is invalid
+[2019.09.15-20.35.05:918][421]CompilerResultsLog: 
+[2019.09.15-20.35.05:918][421]LogMainFrame: MainFrame: Module compiling took 9.510 seconds
+[2019.09.15-20.35.05:918][421]Warning: HotReload failed, recompile failed
+[2019.09.15-20.36.49:152][334]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.15-20.41.23:997][662]Running D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/Documents/Game-Physics/Physics/Physics.uproject" -game -rocket -progress
+[2019.09.15-20.41.24:302][662]Discovering modules, targets and source code for project...
+[2019.09.15-20.41.25:312][662]Binding IntelliSense data...
+[2019.09.15-20.41.27:337][662]Binding IntelliSense data... 100%
+[2019.09.15-20.41.27:337][662]Writing project files...
+[2019.09.15-20.41.29:052][662]Writing project files... 100%
+[2019.09.15-20.41.40:985][ 69]Running D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/Documents/Game-Physics/Physics/Physics.uproject" -game -rocket -progress
+[2019.09.15-20.41.41:291][ 69]Discovering modules, targets and source code for project...
+[2019.09.15-20.41.42:300][ 69]Binding IntelliSense data...
+[2019.09.15-20.41.44:215][ 69]Binding IntelliSense data... 100%
+[2019.09.15-20.41.44:215][ 69]Writing project files...
+[2019.09.15-20.41.45:629][ 69]Writing project files... 100%
+[2019.09.15-20.42.07:995][721]Running D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/Documents/Game-Physics/Physics/Physics.uproject" -game -rocket -progress
+[2019.09.15-20.42.08:400][721]Discovering modules, targets and source code for project...
+[2019.09.15-20.42.09:310][721]Binding IntelliSense data...
+[2019.09.15-20.42.11:330][721]Binding IntelliSense data... 100%
+[2019.09.15-20.42.11:330][721]Writing project files...
+[2019.09.15-20.42.12:744][721]Writing project files... 100%
+[2019.09.15-20.42.12:851][721]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2019.09.15-20.42.12:857][721]Candidate modules for hot reload:
+[2019.09.15-20.42.12:857][721]  Physics
+[2019.09.15-20.42.12:857][721]Launching UnrealBuildTool... [D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,7791 Win64 Development -TargetType=Editor -Project="D:/Documents/Game-Physics/Physics/Physics.uproject" "D:/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.15-20.42.20:807][721]CompilerResultsLog: New page: Compilation - Sep 15, 2019, 12:42:20 PM
+[2019.09.15-20.42.20:807][721]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\Game-Physics).
+[2019.09.15-20.42.20:807][721]CompilerResultsLog: Creating makefile for PhysicsEditor (no existing makefile)
+[2019.09.15-20.42.20:807][721]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.15-20.42.20:807][721]CompilerResultsLog:   Running UnrealHeaderTool "D:\Documents\Game-Physics\Physics\Physics.uproject" "D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.15-20.42.20:808][721]CompilerResultsLog: Error: D:/Documents/Game-Physics/Physics/Source/Physics/ForceGenerator.h(16)  : Error: Class name 'ForceGenerator' is invalid, should be identified as 'UorceGenerator'
+[2019.09.15-20.42.20:808][721]LogMainFrame: MainFrame: Module compiling took 7.957 seconds
+[2019.09.15-20.42.20:808][721]Warning: HotReload failed, recompile failed
+[2019.09.15-20.42.20:813][721]Warning: RebindPackages failed because compilation failed.
+[2019.09.15-20.42.25:964][721]LogSlate: Window 'Message' being destroyed
+[2019.09.15-20.42.25:968][721]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.15-20.42.43:546][468]Running D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/Documents/Game-Physics/Physics/Physics.uproject" -game -rocket -progress
+[2019.09.15-20.42.43:851][468]Discovering modules, targets and source code for project...
+[2019.09.15-20.42.44:860][468]Binding IntelliSense data...
+[2019.09.15-20.42.46:790][468]Binding IntelliSense data... 100%
+[2019.09.15-20.42.46:790][468]Writing project files...
+[2019.09.15-20.42.48:206][468]Writing project files... 100%
+[2019.09.15-20.43.35:341][441]Candidate modules for hot reload:
+[2019.09.15-20.43.35:341][441]  Physics
+[2019.09.15-20.43.35:341][441]Launching UnrealBuildTool... [D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,415 Win64 Development -TargetType=Editor -Project="D:/Documents/Game-Physics/Physics/Physics.uproject" "D:/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.15-20.43.35:344][441]Warning: Starting HotReload took  0.0s.
+[2019.09.15-20.43.52:497][495]CompilerResultsLog: New page: Compilation - Sep 15, 2019, 12:43:52 PM
+[2019.09.15-20.43.52:497][495]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\Game-Physics).
+[2019.09.15-20.43.52:498][495]CompilerResultsLog: Creating makefile for PhysicsEditor (no existing makefile)
+[2019.09.15-20.43.52:498][495]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.15-20.43.52:498][495]CompilerResultsLog:   Running UnrealHeaderTool "D:\Documents\Game-Physics\Physics\Physics.uproject" "D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.15-20.43.52:498][495]CompilerResultsLog: Reflection code generated for PhysicsEditor in 7.1122506 seconds
+[2019.09.15-20.43.52:498][495]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (D:\ProgramFiles\VisualStudio2017\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.15-20.43.52:499][495]CompilerResultsLog: Distributing 12 actions to XGE
+[2019.09.15-20.43.52:499][495]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2019.09.15-20.43.52:499][495]CompilerResultsLog: License is invalid:
+[2019.09.15-20.43.52:499][495]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2019.09.15-20.43.52:499][495]CompilerResultsLog:     This build will run in standalone mode.
+[2019.09.15-20.43.52:499][495]CompilerResultsLog: 
+[2019.09.15-20.43.52:499][495]CompilerResultsLog: -------------------------------------------------------------------------------
+[2019.09.15-20.43.52:499][495]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2019.09.15-20.43.52:499][495]CompilerResultsLog: forceGen.cpp (0:00.71 at +0:00)
+[2019.09.15-20.43.52:500][495]CompilerResultsLog: ForceGenerator.cpp (0:00.65 at +0:00)
+[2019.09.15-20.43.52:500][495]CompilerResultsLog: Error: d:\documents\game-physics\physics\source\physics\ForceGenerator.h(19) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+[2019.09.15-20.43.52:500][495]CompilerResultsLog: Error: d:\documents\game-physics\physics\source\physics\ForceGenerator.h(19) : error C4183: 'ForceGenerator': missing return type; assumed to be a member function returning 'int'
+[2019.09.15-20.43.52:500][495]CompilerResultsLog: Error: d:\documents\game-physics\physics\source\physics\ForceGenerator.h(20) : error C2523: 'UForceGenerator::~ForceGenerator': destructor tag mismatch
+[2019.09.15-20.43.52:500][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(5) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:501][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(6) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+[2019.09.15-20.43.52:501][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(7) : error C4508: 'ForceGenerator': function should return a value; 'void' return type assumed
+[2019.09.15-20.43.52:501][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(9) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:501][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(9) : error C2523: '<Unknown>::~ForceGenerator': destructor tag mismatch
+[2019.09.15-20.43.52:502][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(10) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+[2019.09.15-20.43.52:502][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(10) : error C2084: function 'int ForceGenerator(void)' already has a body
+[2019.09.15-20.43.52:502][495]CompilerResultsLog: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(5): note: see previous definition of 'ForceGenerator'
+[2019.09.15-20.43.52:502][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(17) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:502][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(23) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:503][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(30) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:503][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(37) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:503][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(43) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:503][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(49) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(57) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics\ForceGenerator.cpp(64) : error C2653: 'ForceGenerator': is not a class or namespace name
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: 
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: Error executing D:\ProgramFiles\Epic Games\UE_4.23\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: Particle2D.cpp (0:01.29 at +0:01)
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: Physics.cpp (0:00.71 at +0:02)
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: PhysicsGameModeBase.cpp (0:00.87 at +0:03)
+[2019.09.15-20.43.52:504][495]CompilerResultsLog: ForceGenerator.gen.cpp (0:00.64 at +0:04)
+[2019.09.15-20.43.52:505][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics/ForceGenerator.h(19) : error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+[2019.09.15-20.43.52:505][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics/ForceGenerator.h(19) : error C4183: 'ForceGenerator': missing return type; assumed to be a member function returning 'int'
+[2019.09.15-20.43.52:505][495]CompilerResultsLog: Error: D:\Documents\Game-Physics\Physics\Source\Physics/ForceGenerator.h(20) : error C2523: 'UForceGenerator::~ForceGenerator': destructor tag mismatch
+[2019.09.15-20.43.52:505][495]CompilerResultsLog: 
+[2019.09.15-20.43.52:505][495]CompilerResultsLog: Error executing D:\ProgramFiles\Epic Games\UE_4.23\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2019.09.15-20.43.52:505][495]CompilerResultsLog: Particle2D.gen.cpp (0:00.95 at +0:04)
+[2019.09.15-20.43.52:506][495]CompilerResultsLog: Physics.init.gen.cpp (0:00.78 at +0:05)
+[2019.09.15-20.43.52:506][495]CompilerResultsLog: PhysicsGameModeBase.gen.cpp (0:01.06 at +0:06)
+[2019.09.15-20.43.52:506][495]CompilerResultsLog: ---------------------- Done ----------------------
+[2019.09.15-20.43.52:506][495]CompilerResultsLog: 
+[2019.09.15-20.43.52:506][495]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2019.09.15-20.43.52:506][495]CompilerResultsLog: 
+[2019.09.15-20.43.52:506][495]CompilerResultsLog: 1 build system warning(s):
+[2019.09.15-20.43.52:506][495]CompilerResultsLog:    - License is invalid
+[2019.09.15-20.43.52:506][495]CompilerResultsLog: 
+[2019.09.15-20.43.52:506][495]LogMainFrame: MainFrame: Module compiling took 17.170 seconds
+[2019.09.15-20.43.52:506][495]Warning: HotReload failed, recompile failed
+[2019.09.15-20.44.11:161][975]Running D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/Documents/Game-Physics/Physics/Physics.uproject" -game -rocket -progress
+[2019.09.15-20.44.11:467][975]Discovering modules, targets and source code for project...
+[2019.09.15-20.44.12:475][975]Binding IntelliSense data...
+[2019.09.15-20.44.14:391][975]Binding IntelliSense data... 100%
+[2019.09.15-20.44.14:391][975]Writing project files...
+[2019.09.15-20.44.16:004][975]Writing project files... 100%
+[2019.09.15-20.44.43:666][572]LogHttp: Warning: 0000012CB74F5800: invalid HTTP response code received. URL: https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B0E9AA599-4B89-754E-23BB-07B71989E19C%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=a3430fa24730a9bb39ff1bbc41a57938%7Cdc101fb1d3ae47d7bcc97e56b3254568%7Ccbb7f027-0350-49e0-8f03-0710fbb53921&AppEnvironment=datacollector-binary&UploadType=eteventstream, HTTP code: 0, content length: -1, actual payload size: 0
+[2019.09.15-20.44.43:667][572]LogHttp: Warning: 0000012CB74F5800: request failed, libcurl error: 0 (No error)
+[2019.09.15-20.44.43:667][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 0 (Found bundle for host datarouter.ol.epicgames.com: 0x12c68927f70 [can pipeline])
+[2019.09.15-20.44.43:667][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 1 (Re-using existing connection! (#34) with host datarouter.ol.epicgames.com)
+[2019.09.15-20.44.43:667][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 2 (Connected to datarouter.ol.epicgames.com (52.21.102.187) port 443 (#34))
+[2019.09.15-20.44.43:667][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 3 (We are completely uploaded and fine)
+[2019.09.15-20.44.43:668][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 4 (TLSv1.2 (IN), TLS alert, Client hello (1):)
+[2019.09.15-20.44.43:668][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 5 (Connection died, retrying a fresh connect)
+[2019.09.15-20.44.43:668][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 6 (necessary data rewind wasn't possible)
+[2019.09.15-20.44.43:668][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 7 (Closing connection 34)
+[2019.09.15-20.44.43:668][572]LogHttp: Warning: 0000012CB74F5800: libcurl info message cache 8 (TLSv1.2 (OUT), TLS alert, Client hello (1):)
+[2019.09.15-20.44.43:674][573]LogHttp: Warning: Retry exhausted on https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B0E9AA599-4B89-754E-23BB-07B71989E19C%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=a3430fa24730a9bb39ff1bbc41a57938%7Cdc101fb1d3ae47d7bcc97e56b3254568%7Ccbb7f027-0350-49e0-8f03-0710fbb53921&AppEnvironment=datacollector-binary&UploadType=eteventstream
+[2019.09.15-20.46.16:634][362]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.15-20.46.19:530][691]Running D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/Documents/Game-Physics/Physics/Physics.uproject" -game -rocket -progress
+[2019.09.15-20.46.19:936][691]Discovering modules, targets and source code for project...
+[2019.09.15-20.46.20:943][691]Binding IntelliSense data...
+[2019.09.15-20.46.22:959][691]Binding IntelliSense data... 100%
+[2019.09.15-20.46.22:959][691]Writing project files...
+[2019.09.15-20.46.24:775][691]Writing project files... 100%
+[2019.09.15-20.46.56:832][978]Candidate modules for hot reload:
+[2019.09.15-20.46.56:832][978]  Physics
+[2019.09.15-20.46.56:832][978]Launching UnrealBuildTool... [D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,3002 Win64 Development -TargetType=Editor -Project="D:/Documents/Game-Physics/Physics/Physics.uproject" "D:/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.15-20.47.15:145][978]CompilerResultsLog: New page: Compilation - Sep 15, 2019, 12:47:15 PM
+[2019.09.15-20.47.15:145][978]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\Game-Physics).
+[2019.09.15-20.47.15:145][978]CompilerResultsLog: Creating makefile for PhysicsEditor (no existing makefile)
+[2019.09.15-20.47.15:145][978]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.15-20.47.15:146][978]CompilerResultsLog:   Running UnrealHeaderTool "D:\Documents\Game-Physics\Physics\Physics.uproject" "D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.15-20.47.15:146][978]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.9581614 seconds
+[2019.09.15-20.47.15:146][978]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (D:\ProgramFiles\VisualStudio2017\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.15-20.47.15:146][978]CompilerResultsLog: Distributing 11 actions to XGE
+[2019.09.15-20.47.15:146][978]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2019.09.15-20.47.15:147][978]CompilerResultsLog: License is invalid:
+[2019.09.15-20.47.15:147][978]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2019.09.15-20.47.15:147][978]CompilerResultsLog:     This build will run in standalone mode.
+[2019.09.15-20.47.15:147][978]CompilerResultsLog: 
+[2019.09.15-20.47.15:147][978]CompilerResultsLog: -------------------------------------------------------------------------------
+[2019.09.15-20.47.15:147][978]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2019.09.15-20.47.15:147][978]CompilerResultsLog: ForceGenerator.cpp (0:00.76 at +0:00)
+[2019.09.15-20.47.15:147][978]CompilerResultsLog: Particle2D.cpp (0:01.21 at +0:00)
+[2019.09.15-20.47.15:147][978]CompilerResultsLog: Physics.cpp (0:00.67 at +0:02)
+[2019.09.15-20.47.15:148][978]CompilerResultsLog: PhysicsGameModeBase.cpp (0:00.89 at +0:02)
+[2019.09.15-20.47.15:148][978]CompilerResultsLog: ForceGenerator.gen.cpp (0:00.92 at +0:03)
+[2019.09.15-20.47.15:148][978]CompilerResultsLog: Particle2D.gen.cpp (0:00.96 at +0:04)
+[2019.09.15-20.47.15:148][978]CompilerResultsLog: Physics.init.gen.cpp (0:00.79 at +0:05)
+[2019.09.15-20.47.15:148][978]CompilerResultsLog: PhysicsGameModeBase.gen.cpp (0:01.04 at +0:06)
+[2019.09.15-20.47.15:148][978]CompilerResultsLog: UE4Editor-Physics-3002.dll (0:01.29 at +0:07)
+[2019.09.15-20.47.15:148][978]CompilerResultsLog:    Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3002.suppressed.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3002.suppressed.exp
+[2019.09.15-20.47.15:149][978]CompilerResultsLog: UE4Editor-Physics-3002.lib (0:00.25 at +0:08)
+[2019.09.15-20.47.15:149][978]CompilerResultsLog:    Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3002.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3002.exp
+[2019.09.15-20.47.15:149][978]CompilerResultsLog: PhysicsEditor.target (0:00.20 at +0:08)
+[2019.09.15-20.47.15:149][978]CompilerResultsLog: ---------------------- Done ----------------------
+[2019.09.15-20.47.15:149][978]CompilerResultsLog: 
+[2019.09.15-20.47.15:149][978]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2019.09.15-20.47.15:149][978]CompilerResultsLog: 
+[2019.09.15-20.47.15:149][978]CompilerResultsLog: 1 build system warning(s):
+[2019.09.15-20.47.15:149][978]CompilerResultsLog:    - License is invalid
+[2019.09.15-20.47.15:150][978]CompilerResultsLog: 
+[2019.09.15-20.47.15:150][978]CompilerResultsLog: Total time in XGE executor: 9.27 seconds
+[2019.09.15-20.47.15:150][978]CompilerResultsLog: Total execution time: 18.22 seconds
+[2019.09.15-20.47.15:150][978]LogMainFrame: MainFrame: Module compiling took 18.323 seconds
+[2019.09.15-20.47.15:204][978]LogUObjectHash: Compacting FUObjectHashTables data took   3.93ms
+[2019.09.15-20.47.15:210][978]LogClass: Could not find existing class ForceGenerator in package /Script/Physics for HotReload, assuming new class
+[2019.09.15-20.47.15:221][978]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0004 seconds. Added 3 classes and 2 folders.
+[2019.09.15-20.47.15:229][978]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2019.09.15-20.47.15:333][978]LogUObjectHash: Compacting FUObjectHashTables data took   2.12ms
+[2019.09.15-20.47.15:345][978]LogContentBrowser: Native class hierarchy populated in 0.0106 seconds. Added 2869 classes and 687 folders.
+[2019.09.15-20.47.15:354][978]Display: HotReload took 18.5s.
+[2019.09.15-20.47.15:355][978]Warning: HotReload operation took 18.5s.
+[2019.09.15-20.47.15:397][978]LogVSAccessor: Warning: Couldn't open file 'D:/Documents/Game-Physics/Physics/Source/Physics/ForceGenerator.h'.
+[2019.09.15-20.47.15:519][978]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.15-20.47.15:897][979]LogHotReload: New module detected: UE4Editor-Physics-3002.dll
+[2019.09.15-20.47.15:918][980]LogHotReload: Starting Hot-Reload from IDE
+[2019.09.15-20.47.16:013][980]LogUObjectHash: Compacting FUObjectHashTables data took   5.37ms
+[2019.09.15-20.47.16:022][980]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0004 seconds. Added 3 classes and 2 folders.
+[2019.09.15-20.47.16:029][980]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2019.09.15-20.47.16:087][980]LogUObjectHash: Compacting FUObjectHashTables data took   3.79ms
+[2019.09.15-20.47.16:099][980]LogContentBrowser: Native class hierarchy populated in 0.0103 seconds. Added 2869 classes and 687 folders.
+[2019.09.15-20.47.16:113][980]Display: HotReload took  0.2s.
+[2019.09.15-21.38.43:298][894]Candidate modules for hot reload:
+[2019.09.15-21.38.43:298][894]  Physics
+[2019.09.15-21.38.43:298][894]Launching UnrealBuildTool... [D:/ProgramFiles/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,9957 Win64 Development -TargetType=Editor -Project="D:/Documents/Game-Physics/Physics/Physics.uproject" "D:/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.15-21.38.43:301][894]Warning: Starting HotReload took  0.0s.
+[2019.09.15-21.38.56:601][357]CompilerResultsLog: New page: Compilation - Sep 15, 2019, 1:38:56 PM
+[2019.09.15-21.38.56:601][357]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\Game-Physics).
+[2019.09.15-21.38.56:601][357]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.15-21.38.56:601][357]CompilerResultsLog:   Running UnrealHeaderTool "D:\Documents\Game-Physics\Physics\Physics.uproject" "D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.15-21.38.56:602][357]CompilerResultsLog: Reflection code generated for PhysicsEditor in 7.4722556 seconds
+[2019.09.15-21.38.56:602][357]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (D:\ProgramFiles\VisualStudio2017\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.15-21.38.56:602][357]CompilerResultsLog: Distributing 6 actions to XGE
+[2019.09.15-21.38.56:602][357]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2019.09.15-21.38.56:602][357]CompilerResultsLog: License is invalid:
+[2019.09.15-21.38.56:602][357]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2019.09.15-21.38.56:603][357]CompilerResultsLog:     This build will run in standalone mode.
+[2019.09.15-21.38.56:603][357]CompilerResultsLog: 
+[2019.09.15-21.38.56:603][357]CompilerResultsLog: -------------------------------------------------------------------------------
+[2019.09.15-21.38.56:603][357]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2019.09.15-21.38.56:603][357]CompilerResultsLog: ForceGenerator.cpp (0:00.79 at +0:00)
+[2019.09.15-21.38.56:603][357]CompilerResultsLog: ForceGenerator.gen.cpp (0:00.96 at +0:00)
+[2019.09.15-21.38.56:603][357]CompilerResultsLog: Physics.init.gen.cpp (0:00.78 at +0:01)
+[2019.09.15-21.38.56:603][357]CompilerResultsLog: UE4Editor-Physics-9957.dll (0:01.35 at +0:02)
+[2019.09.15-21.38.56:604][357]CompilerResultsLog:    Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-9957.suppressed.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-9957.suppressed.exp
+[2019.09.15-21.38.56:604][357]CompilerResultsLog: UE4Editor-Physics-9957.lib (0:00.20 at +0:03)
+[2019.09.15-21.38.56:604][357]CompilerResultsLog:    Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-9957.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-9957.exp
+[2019.09.15-21.38.56:604][357]CompilerResultsLog: PhysicsEditor.target (0:00.20 at +0:04)
+[2019.09.15-21.38.56:604][357]CompilerResultsLog: ---------------------- Done ----------------------
+[2019.09.15-21.38.56:605][357]CompilerResultsLog: 
+[2019.09.15-21.38.56:605][357]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2019.09.15-21.38.56:605][357]CompilerResultsLog: 
+[2019.09.15-21.38.56:605][357]CompilerResultsLog: 1 build system warning(s):
+[2019.09.15-21.38.56:605][357]CompilerResultsLog:    - License is invalid
+[2019.09.15-21.38.56:605][357]CompilerResultsLog: 
+[2019.09.15-21.38.56:605][357]CompilerResultsLog: Total time in XGE executor: 4.58 seconds
+[2019.09.15-21.38.56:605][357]CompilerResultsLog: Total execution time: 13.10 seconds
+[2019.09.15-21.38.56:605][357]LogMainFrame: MainFrame: Module compiling took 13.312 seconds
+[2019.09.15-21.38.56:698][357]LogUObjectHash: Compacting FUObjectHashTables data took   7.10ms
+[2019.09.15-21.38.56:704][357]LogClass: Could not find existing class ForceGenerator in package /Script/Physics for HotReload, assuming new class
+[2019.09.15-21.38.56:704][357]LogClass: Function GenerateForce_drag is new.
+[2019.09.15-21.38.56:704][357]LogClass: Function GenerateForce_friction_kinetic is new.
+[2019.09.15-21.38.56:704][357]LogClass: Function GenerateForce_friction_static is new.
+[2019.09.15-21.38.56:705][357]LogClass: Function GenerateForce_normal is new.
+[2019.09.15-21.38.56:705][357]LogClass: Function GenerateForce_sliding is new.
+[2019.09.15-21.38.56:705][357]LogClass: Function GenerateForce_spring is new.
+[2019.09.15-21.38.56:705][357]LogClass: Function generateGravity is new.
+[2019.09.15-21.38.56:705][357]LogClass: Function Vector2DProj is new.
+[2019.09.15-21.38.56:725][357]LogHotReload: Re-instancing ForceGenerator after hot-reload.
+[2019.09.15-21.38.57:029][357]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0004 seconds. Added 3 classes and 2 folders.
+[2019.09.15-21.38.57:037][357]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
+[2019.09.15-21.38.57:140][357]LogUObjectHash: Compacting FUObjectHashTables data took   2.41ms
+[2019.09.15-21.38.57:152][357]LogContentBrowser: Native class hierarchy populated in 0.0107 seconds. Added 2869 classes and 687 folders.
+[2019.09.15-21.38.57:162][357]Display: HotReload took 13.9s.
+[2019.09.15-21.41.20:272][872]LogUObjectHash: Compacting FUObjectHashTables data took   7.37ms
+[2019.09.15-21.41.20:286][872]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Lab2" FILE="../../../../../../Documents/Game-Physics/Physics/Content/Levels/Lab2.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2019.09.15-21.41.20:361][872]LogUObjectHash: Compacting FUObjectHashTables data took   4.59ms
+[2019.09.15-21.41.20:690][872]LogSavePackage: Moving '../../../../../../Documents/Game-Physics/Physics/Saved/Lab270048A7C444E24B8763721920057B58B.tmp' to '../../../../../../Documents/Game-Physics/Physics/Content/Levels/Lab2.umap'
+[2019.09.15-21.41.20:712][872]LogFileHelpers: Saving map 'Lab2' took 0.426

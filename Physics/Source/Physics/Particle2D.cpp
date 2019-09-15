@@ -33,8 +33,8 @@ void AParticle2D::BeginPlay()
 {
 	Super::BeginPlay();
 	// Hardcoded start.
-	rotation = 0;
-	position = FVector2D(this->GetActorLocation());
+	//rotation = 0;
+	//position = FVector2D(this->GetActorLocation());
 
 	//velocity.X = -200;
 }
