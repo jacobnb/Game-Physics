@@ -36,7 +36,7 @@ void AParticle2D::BeginPlay()
 	rotation = 0;
 	position = FVector2D(this->GetActorLocation());
 
-	velocity.X = -200;
+	//velocity.X = -200;
 }
 
 void AParticle2D::updatePositionsExplicitEuler(float dt)

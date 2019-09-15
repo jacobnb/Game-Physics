@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Physics.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{93A3B133-CCE7-4A2A-A54D-5F7D82670861}</UniqueIdentifier>
+      <UniqueIdentifier>{B8C5201C-9B6E-49AA-A3CA-9558D9923F23}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Physics.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{EF7B90B2-1F8F-4982-A879-B26B0AE8DB75}</UniqueIdentifier>
+      <UniqueIdentifier>{12EB48EB-850A-4FCB-9293-1A154D705F2D}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,20 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Physics">
-      <UniqueIdentifier>{0567BDC9-C09F-46D8-9CCB-E6794CD4C89F}</UniqueIdentifier>
+      <UniqueIdentifier>{DDE47306-AE25-40A1-A82E-C3C0942C6EFA}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Physics\ForceGenerator.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\ForceGenerator.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Physics\Particle2D.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\Particle2D.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Physics\Physics.Build.cs">
       <Filter>Source\Physics</Filter>
     </None>
@@ -41,21 +53,5 @@
     <ClInclude Include="..\..\Source\Physics\PhysicsGameModeBase.h">
       <Filter>Source\Physics</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Physics\Particle2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Physics\ForceGenerator.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Physics\Particle2D.cpp">
-      <Filter>Source\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Physics\ForceGenerator.cpp">
-      <Filter>Source\Physics</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>
