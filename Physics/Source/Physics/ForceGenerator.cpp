@@ -56,15 +56,16 @@ FVector2D UForceGenerator::GenerateForce_drag(FVector2D particleVelocity, FVecto
 {
 	// https://www.grc.nasa.gov/WWW/k-12/airplane/drageq.html drag = co * density * velocity squred / 2.0 * area
 	// f_drag = (p * u^2 * area * coeff)/2 (+fluid velocity?)
-	return (objectDragCoefficient * (fluidDensity * particleVelocity * particleVelocity) / 2.0 * objectArea_crossSection) + fluidVelocity;
+	return (objectDragCoefficient * (fluidDensity * -particleVelocity * particleVelocity) / 2.0 * objectArea_crossSection) + fluidVelocity;
 }
 
 FVector2D UForceGenerator::GenerateForce_spring(FVector2D particlePosition, FVector2D anchorPosition, float springRestingLength, float springStiffnessCoefficient)
 {
-	// TODO: Not sure if should vector - float. or (magnitude - float) * norm
-	FVector2D springLength = particlePosition - anchorPosition;
+	FVector2D springLength = anchorPosition - particlePosition;
+	FVector2D springDir = springLength;
+	springDir.Normalize();
 	// f_spring = -coeff*(spring length - spring resting length)
-	return (-springStiffnessCoefficient * (springLength - springRestingLength));
+	return springStiffnessCoefficient * (springLength.Size() - springRestingLength)*springDir;
 
 
 }
