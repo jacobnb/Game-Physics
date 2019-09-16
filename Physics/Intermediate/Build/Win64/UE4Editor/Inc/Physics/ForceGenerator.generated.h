@@ -24,7 +24,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_springStiffnessCoefficient); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_spring(Z_Param_particlePosition,Z_Param_anchorPosition,Z_Param_springRestingLength,Z_Param_springStiffnessCoefficient); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_spring(Z_Param_particlePosition,Z_Param_anchorPosition,Z_Param_springRestingLength,Z_Param_springStiffnessCoefficient); \
 		P_NATIVE_END; \
 	} \
  \
@@ -37,7 +37,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_objectDragCoefficient); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_drag(Z_Param_particleVelocity,Z_Param_fluidVelocity,Z_Param_fluidDensity,Z_Param_objectArea_crossSection,Z_Param_objectDragCoefficient); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_drag(Z_Param_particleVelocity,Z_Param_fluidVelocity,Z_Param_fluidDensity,Z_Param_objectArea_crossSection,Z_Param_objectDragCoefficient); \
 		P_NATIVE_END; \
 	} \
  \
@@ -48,7 +48,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_frictionCoefficient_kinetic); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_friction_kinetic(Z_Param_f_normal,Z_Param_particleVelocity,Z_Param_frictionCoefficient_kinetic); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_friction_kinetic(Z_Param_f_normal,Z_Param_particleVelocity,Z_Param_frictionCoefficient_kinetic); \
 		P_NATIVE_END; \
 	} \
  \
@@ -59,7 +59,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_frictionCoefficient_static); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_friction_static(Z_Param_f_normal,Z_Param_f_opposing,Z_Param_frictionCoefficient_static); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_friction_static(Z_Param_f_normal,Z_Param_f_opposing,Z_Param_frictionCoefficient_static); \
 		P_NATIVE_END; \
 	} \
  \
@@ -69,7 +69,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_f_normal); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_sliding(Z_Param_f_gravity,Z_Param_f_normal); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_sliding(Z_Param_f_gravity,Z_Param_f_normal); \
 		P_NATIVE_END; \
 	} \
  \
@@ -79,7 +79,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_surfaceNormal_unit); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_normal(Z_Param_f_gravity,Z_Param_surfaceNormal_unit); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_normal(Z_Param_f_gravity,Z_Param_surfaceNormal_unit); \
 		P_NATIVE_END; \
 	} \
  \
@@ -90,7 +90,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_down); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->generateGravity(Z_Param_particleMass,Z_Param_gravity,Z_Param_down); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::generateGravity(Z_Param_particleMass,Z_Param_gravity,Z_Param_down); \
 		P_NATIVE_END; \
 	} \
  \
@@ -100,7 +100,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_vec2); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->Vector2DProj(Z_Param_vec1,Z_Param_vec2); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::Vector2DProj(Z_Param_vec1,Z_Param_vec2); \
 		P_NATIVE_END; \
 	}
 
@@ -115,7 +115,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_springStiffnessCoefficient); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_spring(Z_Param_particlePosition,Z_Param_anchorPosition,Z_Param_springRestingLength,Z_Param_springStiffnessCoefficient); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_spring(Z_Param_particlePosition,Z_Param_anchorPosition,Z_Param_springRestingLength,Z_Param_springStiffnessCoefficient); \
 		P_NATIVE_END; \
 	} \
  \
@@ -128,7 +128,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_objectDragCoefficient); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_drag(Z_Param_particleVelocity,Z_Param_fluidVelocity,Z_Param_fluidDensity,Z_Param_objectArea_crossSection,Z_Param_objectDragCoefficient); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_drag(Z_Param_particleVelocity,Z_Param_fluidVelocity,Z_Param_fluidDensity,Z_Param_objectArea_crossSection,Z_Param_objectDragCoefficient); \
 		P_NATIVE_END; \
 	} \
  \
@@ -139,7 +139,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_frictionCoefficient_kinetic); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_friction_kinetic(Z_Param_f_normal,Z_Param_particleVelocity,Z_Param_frictionCoefficient_kinetic); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_friction_kinetic(Z_Param_f_normal,Z_Param_particleVelocity,Z_Param_frictionCoefficient_kinetic); \
 		P_NATIVE_END; \
 	} \
  \
@@ -150,7 +150,7 @@ struct FVector2D;
 		P_GET_PROPERTY(UFloatProperty,Z_Param_frictionCoefficient_static); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_friction_static(Z_Param_f_normal,Z_Param_f_opposing,Z_Param_frictionCoefficient_static); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_friction_static(Z_Param_f_normal,Z_Param_f_opposing,Z_Param_frictionCoefficient_static); \
 		P_NATIVE_END; \
 	} \
  \
@@ -160,7 +160,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_f_normal); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_sliding(Z_Param_f_gravity,Z_Param_f_normal); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_sliding(Z_Param_f_gravity,Z_Param_f_normal); \
 		P_NATIVE_END; \
 	} \
  \
@@ -170,7 +170,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_surfaceNormal_unit); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->GenerateForce_normal(Z_Param_f_gravity,Z_Param_surfaceNormal_unit); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::GenerateForce_normal(Z_Param_f_gravity,Z_Param_surfaceNormal_unit); \
 		P_NATIVE_END; \
 	} \
  \
@@ -181,7 +181,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_down); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->generateGravity(Z_Param_particleMass,Z_Param_gravity,Z_Param_down); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::generateGravity(Z_Param_particleMass,Z_Param_gravity,Z_Param_down); \
 		P_NATIVE_END; \
 	} \
  \
@@ -191,7 +191,7 @@ struct FVector2D;
 		P_GET_STRUCT(FVector2D,Z_Param_vec2); \
 		P_FINISH; \
 		P_NATIVE_BEGIN; \
-		*(FVector2D*)Z_Param__Result=P_THIS->Vector2DProj(Z_Param_vec1,Z_Param_vec2); \
+		*(FVector2D*)Z_Param__Result=UForceGenerator::Vector2DProj(Z_Param_vec1,Z_Param_vec2); \
 		P_NATIVE_END; \
 	}
 

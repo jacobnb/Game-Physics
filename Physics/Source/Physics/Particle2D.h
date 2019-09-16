@@ -60,7 +60,7 @@ protected:
 		void updateRotationKinematic(float dt);
 
 	//lab 2 step 1
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		float mass;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float massInv;

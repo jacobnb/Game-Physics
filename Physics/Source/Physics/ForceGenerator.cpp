@@ -10,7 +10,7 @@ FVector2D UForceGenerator::Vector2DProj(FVector2D vec1, FVector2D vec2)
 {
 	// project v1 onto v2
 	// https://www.ck12.org/book/CK-12-College-Precalculus/section/9.6/
-	return (vec1 * vec2) / vec2.SizeSquared() * vec2;
+	return (FVector2D::DotProduct(vec1, vec2) / vec2.SizeSquared()) * vec2;
 }
 
 FVector2D UForceGenerator::generateGravity(float particleMass, float gravity, FVector2D down)
@@ -23,7 +23,8 @@ FVector2D UForceGenerator::generateGravity(float particleMass, float gravity, FV
 FVector2D UForceGenerator::GenerateForce_normal(FVector2D f_gravity, FVector2D surfaceNormal_unit)
 {
 	// f_normal = proj(f_gravity, surfaceNormal_unit)
-	return Vector2DProj(f_gravity, surfaceNormal_unit);
+	return -Vector2DProj(f_gravity, surfaceNormal_unit);
+
 }
 
 FVector2D UForceGenerator::GenerateForce_sliding(FVector2D f_gravity, FVector2D f_normal)

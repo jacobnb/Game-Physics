@@ -209,7 +209,6 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AParticle2D); \
 	FORCEINLINE static uint32 __PPO__rotation() { return STRUCT_OFFSET(AParticle2D, rotation); } \
 	FORCEINLINE static uint32 __PPO__angular_vel() { return STRUCT_OFFSET(AParticle2D, angular_vel); } \
 	FORCEINLINE static uint32 __PPO__angular_accel() { return STRUCT_OFFSET(AParticle2D, angular_accel); } \
-	FORCEINLINE static uint32 __PPO__mass() { return STRUCT_OFFSET(AParticle2D, mass); } \
 	FORCEINLINE static uint32 __PPO__massInv() { return STRUCT_OFFSET(AParticle2D, massInv); } \
 	FORCEINLINE static uint32 __PPO__force() { return STRUCT_OFFSET(AParticle2D, force); }
 
