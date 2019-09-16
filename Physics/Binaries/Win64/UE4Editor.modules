@@ -2,6 +2,6 @@
 	"BuildId": "8386587",
 	"Modules": 
 	{
-		"Physics": "UE4Editor-Physics-9753.dll"
+		"Physics": "UE4Editor-Physics.dll"
 	}
 }

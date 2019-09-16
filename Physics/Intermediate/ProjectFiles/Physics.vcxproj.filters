@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Physics.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{371D9B85-C63B-43C0-B44C-2245D6BF5438}</UniqueIdentifier>
+      <UniqueIdentifier>{028833D2-5247-42A9-B6CC-C600C946B4ED}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Physics.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{6FFA27C2-37F1-429E-886A-A2024B5DA1E6}</UniqueIdentifier>
+      <UniqueIdentifier>{B271D816-E71F-4F1A-8D0D-C6C8765D823F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Physics">
-      <UniqueIdentifier>{308285E6-F1C1-4AB7-BABE-EC6E8FC067D9}</UniqueIdentifier>
+      <UniqueIdentifier>{39581723-9B8D-425F-8BA4-90F0CEFA8458}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Physics\ForceGenerator.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\ForceGenerator.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Physics\Particle2D.cpp">
       <Filter>Source\Physics</Filter>
     </ClCompile>
@@ -47,21 +53,5 @@
     <ClInclude Include="..\..\Source\Physics\PhysicsGameModeBase.h">
       <Filter>Source\Physics</Filter>
     </ClInclude>
-    <Filter Include="Source\Physics\Private">
-      <UniqueIdentifier>{DB14A0B8-1567-4EF8-ADAF-7C630CC9A7A7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source\Physics\Public">
-      <UniqueIdentifier>{E0B07D06-4BE5-4AD5-9AC7-00DC8A8D78AA}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Physics\ForceGenerator.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Physics\ForceGenerator.cpp">
-      <Filter>Source\Physics</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

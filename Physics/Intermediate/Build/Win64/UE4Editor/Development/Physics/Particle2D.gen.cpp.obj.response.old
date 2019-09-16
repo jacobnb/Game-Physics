@@ -28,7 +28,6 @@
 /wd4838
 /we4668
 /I .
-/I D:\Documents\Game-Physics\Physics\Source\Physics\Private
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime
 /I Runtime\Engine\Classes
@@ -501,7 +500,6 @@
 /I Runtime\ClothingSystemRuntimeInterface
 /I D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics
 /I D:\Documents\Game-Physics\Physics\Source
-/I D:\Documents\Game-Physics\Physics\Source\Physics\Public
 /I D:\Documents\Game-Physics\Physics\Source\Physics
 /I ThirdParty\PhysX3\PxShared\include
 /I ThirdParty\PhysX3\PxShared\include\cudamanager
