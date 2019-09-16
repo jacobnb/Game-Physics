@@ -16,6 +16,32 @@ struct FVector2D;
 
 #define Physics_Source_Physics_Particle2D_h_12_RPC_WRAPPERS \
  \
+	DECLARE_FUNCTION(execcalcMomentOfInertia) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->calcMomentOfInertia(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execapplyTorque) \
+	{ \
+		P_GET_STRUCT(FVector2D,Z_Param_pf); \
+		P_GET_STRUCT(FVector2D,Z_Param_force); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->applyTorque(Z_Param_pf,Z_Param_force); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execupdateAngularAcceleration) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->updateAngularAcceleration(); \
+		P_NATIVE_END; \
+	} \
+ \
 	DECLARE_FUNCTION(execupdateRotationKinematic) \
 	{ \
 		P_GET_PROPERTY(UFloatProperty,Z_Param_dt); \
@@ -88,6 +114,32 @@ struct FVector2D;
 
 
 #define Physics_Source_Physics_Particle2D_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execcalcMomentOfInertia) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->calcMomentOfInertia(); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execapplyTorque) \
+	{ \
+		P_GET_STRUCT(FVector2D,Z_Param_pf); \
+		P_GET_STRUCT(FVector2D,Z_Param_force); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->applyTorque(Z_Param_pf,Z_Param_force); \
+		P_NATIVE_END; \
+	} \
+ \
+	DECLARE_FUNCTION(execupdateAngularAcceleration) \
+	{ \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->updateAngularAcceleration(); \
+		P_NATIVE_END; \
+	} \
  \
 	DECLARE_FUNCTION(execupdateRotationKinematic) \
 	{ \
@@ -210,7 +262,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AParticle2D); \
 	FORCEINLINE static uint32 __PPO__angular_vel() { return STRUCT_OFFSET(AParticle2D, angular_vel); } \
 	FORCEINLINE static uint32 __PPO__angular_accel() { return STRUCT_OFFSET(AParticle2D, angular_accel); } \
 	FORCEINLINE static uint32 __PPO__massInv() { return STRUCT_OFFSET(AParticle2D, massInv); } \
-	FORCEINLINE static uint32 __PPO__force() { return STRUCT_OFFSET(AParticle2D, force); }
+	FORCEINLINE static uint32 __PPO__force() { return STRUCT_OFFSET(AParticle2D, force); } \
+	FORCEINLINE static uint32 __PPO__centerOfMass() { return STRUCT_OFFSET(AParticle2D, centerOfMass); }
 
 
 #define Physics_Source_Physics_Particle2D_h_9_PROLOG

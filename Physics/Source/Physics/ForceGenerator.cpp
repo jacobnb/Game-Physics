@@ -10,7 +10,7 @@ FVector2D UForceGenerator::Vector2DProj(FVector2D vec1, FVector2D vec2)
 {
 	// project v1 onto v2
 	// https://www.ck12.org/book/CK-12-College-Precalculus/section/9.6/
-	return (FVector2D::DotProduct(vec1, vec2) / vec2.SizeSquared()) * vec2;
+	return (FVector2D::DotProduct(vec1, vec2) /  FVector2D::DotProduct(vec2, vec2)) * vec2;
 }
 
 FVector2D UForceGenerator::generateGravity(float particleMass, float gravity, FVector2D down)
@@ -24,7 +24,7 @@ FVector2D UForceGenerator::GenerateForce_normal(FVector2D f_gravity, FVector2D s
 {
 	// f_normal = proj(f_gravity, surfaceNormal_unit)
 	FVector2D f_normal = Vector2DProj(f_gravity, surfaceNormal_unit);
-	f_normal.Y = -f_normal.Y;
+	f_normal = -f_normal;
 	return f_normal;
 }
 
@@ -48,7 +48,6 @@ FVector2D UForceGenerator::GenerateForce_friction_kinetic(FVector2D f_normal, FV
 {
 	// f_friction_k = -coeff*|f_normal| * unit(vel)
 	particleVelocity.Normalize();
-
 	return (particleVelocity * -frictionCoefficient_kinetic * f_normal.Size());
 }
 
@@ -56,6 +55,8 @@ FVector2D UForceGenerator::GenerateForce_drag(FVector2D particleVelocity, FVecto
 {
 	// https://www.grc.nasa.gov/WWW/k-12/airplane/drageq.html drag = co * density * velocity squred / 2.0 * area
 	// f_drag = (p * u^2 * area * coeff)/2 (+fluid velocity?)
+
+	// TODO: replace particle velocity with diff of particle velocity and fluid velocity
 	return (objectDragCoefficient * (fluidDensity * -particleVelocity * particleVelocity) / 2.0 * objectArea_crossSection) + fluidVelocity;
 }
 

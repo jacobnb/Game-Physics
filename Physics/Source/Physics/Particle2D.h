@@ -35,6 +35,9 @@ public:
 		void AddForce(FVector2D newForce);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void UpdateAcceleration();
+	// lab3/2
+	float torque;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -58,6 +61,13 @@ protected:
 		void updateRotationEulerExplicit(float dt);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void updateRotationKinematic(float dt);
+	// lab3.2
+	UFUNCTION(BlueprintCallable, Category = "Particle2D")
+		void updateAngularAcceleration();
+	UFUNCTION(BlueprintCallable, Category = "Particle2D")
+		void applyTorque(FVector2D pf, FVector2D force);
+	UFUNCTION(BlueprintCallable, Category = "Particle2D")
+		void calcMomentOfInertia();
 
 	//lab 2 step 1
 	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
@@ -69,7 +79,11 @@ protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		FVector2D force;
 
-
+	// lab3.1
+	float momentOfInertia;
+	// TODO: lab3 implement enum for shapes and inertia values from book.
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		FVector2D centerOfMass;
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

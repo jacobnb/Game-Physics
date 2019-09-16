@@ -66,6 +66,18 @@ void AParticle2D::updateRotationKinematic(float dt)
 	angular_vel = angular_vel + angular_accel * dt;
 }
 
+void AParticle2D::updateAngularAcceleration()
+{
+}
+
+void AParticle2D::applyTorque(FVector2D pf, FVector2D force)
+{
+}
+
+void AParticle2D::calcMomentOfInertia()
+{
+}
+
 // Called every frame
 void AParticle2D::Tick(float DeltaTime)
 {

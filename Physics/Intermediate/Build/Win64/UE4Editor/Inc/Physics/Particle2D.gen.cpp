@@ -19,9 +19,12 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 	UPackage* Z_Construct_UPackage__Script_Physics();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_AddForce();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
+	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_applyTorque();
+	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_calcMomentOfInertia();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_GetMass();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_SetMass();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_UpdateAcceleration();
+	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_updateAngularAcceleration();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_updatePositionKinematic();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_updatePositionsExplicitEuler();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_updateRotationEulerExplicit();
@@ -32,9 +35,12 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		UClass* Class = AParticle2D::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "AddForce", &AParticle2D::execAddForce },
+			{ "applyTorque", &AParticle2D::execapplyTorque },
+			{ "calcMomentOfInertia", &AParticle2D::execcalcMomentOfInertia },
 			{ "GetMass", &AParticle2D::execGetMass },
 			{ "SetMass", &AParticle2D::execSetMass },
 			{ "UpdateAcceleration", &AParticle2D::execUpdateAcceleration },
+			{ "updateAngularAcceleration", &AParticle2D::execupdateAngularAcceleration },
 			{ "updatePositionKinematic", &AParticle2D::execupdatePositionKinematic },
 			{ "updatePositionsExplicitEuler", &AParticle2D::execupdatePositionsExplicitEuler },
 			{ "updateRotationEulerExplicit", &AParticle2D::execupdateRotationEulerExplicit },
@@ -74,6 +80,66 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AParticle2D_AddForce_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AParticle2D_applyTorque_Statics
+	{
+		struct Particle2D_eventapplyTorque_Parms
+		{
+			FVector2D pf;
+			FVector2D force;
+		};
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_force;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_pf;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AParticle2D_applyTorque_Statics::NewProp_force = { "force", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Particle2D_eventapplyTorque_Parms, force), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UFunction_AParticle2D_applyTorque_Statics::NewProp_pf = { "pf", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(Particle2D_eventapplyTorque_Parms, pf), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AParticle2D_applyTorque_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AParticle2D_applyTorque_Statics::NewProp_force,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AParticle2D_applyTorque_Statics::NewProp_pf,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AParticle2D_applyTorque_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AParticle2D_applyTorque_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AParticle2D, nullptr, "applyTorque", nullptr, nullptr, sizeof(Particle2D_eventapplyTorque_Parms), Z_Construct_UFunction_AParticle2D_applyTorque_Statics::PropPointers, ARRAY_COUNT(Z_Construct_UFunction_AParticle2D_applyTorque_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04880401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AParticle2D_applyTorque_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AParticle2D_applyTorque_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AParticle2D_applyTorque()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AParticle2D_applyTorque_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AParticle2D_calcMomentOfInertia_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AParticle2D_calcMomentOfInertia_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AParticle2D_calcMomentOfInertia_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AParticle2D, nullptr, "calcMomentOfInertia", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AParticle2D_calcMomentOfInertia_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AParticle2D_calcMomentOfInertia_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AParticle2D_calcMomentOfInertia()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AParticle2D_calcMomentOfInertia_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -163,6 +229,31 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		if (!ReturnFunction)
 		{
 			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AParticle2D_UpdateAcceleration_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_AParticle2D_updateAngularAcceleration_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AParticle2D_updateAngularAcceleration_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Particle2D" },
+		{ "Comment", "// lab3.2\n" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+		{ "ToolTip", "lab3.2" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AParticle2D_updateAngularAcceleration_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AParticle2D, nullptr, "updateAngularAcceleration", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AParticle2D_updateAngularAcceleration_Statics::Function_MetaDataParams, ARRAY_COUNT(Z_Construct_UFunction_AParticle2D_updateAngularAcceleration_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AParticle2D_updateAngularAcceleration()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AParticle2D_updateAngularAcceleration_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -310,6 +401,10 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_centerOfMass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_centerOfMass;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_force_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_force;
@@ -355,9 +450,12 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AParticle2D_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AParticle2D_AddForce, "AddForce" }, // 3389375089
+		{ &Z_Construct_UFunction_AParticle2D_applyTorque, "applyTorque" }, // 2597872096
+		{ &Z_Construct_UFunction_AParticle2D_calcMomentOfInertia, "calcMomentOfInertia" }, // 4232157973
 		{ &Z_Construct_UFunction_AParticle2D_GetMass, "GetMass" }, // 3812729500
 		{ &Z_Construct_UFunction_AParticle2D_SetMass, "SetMass" }, // 3804644219
 		{ &Z_Construct_UFunction_AParticle2D_UpdateAcceleration, "UpdateAcceleration" }, // 2618070473
+		{ &Z_Construct_UFunction_AParticle2D_updateAngularAcceleration, "updateAngularAcceleration" }, // 2486578022
 		{ &Z_Construct_UFunction_AParticle2D_updatePositionKinematic, "updatePositionKinematic" }, // 2065843171
 		{ &Z_Construct_UFunction_AParticle2D_updatePositionsExplicitEuler, "updatePositionsExplicitEuler" }, // 1824540959
 		{ &Z_Construct_UFunction_AParticle2D_updateRotationEulerExplicit, "updateRotationEulerExplicit" }, // 533621966
@@ -369,6 +467,15 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		{ "ModuleRelativePath", "Particle2D.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_centerOfMass_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "Comment", "// TODO: lab3 implement enum for shapes and inertia values from book.\n" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+		{ "ToolTip", "TODO: lab3 implement enum for shapes and inertia values from book." },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_centerOfMass = { "centerOfMass", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, centerOfMass), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_centerOfMass_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_centerOfMass_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_force_MetaData[] = {
 		{ "Category", "Particle2D" },
@@ -437,6 +544,7 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_startingMass = { "startingMass", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, startingMass), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_startingMass_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_startingMass_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AParticle2D_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_centerOfMass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_force,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_massInv,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel,
@@ -474,7 +582,7 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AParticle2D, 2455147440);
+	IMPLEMENT_CLASS(AParticle2D, 3024730747);
 	template<> PHYSICS_API UClass* StaticClass<AParticle2D>()
 	{
 		return AParticle2D::StaticClass();
