@@ -23,8 +23,9 @@ FVector2D UForceGenerator::generateGravity(float particleMass, float gravity, FV
 FVector2D UForceGenerator::GenerateForce_normal(FVector2D f_gravity, FVector2D surfaceNormal_unit)
 {
 	// f_normal = proj(f_gravity, surfaceNormal_unit)
-	return -Vector2DProj(f_gravity, surfaceNormal_unit);
-
+	FVector2D f_normal = Vector2DProj(f_gravity, surfaceNormal_unit);
+	f_normal.Y = -f_normal.Y;
+	return f_normal;
 }
 
 FVector2D UForceGenerator::GenerateForce_sliding(FVector2D f_gravity, FVector2D f_normal)
@@ -35,8 +36,12 @@ FVector2D UForceGenerator::GenerateForce_sliding(FVector2D f_gravity, FVector2D 
 
 FVector2D UForceGenerator::GenerateForce_friction_static(FVector2D f_normal, FVector2D f_opposing, float frictionCoefficient_static)
 {
+	// currently this would convert to kinetic friction.
 	// f_friction_s = -f_opposing if less than max, else -coeff*f_normal (max amount is coeff*|f_normal|)
-	return (f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing : -frictionCoefficient_static * f_normal);
+	FVector2D f_op_norm = f_opposing;
+	f_op_norm.Normalize();
+	// return (f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing : f_op_norm * -frictionCoefficient_static * f_normal.Size());
+	return f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing :  FVector2D(0,0);
 }
 
 FVector2D UForceGenerator::GenerateForce_friction_kinetic(FVector2D f_normal, FVector2D particleVelocity, float frictionCoefficient_kinetic)
