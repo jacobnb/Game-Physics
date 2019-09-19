@@ -40,8 +40,8 @@ FVector2D UForceGenerator::GenerateForce_friction_static(FVector2D f_normal, FVe
 	// f_friction_s = -f_opposing if less than max, else -coeff*f_normal (max amount is coeff*|f_normal|)
 	FVector2D f_op_norm = f_opposing;
 	f_op_norm.Normalize();
-	// return (f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing : f_op_norm * -frictionCoefficient_static * f_normal.Size());
-	return f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing :  FVector2D(0,0);
+	return (f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing : f_op_norm * -frictionCoefficient_static * f_normal.Size());
+	// code for this in bp return f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing :  FVector2D(0,0);
 }
 
 FVector2D UForceGenerator::GenerateForce_friction_kinetic(FVector2D f_normal, FVector2D particleVelocity, float frictionCoefficient_kinetic)
@@ -57,7 +57,12 @@ FVector2D UForceGenerator::GenerateForce_drag(FVector2D particleVelocity, FVecto
 	// f_drag = (p * u^2 * area * coeff)/2 (+fluid velocity?)
 
 	// TODO: replace particle velocity with diff of particle velocity and fluid velocity
-	return (objectDragCoefficient * (fluidDensity * -particleVelocity * particleVelocity) / 2.0 * objectArea_crossSection) + fluidVelocity;
+	FVector2D vel_diff = particleVelocity - fluidVelocity;
+	float vel_diff_sqr_mag = FVector2D::DotProduct(vel_diff, vel_diff); // b/c dan says size_squared doesn't work.
+	FVector2D vel_diff_norm = vel_diff;
+	vel_diff_norm.Normalize();
+	// using 
+	return (objectDragCoefficient * (fluidDensity * -vel_diff_sqr_mag) / 2.0 * objectArea_crossSection) * vel_diff_norm;
 }
 
 FVector2D UForceGenerator::GenerateForce_spring(FVector2D particlePosition, FVector2D anchorPosition, float springRestingLength, float springStiffnessCoefficient)
