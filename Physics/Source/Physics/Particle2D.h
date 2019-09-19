@@ -6,6 +6,9 @@
 #include "GameFramework/Actor.h"
 #include "Particle2D.generated.h"
 
+#define vector FVector2D
+#define matrix FVector
+
 UCLASS()
 class PHYSICS_API AParticle2D : public AActor
 {
@@ -35,8 +38,15 @@ public:
 		void AddForce(FVector2D newForce);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void UpdateAcceleration();
-	// lab3/2
+	// lab3.22
 	float torque;
+	enum SHAPES {
+		SQUARE,
+		RECTANGLE,
+		PYRAMID,
+		SPHERE,
+	};
+	SHAPES shape;
 
 protected:
 	// Called when the game starts or when spawned
@@ -80,7 +90,9 @@ protected:
 		FVector2D force;
 
 	// lab3.1
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float momentOfInertia;
+	float invMomentOfIntertia;
 	// TODO: lab3 implement enum for shapes and inertia values from book.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		FVector2D centerOfMass;

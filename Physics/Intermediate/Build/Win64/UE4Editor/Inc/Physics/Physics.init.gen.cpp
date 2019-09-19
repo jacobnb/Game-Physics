@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodePhysics_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x4B624FFB,
+				0x81D557A7,
 				0x0481EE73,
 				METADATA_PARAMS(nullptr, 0)
 			};

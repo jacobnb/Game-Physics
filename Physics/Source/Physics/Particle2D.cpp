@@ -5,7 +5,7 @@
 // Sets default values
 AParticle2D::AParticle2D()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 }
@@ -68,14 +68,39 @@ void AParticle2D::updateRotationKinematic(float dt)
 
 void AParticle2D::updateAngularAcceleration()
 {
+	// torque * invMomentOfInertia;
 }
 
 void AParticle2D::applyTorque(FVector2D pf, FVector2D force)
 {
+	// torque = pf X f
+	float local_torque = vector::CrossProduct(pf, force);
+	torque += local_torque * invMomentOfIntertia;
+	// should invMomentOfIntertia be an Inertia Tensor?
 }
 
 void AParticle2D::calcMomentOfInertia()
 {
+	// apply enum and calc inverse.
+	switch (shape) {
+	case(SHAPES::PYRAMID):
+		break;
+	case(SHAPES::RECTANGLE):
+		// 1/12 * m(dx^2 + xy^2)
+		break;
+	case(SHAPES::SPHERE):
+		break;
+	case(SHAPES::SQUARE):
+		break;
+	// rod 
+		// 1/12 * m*l^2
+	//disc 
+		// 1/2*m*r^2
+	// ring 
+		// 1/2 * m *(router^2 + rinner^2)
+	default:
+
+	}
 }
 
 // Called every frame
