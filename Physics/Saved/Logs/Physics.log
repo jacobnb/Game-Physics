@@ -1,4 +1,4 @@
-﻿Log file open, 09/19/19 10:00:57
+﻿Log file open, 09/23/19 09:42:14
 LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
 LogWindows: File 'aqProf.dll' does not exist
 LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
@@ -9,7 +9,7 @@ LogConsoleResponse: Display: Failed to find resolution value strings in scalabil
 LogInit: Display: Running engine for game: Physics
 LogPlatformFile: Not using cached read wrapper
 LogTaskGraph: Started task graph with 5 named threads and 23 total threads with 3 sets of task threads.
-LogStats: Stats thread started at 0.073034
+LogStats: Stats thread started at 0.071950
 LogD3D11RHI: Loaded GFSDK_Aftermath_Lib.x64.dll
 LogICUInternationalization: ICU TimeZone Detection - Raw Offset: -5:00, Platform Override: ''
 LogPluginManager: Mounting plugin Paper2D
@@ -157,865 +157,664 @@ LogInit: Presizing for max 16777216 objects, including 0 objects not considered 
 LogInit: Object subsystem initialized
 LogConfig: Setting CVar [[con.DebugEarlyDefault:1]]
 LogConfig: Setting CVar [[r.setres:1280x720]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[r.VSync:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
-[2019.09.19-14.00.58:042][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
-[2019.09.19-14.00.58:042][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
-[2019.09.19-14.00.58:042][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
-[2019.09.19-14.00.58:047][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.09.19-14.00.58:047][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.09.19-14.00.58:048][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.09.19-14.00.58:048][  0]LogInit: Selected Device Profile: [Windows]
-[2019.09.19-14.00.58:048][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
-[2019.09.19-14.00.58:051][  0]LogHAL: Display: Platform has ~ 32 GB [34283397120 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
-[2019.09.19-14.00.58:051][  0]LogInit: Going up to parent DeviceProfile []
-[2019.09.19-14.00.58:051][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
-[2019.09.19-14.00.58:051][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
-[2019.09.19-14.00.58:052][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
-[2019.09.19-14.00.58:052][  0]LogInit: Computer: JOYCE101-04
-[2019.09.19-14.00.58:052][  0]LogInit: User: jacobbiederman
-[2019.09.19-14.00.58:052][  0]LogInit: CPU Page size=4096, Cores=4
-[2019.09.19-14.00.58:052][  0]LogInit: High frequency timer resolution =10.000000 MHz
-[2019.09.19-14.00.58:053][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx)
-[2019.09.19-14.00.58:053][  0]LogMemory: Platform Memory Stats for Windows
-[2019.09.19-14.00.58:053][  0]LogMemory: Process Physical Memory: 100.65 MB used, 100.66 MB peak
-[2019.09.19-14.00.58:053][  0]LogMemory: Process Virtual Memory: 100.56 MB used, 100.56 MB peak
-[2019.09.19-14.00.58:053][  0]LogMemory: Physical Memory: 7708.71 MB used,  24986.48 MB free, 32695.20 MB total
-[2019.09.19-14.00.58:053][  0]LogMemory: Virtual Memory: 4682.88 MB used,  134213048.00 MB free, 134217728.00 MB total
-[2019.09.19-14.00.58:056][  0]LogWindows: WindowsPlatformFeatures enabled
-[2019.09.19-14.00.58:076][  0]LogInit: Using OS detected language (en-US).
-[2019.09.19-14.00.58:076][  0]LogInit: Using OS detected locale (en-US).
-[2019.09.19-14.00.58:077][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
-[2019.09.19-14.00.58:241][  0]LogInit: Setting process to per monitor DPI aware
-[2019.09.19-14.00.58:272][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
-[2019.09.19-14.00.58:273][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
-[2019.09.19-14.00.58:466][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.09.19-14.00.58:466][  0]LogD3D11RHI: D3D11 adapters:
-[2019.09.19-14.00.58:514][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1080 Ti' (Feature Level 11_0)
-[2019.09.19-14.00.58:514][  0]LogD3D11RHI:       11132/0/16347 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
-[2019.09.19-14.00.58:516][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
-[2019.09.19-14.00.58:516][  0]LogD3D11RHI:       0/0/16347 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
-[2019.09.19-14.00.58:516][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
-[2019.09.19-14.00.58:522][  0]LogD3D11RHI: Creating new Direct3DDevice
-[2019.09.19-14.00.58:522][  0]LogD3D11RHI:     GPU DeviceId: 0x1b06 (for the marketing name, search the web for "GPU Device Id")
-[2019.09.19-14.00.58:522][  0]LogWindows: EnumDisplayDevices:
-[2019.09.19-14.00.58:522][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:1)
-[2019.09.19-14.00.58:522][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1080 Ti' (P:1 D:1)
-[2019.09.19-14.00.58:522][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
-[2019.09.19-14.00.58:522][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
-[2019.09.19-14.00.58:523][  0]LogWindows: DebugString: FoundDriverCount:4 
-[2019.09.19-14.00.58:523][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1080 Ti
-[2019.09.19-14.00.58:523][  0]LogD3D11RHI:   Driver Version: 388.13 (internal:23.21.13.8813, unified:388.13)
-[2019.09.19-14.00.58:523][  0]LogD3D11RHI:      Driver Date: 10-27-2017
-[2019.09.19-14.00.58:523][  0]LogRHI: Texture pool is 7792 MB (70% of 11132 MB)
-[2019.09.19-14.00.58:550][  0]LogD3D11RHI: Async texture creation enabled
-[2019.09.19-14.00.58:561][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
-[2019.09.19-14.00.58:972][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
-[2019.09.19-14.00.58:983][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
-[2019.09.19-14.00.58:993][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
-[2019.09.19-14.00.59:002][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
-[2019.09.19-14.00.59:011][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
-[2019.09.19-14.00.59:019][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
-[2019.09.19-14.00.59:027][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
-[2019.09.19-14.00.59:035][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
-[2019.09.19-14.00.59:038][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
-[2019.09.19-14.00.59:070][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
-[2019.09.19-14.00.59:072][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
-[2019.09.19-14.00.59:088][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
-[2019.09.19-14.00.59:088][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
-[2019.09.19-14.00.59:101][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
-[2019.09.19-14.00.59:101][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
-[2019.09.19-14.00.59:108][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
-[2019.09.19-14.00.59:114][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
-[2019.09.19-14.00.59:121][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
-[2019.09.19-14.00.59:127][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
-[2019.09.19-14.00.59:149][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
-[2019.09.19-14.00.59:149][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
-[2019.09.19-14.00.59:149][  0]LogTargetPlatformManager: Display: Building Assets For Windows
-[2019.09.19-14.00.59:158][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
-[2019.09.19-14.00.59:208][  0]LogShaderCompilers: Guid format shader working directory is -15 characters bigger than the processId version (../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Intermediate/Shaders/WorkingDirectory/11796/).
-[2019.09.19-14.00.59:208][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/jacob.biederman/AppData/Local/Temp/UnrealShaderWorkingDir/F2D53B8E4692FBD8BF0D3D9D9CA0381D/'.
-[2019.09.19-14.00.59:211][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
-[2019.09.19-14.00.59:211][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
-[2019.09.19-14.00.59:211][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
-[2019.09.19-14.00.59:774][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
-[2019.09.19-14.00.59:820][  0]LogDerivedDataCache: Loaded boot cache 0.05s 73MB C:/Users/jacob.biederman/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
-[2019.09.19-14.00.59:820][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/jacob.biederman/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc
-[2019.09.19-14.00.59:820][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
-[2019.09.19-14.00.59:820][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
-[2019.09.19-14.00.59:820][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.09.19-14.00.59:820][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
-[2019.09.19-14.00.59:830][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
-[2019.09.19-14.00.59:830][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
-[2019.09.19-14.00.59:830][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
-[2019.09.19-14.00.59:832][  0]LogDerivedDataCache: Using Local data cache path C:/Users/jacob.biederman/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
-[2019.09.19-14.00.59:832][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
-[2019.09.19-14.00.59:832][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
-[2019.09.19-14.00.59:854][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
-[2019.09.19-14.00.59:857][  0]LogSlate: Using FreeType 2.6.0
-[2019.09.19-14.00.59:858][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
-[2019.09.19-14.00.59:917][  0]LogAssetRegistry: FAssetRegistry took 0.0024 seconds to start up
-[2019.09.19-14.01.00:180][  0]LogInit: Selected Device Profile: [Windows]
-[2019.09.19-14.01.00:332][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
-[2019.09.19-14.01.00:332][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
-[2019.09.19-14.01.00:332][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
-[2019.09.19-14.01.00:332][  0]LogMeshReduction: No distributed automatic mesh merging module available
-[2019.09.19-14.01.00:332][  0]LogMeshMerging: No distributed automatic mesh merging module available
-[2019.09.19-14.01.00:341][  0]LogNetVersion: Physics 1.0.0, NetCL: 8386587, EngineNetVer: 11, GameNetVer: 0 (Checksum: 2715820292)
-[2019.09.19-14.01.00:730][  0]LogPackageLocalizationCache: Processed 12 localized package path(s) for 1 prioritized culture(s) in 0.043266 seconds
-[2019.09.19-14.01.00:737][  0]LogUObjectArray: 43444 objects as part of root set at end of initial load.
-[2019.09.19-14.01.00:737][  0]LogUObjectAllocator: 7548648 out of 0 bytes used by permanent object pool.
-[2019.09.19-14.01.00:737][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
-[2019.09.19-14.01.01:624][  0]LogTcpMessaging: Initializing TcpMessaging bridge
-[2019.09.19-14.01.01:626][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
-[2019.09.19-14.01.01:679][  0]SourceControl: Source control is disabled
-[2019.09.19-14.01.01:679][  0]SourceControl: Source control is disabled
-[2019.09.19-14.01.01:681][  0]SourceControl: Source control is disabled
-[2019.09.19-14.01.01:682][  0]SourceControl: Source control is disabled
-[2019.09.19-14.01.01:775][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
-[2019.09.19-14.01.01:867][  0]LogOcInput: OculusInput pre-init called
-[2019.09.19-14.01.01:873][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
-[2019.09.19-14.01.01:873][  0]LogWindows: File 'OVRPlugin.dll' does not exist
-[2019.09.19-14.01.01:934][  0]LogEngine: Initializing Engine...
-[2019.09.19-14.01.01:935][  0]LogHMD: Failed to initialize OpenVR with code 110
-[2019.09.19-14.01.01:936][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
-[2019.09.19-14.01.02:145][  0]LogInit: Initializing FReadOnlyCVARCache
-[2019.09.19-14.01.02:162][  0]LogAIModule: Creating AISystem for world Untitled
-[2019.09.19-14.01.02:169][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
-[2019.09.19-14.01.02:208][  0]LogInit: FAudioDevice initialized.
-[2019.09.19-14.01.02:209][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
-[2019.09.19-14.01.02:290][  0]LogDerivedDataCache: Saved boot cache 0.08s 73MB C:/Users/jacob.biederman/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
-[2019.09.19-14.01.02:295][  0]LogInit: Texture streaming: Enabled
-[2019.09.19-14.01.02:312][  0]LogEngineSessionManager: EngineSessionManager initialized
-[2019.09.19-14.01.02:356][  0]LogInit: Transaction tracking system initialized
-[2019.09.19-14.01.02:389][  0]BlueprintLog: New page: Editor Load
-[2019.09.19-14.01.02:473][  0]LocalizationService: Localization service is disabled
-[2019.09.19-14.01.02:723][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Content/' took 0.00s
-[2019.09.19-14.01.02:723][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
-[2019.09.19-14.01.02:723][  0]LogCook: Display: Mobile HDR setting 1
-[2019.09.19-14.01.02:915][  0]SourceControl: Source control is disabled
-[2019.09.19-14.01.02:915][  0]Cmd: MAP LOAD FILE="../../../Engine/Content/Maps/Templates/Template_Default.umap" TEMPLATE=1 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.09.19-14.01.02:915][  0]LightingResults: New page: Lighting Build
-[2019.09.19-14.01.02:918][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
-[2019.09.19-14.01.02:918][  0]MapCheck: New page: Map Check
-[2019.09.19-14.01.02:918][  0]LightingResults: New page: Lighting Build
-[2019.09.19-14.01.02:943][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.06ms
-[2019.09.19-14.01.03:019][  0]LogAIModule: Creating AISystem for world Untitled_1
-[2019.09.19-14.01.03:026][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.09.19-14.01.03:052][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.46ms
-[2019.09.19-14.01.03:052][  0]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.09.19-14.01.03:052][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.25ms to complete.
-[2019.09.19-14.01.03:052][  0]LogFileHelpers: Loading map 'Template_Default' took 0.137
-[2019.09.19-14.01.03:158][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.19-14.01.03:166][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.19-14.01.03:173][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.19-14.01.03:179][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
-[2019.09.19-14.01.03:185][  0]LogCollectionManager: Loaded 0 collections in 0.001702 seconds
-[2019.09.19-14.01.03:191][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Collections/' took 0.00s
-[2019.09.19-14.01.03:191][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Developers/jacobbiederman/Collections/' took 0.00s
-[2019.09.19-14.01.03:191][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Collections/' took 0.00s
-[2019.09.19-14.01.03:191][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000001 seconds
-[2019.09.19-14.01.03:199][  0]LogContentBrowser: Native class hierarchy populated in 0.0076 seconds. Added 2866 classes and 682 folders.
-[2019.09.19-14.01.03:205][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0002 seconds. Added 0 classes and 0 folders.
-[2019.09.19-14.01.03:259][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0004 seconds. Added 0 classes and 0 folders.
-[2019.09.19-14.01.03:266][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
-[2019.09.19-14.01.03:280][  0]LogSlate: Took 0.000120 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
-[2019.09.19-14.01.03:282][  0]LogSlate: Took 0.000175 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
-[2019.09.19-14.01.03:288][  0]LogSlate: Took 0.000345 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
-[2019.09.19-14.01.03:289][  0]LogSlate: Took 0.000227 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
-[2019.09.19-14.01.03:387][  0]LogRenderer: Reallocating scene render targets to support 1052x572 Format 10 NumSamples 1 (Frame:1).
-[2019.09.19-14.01.03:472][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
-[2019.09.19-14.01.03:472][  0]LogLoad: (Engine Initialization) Total time: 6.53 seconds
-[2019.09.19-14.01.03:473][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
-[2019.09.19-14.01.03:523][  0]LogAssetRegistry: Asset discovery search completed in 3.6072 seconds
-[2019.09.19-14.01.03:526][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000004 seconds (found 0 objects)
-[2019.09.19-14.01.03:526][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000150 seconds (updated 0 objects)
-[2019.09.19-14.01.03:527][  0]LogContentStreaming: Texture pool size now 1000 MB
-[2019.09.19-14.01.04:839][  4]LogSlate: Took 0.001620 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.09.19-14.02.08:681][401]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.09.19-14.02.08:972][435]LogSlate: Took 0.000132 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
-[2019.09.19-14.02.12:930][904]LogAIModule: Creating AISystem for world lab3
-[2019.09.19-14.02.12:935][904]LogAssetEditorManager: Opening Asset editor for World /Game/Levels/lab3.lab3
-[2019.09.19-14.02.12:957][904]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
-[2019.09.19-14.02.12:958][904]Cmd: MAP LOAD FILE="../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Levels/lab3.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=3
-[2019.09.19-14.02.12:959][904]LightingResults: New page: Lighting Build
-[2019.09.19-14.02.12:959][904]LoadErrors: New page: Loading map: lab3.umap
-[2019.09.19-14.02.12:963][904]LogWorld: UWorld::CleanupWorld for Untitled_1, bSessionEnded=true, bCleanupResources=true
-[2019.09.19-14.02.12:963][904]MapCheck: New page: Map Check
-[2019.09.19-14.02.12:963][904]LightingResults: New page: Lighting Build
-[2019.09.19-14.02.12:988][904]LogUObjectHash: Compacting FUObjectHashTables data took   1.57ms
-[2019.09.19-14.02.12:991][904]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
-[2019.09.19-14.02.13:015][904]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
-[2019.09.19-14.02.13:032][904]Cmd: MAP CHECKDEP NOCLEARLOG
-[2019.09.19-14.02.13:032][904]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.104ms to complete.
-[2019.09.19-14.02.13:032][904]LogFileHelpers: Loading map 'lab3' took 0.074
-[2019.09.19-14.02.21:397][901]LogAssetEditorManager: Opening Asset editor for Class /Script/Physics.ForceGenerator
-[2019.09.19-14.20.52:524][466]Candidate modules for hot reload:
-[2019.09.19-14.20.52:524][466]  Physics
-[2019.09.19-14.20.52:524][466]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,1399 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
-[2019.09.19-14.20.52:526][466]Warning: Starting HotReload took  0.0s.
-[2019.09.19-14.21.03:025][716]CompilerResultsLog: New page: Compilation - Sep 19, 2019, 6:21:03 AM
-[2019.09.19-14.21.03:025][716]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
-[2019.09.19-14.21.03:025][716]CompilerResultsLog: Parsing headers for PhysicsEditor
-[2019.09.19-14.21.03:025][716]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2019.09.19-14.21.03:026][716]CompilerResultsLog: Reflection code generated for PhysicsEditor in 7.1919983 seconds
-[2019.09.19-14.21.03:026][716]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-[2019.09.19-14.21.03:026][716]CompilerResultsLog: Building 7 actions with 8 processes...
-[2019.09.19-14.21.03:026][716]CompilerResultsLog:   [1/7] ForceGenerator.cpp
-[2019.09.19-14.21.03:026][716]CompilerResultsLog:   [2/7] Physics.init.gen.cpp
-[2019.09.19-14.21.03:026][716]CompilerResultsLog:   [3/7] Particle2D.gen.cpp
-[2019.09.19-14.21.03:026][716]CompilerResultsLog:   [4/7] Particle2D.cpp
-[2019.09.19-14.21.03:027][716]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(73): warning C4458: declaration of 'force' hides class member
-[2019.09.19-14.21.03:027][716]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\Particle2D.h(89): note: see declaration of 'AParticle2D::force'
-[2019.09.19-14.21.03:027][716]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(76): warning C4458: declaration of 'torque' hides class member
-[2019.09.19-14.21.03:027][716]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\Particle2D.h(41): note: see declaration of 'AParticle2D::torque'
-[2019.09.19-14.21.03:027][716]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(76) : error C2275: 'FVector2D': illegal use of this type as an expression
-[2019.09.19-14.21.03:028][716]CompilerResultsLog:   C:\Program Files\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h(13): note: see declaration of 'FVector2D'
-[2019.09.19-14.21.03:028][716]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(76) : error C2440: 'initializing': cannot convert from 'FVector2D' to 'float'
-[2019.09.19-14.21.03:028][716]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(76): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-[2019.09.19-14.21.03:029][716]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(76) : error C2039: 'CrossProduct': is not a member of '`global namespace''
-[2019.09.19-14.21.03:029][716]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(76) : error C3861: 'CrossProduct': identifier not found
-[2019.09.19-14.21.03:029][716]LogMainFrame: MainFrame: Module compiling took 10.510 seconds
-[2019.09.19-14.21.03:029][716]Warning: HotReload failed, recompile failed
-[2019.09.19-14.21.11:188][690]LogSlate: Window 'Message Log' being destroyed
-[2019.09.19-14.21.11:193][690]LogSlate: Window 'Message Log' being destroyed
-[2019.09.19-14.21.24:226][380]Candidate modules for hot reload:
-[2019.09.19-14.21.24:226][380]  Physics
-[2019.09.19-14.21.24:226][380]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,5852 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
-[2019.09.19-14.21.24:228][380]Warning: Starting HotReload took  0.0s.
-[2019.09.19-14.21.34:972][657]CompilerResultsLog: New page: Compilation - Sep 19, 2019, 6:21:34 AM
-[2019.09.19-14.21.34:972][657]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
-[2019.09.19-14.21.34:972][657]CompilerResultsLog: Parsing headers for PhysicsEditor
-[2019.09.19-14.21.34:972][657]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-[2019.09.19-14.21.34:973][657]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.8778598 seconds
-[2019.09.19-14.21.34:973][657]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-[2019.09.19-14.21.34:973][657]CompilerResultsLog: Building 5 actions with 8 processes...
-[2019.09.19-14.21.34:973][657]CompilerResultsLog:   [1/5] Particle2D.gen.cpp
-[2019.09.19-14.21.34:973][657]CompilerResultsLog:   [2/5] Particle2D.cpp
-[2019.09.19-14.21.34:973][657]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(73): warning C4458: declaration of 'force' hides class member
-[2019.09.19-14.21.34:974][657]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\Particle2D.h(89): note: see declaration of 'AParticle2D::force'
-[2019.09.19-14.21.34:974][657]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(76): warning C4458: declaration of 'torque' hides class member
-[2019.09.19-14.21.34:974][657]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\Particle2D.h(41): note: see declaration of 'AParticle2D::torque'
-[2019.09.19-14.21.34:974][657]CompilerResultsLog:   [3/5] UE4Editor-Physics-5852.lib
-[2019.09.19-14.21.34:974][657]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-5852.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-5852.exp
-[2019.09.19-14.21.34:975][657]CompilerResultsLog:   [4/5] UE4Editor-Physics-5852.dll
-[2019.09.19-14.21.34:975][657]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-5852.suppressed.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-5852.suppressed.exp
-[2019.09.19-14.21.34:975][657]CompilerResultsLog:   [5/5] PhysicsEditor.target
-[2019.09.19-14.21.34:975][657]CompilerResultsLog: Total time in Parallel executor: 2.42 seconds
-[2019.09.19-14.21.34:975][657]CompilerResultsLog: Total execution time: 10.64 seconds
-[2019.09.19-14.21.34:975][657]LogMainFrame: MainFrame: Module compiling took 10.753 seconds
-[2019.09.19-14.21.35:000][657]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
-[2019.09.19-14.21.35:013][657]LogClass: Could not find existing class Particle2D in package /Script/Physics for HotReload, assuming new class
-[2019.09.19-14.21.35:014][657]LogClass: Function AddForce is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function applyTorque is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function calcMomentOfInertia is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function GetMass is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function SetMass is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function UpdateAcceleration is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function updateAngularAcceleration is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function updatePositionKinematic is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function updatePositionsExplicitEuler is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function updateRotationEulerExplicit is new.
-[2019.09.19-14.21.35:014][657]LogClass: Function updateRotationKinematic is new.
-[2019.09.19-14.21.35:019][657]LogHotReload: Re-instancing Particle2D after hot-reload.
-[2019.09.19-14.21.35:094][657]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0003 seconds. Added 3 classes and 2 folders.
-[2019.09.19-14.21.35:097][657]Display: HotReload successful (8 functions remapped  0 scriptstructs remapped)
-[2019.09.19-14.21.35:153][657]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
-[2019.09.19-14.21.35:165][657]LogContentBrowser: Native class hierarchy populated in 0.0078 seconds. Added 2867 classes and 684 folders.
-[2019.09.19-14.21.35:165][657]Display: HotReload took 10.9s.
-[2019.09.19-14.38.43:434][741]LogUObjectHash: Compacting FUObjectHashTables data took   1.97ms
-[2019.09.19-14.38.47:821][251]LogSlate: FSceneViewport::OnFocusLost() reason 2
-[2019.09.19-14.38.48:867][376]LogSlate: FSceneViewport::OnFocusLost() reason 5
-[2019.09.19-14.38.48:869][376]LogAssetEditorManager: Opening Asset editor for Blueprint /Game/Blueprints/Particle2D_torque.Particle2D_torque
-[2019.09.19-14.38.49:101][376]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0005 seconds. Added 121 classes and 0 folders.
-[2019.09.19-14.38.49:885][376]LogSlate: Took 0.000635 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
-[2019.09.19-14.38.49:935][377]LogSlate: Took 0.000406 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
-[2019.09.19-14.39.13:682][467]LogSlate: Took 0.002569 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensedItalic.ttf' (160K)
-[2019.09.19-14.39.47:482][889]BlueprintLog: New page: Compile Particle2D_torque
-[2019.09.19-14.39.47:660][889]LogUObjectHash: Compacting FUObjectHashTables data took   3.30ms
-[2019.09.19-14.40.20:832][ 72]LogUObjectHash: Compacting FUObjectHashTables data took   3.73ms
-[2019.09.19-14.40.20:985][ 72]LogSavePackage: Moving '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/lab3_Auto1CDCB25E046D9C2C51763DF889B8B5300.tmp' to '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Autosaves/Game/Levels/lab3_Auto1.umap'
-[2019.09.19-14.40.20:989][ 72]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Levels/lab3' took 0.189
-[2019.09.19-14.40.20:989][ 72]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.189
-[2019.09.19-14.40.20:990][ 72]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/Particle2D_torque] ([1] browsable assets)...
-[2019.09.19-14.40.21:000][ 72]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/Particle2D_torque.Particle2D_torque]
-[2019.09.19-14.40.21:000][ 72]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/Particle2D_torque]
-[2019.09.19-14.40.21:027][ 72]LogSavePackage: Moving '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Particle2D_torque_Auto1C52DFDFD4FD6C92071CBC69AF501016F.tmp' to '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Autosaves/Game/Blueprints/Particle2D_torque_Auto1.uasset'
-[2019.09.19-14.40.21:028][ 72]LogFileHelpers: Auto-saving content packages took 0.038
-[2019.09.19-14.49.24:451][ 25]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.09.19-14.49.24:538][ 34]LogSlate: Window 'Particle2D_torque' being destroyed
-[2019.09.19-14.49.24:543][ 34]LogSlate: Window 'Particle2D_torque' being destroyed
-[2019.09.19-14.49.24:553][ 34]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
-[2019.09.19-14.49.25:761][163]LogUObjectHash: Compacting FUObjectHashTables data took   2.89ms
-[2019.09.19-14.49.25:768][163]LogSlate: FSceneViewport::OnFocusLost() reason 5
-[2019.09.19-14.49.25:774][163]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/lab3" FILE="../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Levels/lab3.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
-[2019.09.19-14.49.25:800][163]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
-[2019.09.19-14.49.25:941][163]LogSavePackage: Moving '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/lab35D7C01934EAF7513B827619D8F8BAECD.tmp' to '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Levels/lab3.umap'
-[2019.09.19-14.49.25:961][163]LogFileHelpers: Saving map 'lab3' took 0.187
-[2019.09.19-14.49.25:964][163]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Blueprints/Particle2D_torque" FILE="../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Blueprints/Particle2D_torque.uasset" SILENT=true
-[2019.09.19-14.49.25:981][163]LogSavePackage: Moving '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Particle2D_torque2BFBCFC64C7351B85CB4C2A12E8B2402.tmp' to '../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Blueprints/Particle2D_torque.uasset'
-[2019.09.19-14.49.26:802][258]LogSlate: FSceneViewport::OnFocusLost() reason 0
-[2019.09.19-14.49.26:924][269]LogUObjectHash: Compacting FUObjectHashTables data took   3.04ms
-[2019.09.19-14.49.26:972][269]LogSlate: Window 'Physics - Unreal Editor' being destroyed
-[2019.09.19-14.49.26:973][269]LogWindowsTextInputMethodSystem: Display: IME system now deactivated.
-[2019.09.19-14.49.27:072][270]Cmd: QUIT_EDITOR
-[2019.09.19-14.49.27:105][270]LogExit: Preparing to exit.
-[2019.09.19-14.49.28:066][270]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
-[2019.09.19-14.49.28:070][270]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
-[2019.09.19-14.49.28:103][270]LogDemo: Cleaned up 0 splitscreen connections with owner deletion
-[2019.09.19-14.49.28:111][270]LogWorld: UWorld::CleanupWorld for None, bSessionEnded=true, bCleanupResources=true
-[2019.09.19-14.49.28:111][270]LogExit: Editor shut down
-[2019.09.19-14.49.28:111][270]LogExit: Transaction tracking system shut down
-[2019.09.19-14.49.28:329][270]LogExit: Object subsystem successfully closed.
-[2019.09.19-14.49.28:348][270]LogShaderCompilers: Display: Shaders left to compile 0
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module BlueprintGraph (675)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module Physics (673)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (672)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module SceneOutliner (670)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module AddContentDialog (668)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module WidgetCarousel (667)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module EditorWidgets (664)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module CollectionManager (662)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module HierarchicalLODUtilities (660)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module StatsViewer (658)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module VirtualTexturingEditor (656)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module FoliageEdit (654)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module LandscapeEditor (652)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module MeshPaintMode (650)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (648)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module ActorPickerMode (646)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module GeometryMode (644)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module TextureAlignMode (642)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module BspMode (640)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (638)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (636)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module AutomationWorker (634)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module OculusMR (632)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module AudioCaptureEditor (630)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (628)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (626)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module PlacementMode (625)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module MaterialEditor (624)
-[2019.09.19-14.49.28:375][270]LogModuleManager: Shutting down and abandoning module ActorSequenceEditor (620)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (618)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (616)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module WebMMediaFactory (614)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module WebMMediaEditor (612)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module WebMMedia (610)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (608)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module MediaCompositingEditor (606)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module SequenceRecorder (605)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module OpenExrWrapper (602)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module ImgMediaFactory (600)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module ImgMediaEditor (598)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (596)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (594)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (592)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (590)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module MagicLeapCameraPreviewFactory (588)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module MagicLeapMediaCodecFactory (586)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module MagicLeapMediaFactory (584)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module MagicLeapMediaEditor (582)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module CharacterAI (580)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module SmartSnapping (578)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module SessionServices (576)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module MeshPaint (574)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module ViewportSnapping (572)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module ViewportInteraction (570)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module ClothPainter (568)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module SkeletalMeshEditor (567)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module LogVisualizer (564)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module IntroTutorials (562)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (561)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module LuminPlatformEditor (558)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (556)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (554)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (552)
-[2019.09.19-14.49.28:377][270]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (551)
-[2019.09.19-14.49.29:119][270]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (548)
-[2019.09.19-14.49.29:119][270]LogModuleManager: Shutting down and abandoning module LuminRuntimeSettings (546)
-[2019.09.19-14.49.29:119][270]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (544)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (542)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module TimeManagementEditor (540)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module InputBindingEditor (538)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module MergeActors (536)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (534)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module LocalizationService (533)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module HardwareTargeting (530)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (528)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module UndoHistory (526)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module XmlParser (524)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module Blutility (522)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (520)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (519)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (516)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module SettingsEditor (514)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module ProjectLauncher (512)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module SessionFrontend (510)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module ProfilerClient (508)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module DeviceManager (506)
-[2019.09.19-14.49.29:120][270]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (505)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module AutomationController (502)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module AutomationWindow (500)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module Layers (498)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (496)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module DetailCustomizations (494)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module PackagesDialog (492)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module AnimationBlueprintEditor (490)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module Persona (488)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (487)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module AnimGraph (485)
-[2019.09.19-14.49.29:174][270]LogModuleManager: Shutting down and abandoning module Kismet (482)
-[2019.09.19-14.49.29:180][270]LogModuleManager: Shutting down and abandoning module KismetWidgets (481)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module GraphEditor (478)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module StructViewer (476)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module ClassViewer (474)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module Toolbox (472)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module DesktopPlatform (471)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module ModuleUI (468)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module MovieSceneTools (466)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module OutputLog (464)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module GammaUI (462)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module Documentation (460)
-[2019.09.19-14.49.29:181][270]LogModuleManager: Shutting down and abandoning module LiveCoding (458)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module LevelSequence (456)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (454)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module MovieScene (452)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (450)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module LauncherPlatform (448)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module AnalyticsET (446)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module PortalServices (444)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module PortalRpc (442)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module MessagingRpc (440)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module AIModule (438)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module GameplayDebugger (437)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module AITestSuite (435)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module NavigationSystem (433)
-[2019.09.19-14.49.29:182][270]LogModuleManager: Shutting down and abandoning module ImageWriteQueue (430)
-[2019.09.19-14.49.29:186][270]LogModuleManager: Shutting down and abandoning module ProfilerService (428)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module TaskGraph (426)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module ScreenshotTools (424)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module SteamVRController (422)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (420)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (418)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module OculusEditor (416)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module OculusInput (414)
-[2019.09.19-14.49.29:194][270]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (412)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module EditableMesh (410)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (408)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module CableComponent (406)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AudioCapture (404)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (402)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AppleImageUtilsBlueprintSupport (400)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AppleImageUtils (398)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AndroidPermission (396)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module NUTUnrealEngine4 (394)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module NetcodeUnitTest (392)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module MediaCompositing (390)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module ImgMedia (388)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module MagicLeapHelperVulkan (386)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module MagicLeapHelperOpenGL (384)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module MagicLeapAudio (382)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module HTML5Networking (380)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module GeometryCacheTracks (378)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module GeometryCacheSequencer (376)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module BackChannel (374)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AutomationUtilsEditor (372)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AutomationUtils (370)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AlembicImporter (368)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module AlembicLibrary (367)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module GeometryCache (366)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (365)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module VariantManagerContent (360)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module DatasmithContentEditor (358)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (356)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module PluginBrowser (354)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (352)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module MaterialAnalyzer (350)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module CurveEditorTools (348)
-[2019.09.19-14.49.29:195][270]LogModuleManager: Shutting down and abandoning module CurveEditor (347)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module CryptoKeysOpenSSL (344)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module CryptoKeys (342)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (340)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module VisualStudioCodeSourceCodeAccess (338)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module UObjectPlugin (336)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (334)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (332)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module GitSourceControl (330)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module SourceControl (329)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module CLionSourceCodeAccess (326)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module AnimationSharingEd (324)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module ActorLayerUtilitiesEditor (322)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module ActorLayerUtilities (320)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (318)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (316)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (314)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module Paper2DEditor (312)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module SignificanceManager (308)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (306)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (304)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (300)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module ActorSequence (298)
-[2019.09.19-14.49.29:196][270]LogModuleManager: Shutting down and abandoning module UdpMessaging (296)
-[2019.09.19-14.49.29:297][270]LogModuleManager: Shutting down and abandoning module TcpMessaging (294)
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module MagicLeapIdentity (292)
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module MagicLeapSecureStorage (290)
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module MagicLeapHandTracking (288)
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module MagicLeapEyeTracker (286)
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module MagicLeapController (284)
-[2019.09.19-14.49.29:397][270]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module MagicLeapAR (282)
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module AugmentedReality (281)
-[2019.09.19-14.49.29:397][270]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (278)
-[2019.09.19-14.49.29:398][270]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (276)
-[2019.09.19-14.49.29:398][270]LogModuleManager: Shutting down and abandoning module FacialAnimation (274)
-[2019.09.19-14.49.29:398][270]LogModuleManager: Shutting down and abandoning module DataValidation (272)
-[2019.09.19-14.49.29:398][270]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (270)
-[2019.09.19-14.49.29:398][270]LogModuleManager: Shutting down and abandoning module LevelEditor (269)
-[2019.09.19-14.49.29:399][270]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (268)
-[2019.09.19-14.49.29:399][270]LogModuleManager: Shutting down and abandoning module CommonMenuExtensions (266)
-[2019.09.19-14.49.29:400][270]LogModuleManager: Shutting down and abandoning module MainFrame (264)
-[2019.09.19-14.49.29:400][270]LogModuleManager: Shutting down and abandoning module HotReload (263)
-[2019.09.19-14.49.29:401][270]LogModuleManager: Shutting down and abandoning module ContentBrowser (259)
-[2019.09.19-14.49.29:404][270]LogModuleManager: Shutting down and abandoning module TreeMap (257)
-[2019.09.19-14.49.29:404][270]LogModuleManager: Shutting down and abandoning module AnimationSharing (254)
-[2019.09.19-14.49.29:404][270]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (252)
-[2019.09.19-14.49.29:404][270]LogModuleManager: Shutting down and abandoning module Paper2D (250)
-[2019.09.19-14.49.29:404][270]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (248)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module WebMMoviePlayer (246)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module NetworkReplayStreaming (244)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module PacketHandler (242)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (240)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (238)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module MediaAssets (236)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module Overlay (234)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module OverlayEditor (233)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module VREditor (230)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module StringTableEditor (228)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (226)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (224)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module FunctionalTesting (222)
-[2019.09.19-14.49.29:409][270]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (220)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (219)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module UMG (216)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module UMGEditor (215)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module Sequencer (214)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module MessageLog (211)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module SlateReflector (206)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module Slate (204)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module LandscapeEditorUtilities (202)
-[2019.09.19-14.49.29:410][270]LogModuleManager: Shutting down and abandoning module EditorStyle (200)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module UnrealEd (198)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module MRMesh (196)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (194)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (192)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module XAudio2 (190)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module Networking (188)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module Core (186)
-[2019.09.19-14.49.29:413][270]LogModuleManager: Shutting down and abandoning module KismetCompiler (184)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module MeshUtilities (182)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (181)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (180)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module SkeletalMeshReduction (179)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module ProxyLODMeshReduction (177)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (175)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module MaterialBaking (171)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module NullInstallBundleManager (166)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module DerivedDataCache (164)
-[2019.09.19-14.49.29:414][270]LogDerivedDataCache: Shutdown
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module XGEController (162)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module TargetPlatform (160)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (159)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (157)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (155)
-[2019.09.19-14.49.29:414][270]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (153)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (151)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (149)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (147)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (145)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (143)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (141)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module ImageWrapper (140)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (137)
-[2019.09.19-14.49.29:415][270]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (135)
-[2019.09.19-14.49.29:416][270]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (133)
-[2019.09.19-14.49.29:416][270]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (131)
-[2019.09.19-14.49.29:416][270]LogModuleManager: Shutting down and abandoning module LuminTargetPlatform (129)
-[2019.09.19-14.49.29:417][270]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (127)
-[2019.09.19-14.49.29:417][270]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (125)
-[2019.09.19-14.49.29:418][270]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (123)
-[2019.09.19-14.49.29:418][270]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (121)
-[2019.09.19-14.49.29:418][270]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (119)
-[2019.09.19-14.49.29:419][270]LogModuleManager: Shutting down and abandoning module Messaging (117)
-[2019.09.19-14.49.29:419][270]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (115)
-[2019.09.19-14.49.29:421][270]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (113)
-[2019.09.19-14.49.29:422][270]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (111)
-[2019.09.19-14.49.29:435][270]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (109)
-[2019.09.19-14.49.29:435][270]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (107)
-[2019.09.19-14.49.29:435][270]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (105)
-[2019.09.19-14.49.29:435][270]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (103)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (101)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (99)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (97)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (95)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (93)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module InputCore (90)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module Settings (88)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (86)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module PhysXCooking (84)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module WindowsPlatformFeatures (82)
-[2019.09.19-14.49.29:436][270]LogModuleManager: Shutting down and abandoning module GameplayMediaEncoder (81)
-[2019.09.19-14.49.29:437][270]LogModuleManager: Shutting down and abandoning module SteamVR (78)
-[2019.09.19-14.49.29:437][270]LogHMD: Freeing OpenVRDLLHandle.
-[2019.09.19-14.49.29:437][270]LogModuleManager: Shutting down and abandoning module OculusHMD (76)
-[2019.09.19-14.49.29:437][270]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (74)
-[2019.09.19-14.49.29:437][270]LogModuleManager: Shutting down and abandoning module LauncherChunkInstaller (72)
-[2019.09.19-14.49.29:437][270]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (70)
-[2019.09.19-14.49.29:437][270]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (66)
-[2019.09.19-14.49.29:439][270]LogModuleManager: Shutting down and abandoning module XMPP (61)
-[2019.09.19-14.49.29:439][270]LogModuleManager: Shutting down and abandoning module WebSockets (60)
-[2019.09.19-14.49.29:454][270]LogModuleManager: Shutting down and abandoning module HTTP (57)
-[2019.09.19-14.49.29:454][270]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
-[2019.09.19-14.49.29:454][270]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B9793B38E-4160-4622-9E83-EA816B447581%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.23.0-8386587%2B%2B%2BUE4%2BRelease-4.23&UserID=2d68b17b417884b47a1c82a9b99f1dbd%7C433d512cb8b0493d9ef5fd33b11f6e0f%7C94bb0d8a-3fc9-4288-8dfa-3e925c89dc5a&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
-[2019.09.19-14.49.29:481][270]LogModuleManager: Shutting down and abandoning module SSL (56)
-[2019.09.19-14.49.29:484][270]LogModuleManager: Shutting down and abandoning module WmfMedia (52)
-[2019.09.19-14.49.29:487][270]LogModuleManager: Shutting down and abandoning module Media (51)
-[2019.09.19-14.49.29:488][270]LogModuleManager: Shutting down and abandoning module MagicLeap (48)
-[2019.09.19-14.49.29:488][270]LogModuleManager: Shutting down and abandoning module DatasmithContent (46)
-[2019.09.19-14.49.29:489][270]LogModuleManager: Shutting down and abandoning module AISupportModule (44)
-[2019.09.19-14.49.29:489][270]LogModuleManager: Shutting down and abandoning module PlatformCryptoOpenSSL (42)
-[2019.09.19-14.49.29:489][270]LogModuleManager: Shutting down and abandoning module PlatformCrypto (40)
-[2019.09.19-14.49.29:489][270]LogModuleManager: Shutting down and abandoning module AnimationModifiers (38)
-[2019.09.19-14.49.29:490][270]LogModuleManager: Shutting down and abandoning module PropertyEditor (37)
-[2019.09.19-14.49.29:490][270]LogModuleManager: Shutting down and abandoning module AudioEditor (34)
-[2019.09.19-14.49.29:490][270]LogModuleManager: Shutting down and abandoning module TextureCompressor (32)
-[2019.09.19-14.49.29:490][270]LogModuleManager: Shutting down and abandoning module RenderCore (30)
-[2019.09.19-14.49.29:490][270]LogModuleManager: Shutting down and abandoning module Landscape (28)
-[2019.09.19-14.49.29:490][270]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (26)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module OpenGLDrv (24)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module D3D11RHI (22)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (20)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module Renderer (18)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module Engine (16)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module CoreUObject (14)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module NetworkFile (12)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (10)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module StreamingFile (8)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module SandboxFile (6)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module PakFile (4)
-[2019.09.19-14.49.29:493][270]LogModuleManager: Shutting down and abandoning module RSA (3)
-[2019.09.19-14.49.29:494][270]LogD3D11RHI: Shutdown
-[2019.09.19-14.49.29:494][270]LogD3D11RHI: CleanupD3DDevice
-[2019.09.19-14.49.29:495][270]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
-[2019.09.19-14.49.29:495][270]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
-[2019.09.19-14.49.29:495][270]LogRendererCore: FGlobalDynamicReadBuffer::Cleanup()
-[2019.09.19-14.49.29:617][270]LogD3D11RHI: ~FD3D11DynamicRHI
-[2019.09.19-14.49.29:626][270]LogExit: Exiting.
-[2019.09.19-14.49.29:643][270]Log file closed, 09/19/19 10:49:29
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[r.VSync:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[r.RHICmdBypass:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[r.GPUCrashDebugging:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.RendererOverrideSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
+[2019.09.23-13.42.14:556][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.StreamingSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.MinBulkDataSizeForAsyncLoading:131072]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.AsyncLoadingThreadEnabled:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.EventDrivenLoaderEnabled:1]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.WarnIfTimeLimitExceeded:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMultiplier:1.5]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.TimeLimitExceededMinTime:0.005]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.UseBackgroundLevelStreaming:1]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.PriorityAsyncLoadingExtraTime:15.0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.LevelStreamingActorsUpdateTimeLimit:5.0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.PriorityLevelStreamingActorsUpdateExtraTime:5.0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsRegistrationGranularity:10]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.UnregisterComponentsTimeLimit:1.0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[s.LevelStreamingComponentsUnregistrationGranularity:5]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.GarbageCollectionSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.MaxObjectsNotConsideredByGC:1]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.SizeOfPermanentObjectPool:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.FlushStreamingOnGC:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.NumRetriesBeforeForcingGC:10]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.AllowParallelGC:1]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.TimeBetweenPurgingPendingKillObjects:61.1]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.MaxObjectsInEditor:16777216]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.IncrementalBeginDestroyEnabled:1]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.CreateGCClusters:1]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.MinGCClusterSize:5]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.ActorClusteringEnabled:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.BlueprintClusteringEnabled:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Setting CVar [[gc.UseDisregardForGCOnDedicatedServers:0]]
+[2019.09.23-13.42.14:556][  0]LogConfig: Applying CVar settings from Section [/Script/Engine.NetworkSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
+[2019.09.23-13.42.14:556][  0]LogConfig: Applying CVar settings from Section [/Script/UnrealEd.CookerSettings] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
+[2019.09.23-13.42.14:560][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:560][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.09.23-13.42.14:560][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.09.23-13.42.14:560][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:560][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.09.23-13.42.14:560][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:560][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.09.23-13.42.14:560][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.09.23-13.42.14:560][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.09.23-13.42.14:560][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.09.23-13.42.14:561][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.09.23-13.42.14:561][  0]LogInit: Selected Device Profile: [Windows]
+[2019.09.23-13.42.14:561][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2019.09.23-13.42.14:565][  0]LogHAL: Display: Platform has ~ 32 GB [34283397120 / 34359738368 / 32], which maps to Largest [LargestMinGB=32, LargerMinGB=12, DefaultMinGB=8, SmallerMinGB=6, SmallestMinGB=0)
+[2019.09.23-13.42.14:565][  0]LogInit: Going up to parent DeviceProfile []
+[2019.09.23-13.42.14:565][  0]LogConfig: Applying CVar settings from Section [ViewDistanceQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.SkeletalMeshLODBias:0]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.ViewDistanceScale:1.0]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Applying CVar settings from Section [AntiAliasingQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.PostProcessAAQuality:4]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Applying CVar settings from Section [ShadowQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.LightFunctionQuality:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.ShadowQuality:5]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Shadow.CSM.MaxCascades:10]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Shadow.MaxResolution:2048]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Shadow.MaxCSMResolution:2048]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Shadow.RadiusThreshold:0.01]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Shadow.DistanceScale:1.0]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Shadow.CSM.TransitionScale:1.0]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Shadow.PreShadowResolutionFactor:1.0]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DistanceFieldShadowing:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DistanceFieldAO:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.AOQuality:2]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.VolumetricFog:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridPixelSize:8]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.VolumetricFog.GridSizeZ:128]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.VolumetricFog.HistoryMissSupersampleCount:4]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.LightMaxDrawDistanceScale:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.CapsuleShadows:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Applying CVar settings from Section [PostProcessQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.MotionBlurQuality:4]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMipLevelFactor:0.4]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.AmbientOcclusionMaxQuality:100]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.AmbientOcclusionLevels:-1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.AmbientOcclusionRadiusScale:1.0]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DepthOfFieldQuality:2]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.RenderTargetPoolMin:400]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.LensFlareQuality:2]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.SceneColorFringeQuality:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.EyeAdaptationQuality:2]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.BloomQuality:5]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.FastBlurThreshold:100]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Upscale.Quality:3]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Tonemapper.GrainQuantization:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.LightShaftQuality:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Filter.SizeScale:1]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.Tonemapper.Quality:5]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Gather.AccumulatorQuality:1        ; higher gathering accumulator quality]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Gather.PostfilterMethod:1          ; Median3x3 postfilering method]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Gather.EnableBokehSettings:0       ; no bokeh simulation when gathering]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Gather.RingCount:4                 ; medium number of samples when gathering]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Scatter.ForegroundCompositing:1    ; additive foreground scattering]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Scatter.BackgroundCompositing:2    ; additive background scattering]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Scatter.EnableBokehSettings:1      ; bokeh simulation when scattering]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Scatter.MaxSpriteRatio:0.1         ; only a maximum of 10% of scattered bokeh]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Recombine.Quality:1                ; cheap slight out of focus]]
+[2019.09.23-13.42.14:565][  0]LogConfig: Setting CVar [[r.DOF.Recombine.EnableBokehSettings:0    ; no bokeh simulation on slight out of focus]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.DOF.TemporalAAQuality:1                ; more stable temporal accumulation]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxForegroundRadius:0.025]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.DOF.Kernel.MaxBackgroundRadius:0.025]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Applying CVar settings from Section [TextureQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.Streaming.MipBias:0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.Streaming.AmortizeCPUToGPUCopy:0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.Streaming.MaxNumTexturesToStreamPerFrame:0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.Streaming.Boost:1]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.MaxAnisotropy:8]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.Streaming.LimitPoolSizeToVRAM:0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.Streaming.PoolSize:1000]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.Streaming.MaxEffectiveScreenSize:0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Applying CVar settings from Section [EffectsQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.TranslucencyLightingVolumeDim:64]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.RefractionQuality:2]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.SSR.Quality:3]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.SceneColorFormat:4]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.DetailMode:2]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.TranslucencyVolumeBlur:1]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.MaterialQualityLevel:1 ; High quality]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.SSS.Scale:1]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.SSS.SampleSet:2]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.SSS.Quality:1]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.SSS.HalfRes:1]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.EmitterSpawnRateScale:1.0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[r.ParticleLightQuality:2]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Applying CVar settings from Section [FoliageQuality@3] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Scalability.ini]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[foliage.DensityScale:1.0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[grass.DensityScale:1.0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Applying CVar settings from Section [Startup] File [../../../Engine/Config/ConsoleVariables.ini]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[net.UseAdaptiveNetUpdateFrequency:0]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Setting CVar [[p.chaos.AllowCreatePhysxBodies:1]]
+[2019.09.23-13.42.14:566][  0]LogConfig: Applying CVar settings from Section [ConsoleVariables] File [C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Config/Windows/Engine.ini]
+[2019.09.23-13.42.14:566][  0]LogInit: Computer: JOYCE101-04
+[2019.09.23-13.42.14:566][  0]LogInit: User: jacobbiederman
+[2019.09.23-13.42.14:566][  0]LogInit: CPU Page size=4096, Cores=4
+[2019.09.23-13.42.14:566][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2019.09.23-13.42.14:566][  0]LogMemory: Memory total: Physical=31.9GB (32GB approx)
+[2019.09.23-13.42.14:566][  0]LogMemory: Platform Memory Stats for Windows
+[2019.09.23-13.42.14:566][  0]LogMemory: Process Physical Memory: 100.63 MB used, 100.63 MB peak
+[2019.09.23-13.42.14:566][  0]LogMemory: Process Virtual Memory: 100.43 MB used, 100.43 MB peak
+[2019.09.23-13.42.14:566][  0]LogMemory: Physical Memory: 7396.77 MB used,  25298.42 MB free, 32695.20 MB total
+[2019.09.23-13.42.14:567][  0]LogMemory: Virtual Memory: 4682.88 MB used,  134213048.00 MB free, 134217728.00 MB total
+[2019.09.23-13.42.14:569][  0]LogWindows: WindowsPlatformFeatures enabled
+[2019.09.23-13.42.14:591][  0]LogInit: Using OS detected language (en-US).
+[2019.09.23-13.42.14:591][  0]LogInit: Using OS detected locale (en-US).
+[2019.09.23-13.42.14:591][  0]LogTextLocalizationManager: No specific localization for 'en-US' exists, so the 'en' localization will be used.
+[2019.09.23-13.42.14:750][  0]LogInit: Setting process to per monitor DPI aware
+[2019.09.23-13.42.14:787][  0]LogSlate: New Slate User Created.  User Index 0, Is Virtual User: 0
+[2019.09.23-13.42.14:787][  0]LogSlate: Slate User Registered.  User Index 0, Is Virtual User: 0
+[2019.09.23-13.42.14:987][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.09.23-13.42.14:987][  0]LogD3D11RHI: D3D11 adapters:
+[2019.09.23-13.42.15:038][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1080 Ti' (Feature Level 11_0)
+[2019.09.23-13.42.15:038][  0]LogD3D11RHI:       11132/0/16347 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:2, VendorId:0x10de
+[2019.09.23-13.42.15:040][  0]LogD3D11RHI:    1. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2019.09.23-13.42.15:040][  0]LogD3D11RHI:       0/0/16347 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2019.09.23-13.42.15:040][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2019.09.23-13.42.15:047][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2019.09.23-13.42.15:047][  0]LogD3D11RHI:     GPU DeviceId: 0x1b06 (for the marketing name, search the web for "GPU Device Id")
+[2019.09.23-13.42.15:047][  0]LogWindows: EnumDisplayDevices:
+[2019.09.23-13.42.15:047][  0]LogWindows:    0. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:1)
+[2019.09.23-13.42.15:047][  0]LogWindows:    1. 'NVIDIA GeForce GTX 1080 Ti' (P:1 D:1)
+[2019.09.23-13.42.15:047][  0]LogWindows:    2. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
+[2019.09.23-13.42.15:047][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1080 Ti' (P:0 D:0)
+[2019.09.23-13.42.15:048][  0]LogWindows: DebugString: FoundDriverCount:4 
+[2019.09.23-13.42.15:048][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1080 Ti
+[2019.09.23-13.42.15:048][  0]LogD3D11RHI:   Driver Version: 388.13 (internal:23.21.13.8813, unified:388.13)
+[2019.09.23-13.42.15:048][  0]LogD3D11RHI:      Driver Date: 10-27-2017
+[2019.09.23-13.42.15:048][  0]LogRHI: Texture pool is 7792 MB (70% of 11132 MB)
+[2019.09.23-13.42.15:077][  0]LogD3D11RHI: Async texture creation enabled
+[2019.09.23-13.42.15:089][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 1)
+[2019.09.23-13.42.15:470][  0]LogTemp: Display: Module 'AllDesktopTargetPlatform' loaded TargetPlatform 'AllDesktop'
+[2019.09.23-13.42.15:478][  0]LogTemp: Display: Module 'MacClientTargetPlatform' loaded TargetPlatform 'MacClient'
+[2019.09.23-13.42.15:486][  0]LogTemp: Display: Module 'MacNoEditorTargetPlatform' loaded TargetPlatform 'MacNoEditor'
+[2019.09.23-13.42.15:495][  0]LogTemp: Display: Module 'MacServerTargetPlatform' loaded TargetPlatform 'MacServer'
+[2019.09.23-13.42.15:504][  0]LogTemp: Display: Module 'MacTargetPlatform' loaded TargetPlatform 'Mac'
+[2019.09.23-13.42.15:512][  0]LogTemp: Display: Module 'WindowsClientTargetPlatform' loaded TargetPlatform 'WindowsClient'
+[2019.09.23-13.42.15:520][  0]LogTemp: Display: Module 'WindowsNoEditorTargetPlatform' loaded TargetPlatform 'WindowsNoEditor'
+[2019.09.23-13.42.15:528][  0]LogTemp: Display: Module 'WindowsServerTargetPlatform' loaded TargetPlatform 'WindowsServer'
+[2019.09.23-13.42.15:532][  0]LogTemp: Display: Module 'WindowsTargetPlatform' loaded TargetPlatform 'Windows'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTC'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATC'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXT'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1a'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTC'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'AndroidClient'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ASTCClient'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ATCClient'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_DXTClient'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1Client'
+[2019.09.23-13.42.15:563][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC1aClient'
+[2019.09.23-13.42.15:564][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_ETC2Client'
+[2019.09.23-13.42.15:564][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_PVRTCClient'
+[2019.09.23-13.42.15:564][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_Multi'
+[2019.09.23-13.42.15:564][  0]LogTemp: Display: Module 'AndroidTargetPlatform' loaded TargetPlatform 'Android_MultiClient'
+[2019.09.23-13.42.15:565][  0]LogTemp: Display: Module 'HTML5TargetPlatform' loaded TargetPlatform 'HTML5'
+[2019.09.23-13.42.15:582][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOSClient'
+[2019.09.23-13.42.15:582][  0]LogTemp: Display: Module 'IOSTargetPlatform' loaded TargetPlatform 'IOS'
+[2019.09.23-13.42.15:595][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOSClient'
+[2019.09.23-13.42.15:595][  0]LogTemp: Display: Module 'TVOSTargetPlatform' loaded TargetPlatform 'TVOS'
+[2019.09.23-13.42.15:602][  0]LogTemp: Display: Module 'LinuxClientTargetPlatform' loaded TargetPlatform 'LinuxClient'
+[2019.09.23-13.42.15:608][  0]LogTemp: Display: Module 'LinuxNoEditorTargetPlatform' loaded TargetPlatform 'LinuxNoEditor'
+[2019.09.23-13.42.15:615][  0]LogTemp: Display: Module 'LinuxServerTargetPlatform' loaded TargetPlatform 'LinuxServer'
+[2019.09.23-13.42.15:623][  0]LogTemp: Display: Module 'LinuxTargetPlatform' loaded TargetPlatform 'Linux'
+[2019.09.23-13.42.15:645][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'Lumin'
+[2019.09.23-13.42.15:645][  0]LogTemp: Display: Module 'LuminTargetPlatform' loaded TargetPlatform 'LuminClient'
+[2019.09.23-13.42.15:645][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2019.09.23-13.42.15:653][  0]LogAudioDebug: Display: Lib vorbis DLL was dynamically loaded.
+[2019.09.23-13.42.15:706][  0]LogShaderCompilers: Guid format shader working directory is -14 characters bigger than the processId version (../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/Intermediate/Shaders/WorkingDirectory/6868/).
+[2019.09.23-13.42.15:706][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/jacob.biederman/AppData/Local/Temp/UnrealShaderWorkingDir/1266EF3D4CE75D64CA7766A2E3907062/'.
+[2019.09.23-13.42.15:709][  0]LogXGEController: Cleaning working directory: C:/Users/jacob.biederman/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2019.09.23-13.42.15:709][  0]LogXGEController: Cannot use XGE Controller as Incredibuild is not installed on this machine.
+[2019.09.23-13.42.15:709][  0]LogShaderCompilers: Cannot use XGE Shader Compiler as Incredibuild is not installed on this machine.
+[2019.09.23-13.42.15:709][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2019.09.23-13.42.16:283][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2019.09.23-13.42.16:330][  0]LogDerivedDataCache: Loaded boot cache 0.05s 73MB C:/Users/jacob.biederman/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
+[2019.09.23-13.42.16:330][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/jacob.biederman/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc
+[2019.09.23-13.42.16:330][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2019.09.23-13.42.16:330][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2019.09.23-13.42.16:330][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../../Users/jacob.biederman/Documents/Game-Physics/Physics/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.09.23-13.42.16:330][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2019.09.23-13.42.16:340][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2019.09.23-13.42.16:341][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  EnterprisePak pak cache file ../../../Enterprise/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2019.09.23-13.42.16:341][  0]LogDerivedDataCache: Unable to find inner node EnterprisePak for hierarchical cache Hierarchy.
+[2019.09.23-13.42.16:342][  0]LogDerivedDataCache: Using Local data cache path C:/Users/jacob.biederman/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2019.09.23-13.42.16:342][  0]LogDerivedDataCache: Shared data cache path not found in *engine.ini, will not use an Shared cache.
+[2019.09.23-13.42.16:342][  0]LogDerivedDataCache: Unable to find inner node Shared for hierarchical cache Hierarchy.
+[2019.09.23-13.42.16:365][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2019.09.23-13.42.16:367][  0]LogSlate: Using FreeType 2.6.0
+[2019.09.23-13.42.16:368][  0]LogSlate: SlateFontServices - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2019.09.23-13.42.16:426][  0]LogAssetRegistry: FAssetRegistry took 0.0030 seconds to start up
+[2019.09.23-13.42.16:677][  0]LogInit: Selected Device Profile: [Windows]
+[2019.09.23-13.42.16:820][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2019.09.23-13.42.16:820][  0]LogMeshReduction: Using SimplygonMeshReduction for automatic skeletal mesh reduction
+[2019.09.23-13.42.16:820][  0]LogMeshReduction: Using ProxyLODMeshReduction for automatic mesh merging
+[2019.09.23-13.42.16:820][  0]LogMeshReduction: No distributed automatic mesh merging module available
+[2019.09.23-13.42.16:820][  0]LogMeshMerging: No distributed automatic mesh merging module available
+[2019.09.23-13.42.16:830][  0]LogNetVersion: Physics 1.0.0, NetCL: 8386587, EngineNetVer: 11, GameNetVer: 0 (Checksum: 2715820292)
+[2019.09.23-13.42.17:240][  0]LogPackageLocalizationCache: Processed 12 localized package path(s) for 1 prioritized culture(s) in 0.053159 seconds
+[2019.09.23-13.42.17:249][  0]LogUObjectArray: 43444 objects as part of root set at end of initial load.
+[2019.09.23-13.42.17:249][  0]LogUObjectAllocator: 7548648 out of 0 bytes used by permanent object pool.
+[2019.09.23-13.42.17:249][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2019.09.23-13.42.18:148][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2019.09.23-13.42.18:151][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2019.09.23-13.42.18:212][  0]SourceControl: Source control is disabled
+[2019.09.23-13.42.18:212][  0]SourceControl: Source control is disabled
+[2019.09.23-13.42.18:214][  0]SourceControl: Source control is disabled
+[2019.09.23-13.42.18:216][  0]SourceControl: Source control is disabled
+[2019.09.23-13.42.18:303][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2019.09.23-13.42.18:394][  0]LogOcInput: OculusInput pre-init called
+[2019.09.23-13.42.18:400][  0]LogWindows: Failed to load 'OVRPlugin.dll' (GetLastError=126)
+[2019.09.23-13.42.18:400][  0]LogWindows: File 'OVRPlugin.dll' does not exist
+[2019.09.23-13.42.18:463][  0]LogEngine: Initializing Engine...
+[2019.09.23-13.42.18:464][  0]LogHMD: Failed to initialize OpenVR with code 110
+[2019.09.23-13.42.18:465][  0]LogStats: UGameplayTagsManager::InitializeManager -  0.000 s
+[2019.09.23-13.42.18:681][  0]LogInit: Initializing FReadOnlyCVARCache
+[2019.09.23-13.42.18:697][  0]LogAIModule: Creating AISystem for world Untitled
+[2019.09.23-13.42.18:704][  0]LogInit: XAudio2 using 'Speakers (Realtek High Definition Audio)' : 2 channels at 48 kHz using 32 bits per sample (channel mask 0x3)
+[2019.09.23-13.42.18:741][  0]LogInit: FAudioDevice initialized.
+[2019.09.23-13.42.18:741][  0]LogNetVersion: Set ProjectVersion to 1.0.0.0. Version Checksum will be recalculated on next use.
+[2019.09.23-13.42.18:819][  0]LogDerivedDataCache: Saved boot cache 0.08s 73MB C:/Users/jacob.biederman/AppData/Local/UnrealEngine/4.23/DerivedDataCache/Boot.ddc.
+[2019.09.23-13.42.18:830][  0]LogInit: Texture streaming: Enabled
+[2019.09.23-13.42.18:863][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2019.09.23-13.42.18:913][  0]LogInit: Transaction tracking system initialized
+[2019.09.23-13.42.18:946][  0]BlueprintLog: New page: Editor Load
+[2019.09.23-13.42.19:028][  0]LocalizationService: Localization service is disabled
+[2019.09.23-13.42.19:284][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Content/' took 0.00s
+[2019.09.23-13.42.19:285][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2019.09.23-13.42.19:285][  0]LogCook: Display: Mobile HDR setting 1
+[2019.09.23-13.42.19:478][  0]SourceControl: Source control is disabled
+[2019.09.23-13.42.19:479][  0]Cmd: MAP LOAD FILE="../../../Engine/Content/Maps/Templates/Template_Default.umap" TEMPLATE=1 SHOWPROGRESS=1 FEATURELEVEL=3
+[2019.09.23-13.42.19:479][  0]LightingResults: New page: Lighting Build
+[2019.09.23-13.42.19:482][  0]LogWorld: UWorld::CleanupWorld for Untitled, bSessionEnded=true, bCleanupResources=true
+[2019.09.23-13.42.19:482][  0]MapCheck: New page: Map Check
+[2019.09.23-13.42.19:482][  0]LightingResults: New page: Lighting Build
+[2019.09.23-13.42.19:507][  0]LogUObjectHash: Compacting FUObjectHashTables data took   2.36ms
+[2019.09.23-13.42.19:580][  0]LogAIModule: Creating AISystem for world Untitled_1
+[2019.09.23-13.42.19:586][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2019.09.23-13.42.19:611][  0]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2019.09.23-13.42.19:611][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2019.09.23-13.42.19:611][  0]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0.182ms to complete.
+[2019.09.23-13.42.19:611][  0]LogFileHelpers: Loading map 'Template_Default' took 0.132
+[2019.09.23-13.42.19:746][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-13.42.19:753][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-13.42.19:760][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-13.42.19:766][  0]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2019.09.23-13.42.19:780][  0]LogCollectionManager: Loaded 0 collections in 0.001898 seconds
+[2019.09.23-13.42.19:803][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Saved/Collections/' took 0.00s
+[2019.09.23-13.42.19:803][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Developers/jacobbiederman/Collections/' took 0.00s
+[2019.09.23-13.42.19:803][  0]LogFileCache: Scanning file cache for directory 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Content/Collections/' took 0.00s
+[2019.09.23-13.42.19:803][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000002 seconds
+[2019.09.23-13.42.19:813][  0]LogContentBrowser: Native class hierarchy populated in 0.0089 seconds. Added 2866 classes and 682 folders.
+[2019.09.23-13.42.19:824][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0004 seconds. Added 0 classes and 0 folders.
+[2019.09.23-13.42.19:966][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.09.23-13.42.19:984][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0003 seconds. Added 1 classes and 2 folders.
+[2019.09.23-13.42.20:037][  0]LogSlate: Took 0.000274 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2019.09.23-13.42.20:039][  0]LogSlate: Took 0.000147 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2019.09.23-13.42.20:046][  0]LogSlate: Took 0.001746 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2019.09.23-13.42.20:121][  0]LogRenderer: Reallocating scene render targets to support 1052x572 Format 10 NumSamples 1 (Frame:1).
+[2019.09.23-13.42.20:211][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0003 seconds. Added 0 classes and 0 folders.
+[2019.09.23-13.42.20:211][  0]LogLoad: (Engine Initialization) Total time: 6.73 seconds
+[2019.09.23-13.42.20:211][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2019.09.23-13.42.20:263][  0]LogAssetRegistry: Asset discovery search completed in 3.8392 seconds
+[2019.09.23-13.42.20:267][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000004 seconds (found 0 objects)
+[2019.09.23-13.42.20:267][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000069 seconds (updated 0 objects)
+[2019.09.23-13.42.20:269][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2019.09.23-13.42.20:295][  0]LogSlate: Took 0.001409 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.09.23-13.42.43:168][654]LogSlate: FSceneViewport::OnFocusLost() reason 2
+[2019.09.23-13.42.48:248][259]LogSlate: Took 0.000202 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2019.09.23-13.42.48:294][259]LogSlate: Took 0.002401 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2019.09.23-13.44.14:707][584]Running C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" -game -rocket -progress
+[2019.09.23-13.44.15:010][584]Discovering modules, targets and source code for project...
+[2019.09.23-13.44.16:218][584]Binding IntelliSense data...
+[2019.09.23-13.44.18:138][584]Binding IntelliSense data... 100%
+[2019.09.23-13.44.18:138][584]Writing project files...
+[2019.09.23-13.44.19:851][584]Writing project files... 100%
+[2019.09.23-13.44.19:958][584]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2019.09.23-13.44.19:968][584]Candidate modules for hot reload:
+[2019.09.23-13.44.19:968][584]  Physics
+[2019.09.23-13.44.19:968][584]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,7140 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.44.33:487][584]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:44:33 AM
+[2019.09.23-13.44.33:487][584]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.44.33:487][584]CompilerResultsLog: Creating makefile for PhysicsEditor (no existing makefile)
+[2019.09.23-13.44.33:487][584]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.44.33:487][584]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.44.33:487][584]CompilerResultsLog: Reflection code generated for PhysicsEditor in 5.8715429 seconds
+[2019.09.23-13.44.33:487][584]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.44.33:487][584]CompilerResultsLog: Building 8 actions with 8 processes...
+[2019.09.23-13.44.33:487][584]CompilerResultsLog:   [1/8] Particle2D.cpp
+[2019.09.23-13.44.33:487][584]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(74): warning C4458: declaration of 'force' hides class member
+[2019.09.23-13.44.33:487][584]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\Particle2D.h(90): note: see declaration of 'AParticle2D::force'
+[2019.09.23-13.44.33:488][584]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(103) : error C2059: syntax error: '}'
+[2019.09.23-13.44.33:488][584]CompilerResultsLog:   [2/8] Physics.init.gen.cpp
+[2019.09.23-13.44.33:488][584]CompilerResultsLog:   [3/8] CollisionHull2D.cpp
+[2019.09.23-13.44.33:488][584]CompilerResultsLog:   [4/8] CollisionHull2D.gen.cpp
+[2019.09.23-13.44.33:488][584]CompilerResultsLog:   [5/8] Particle2D.gen.cpp
+[2019.09.23-13.44.33:488][584]LogMainFrame: MainFrame: Module compiling took 13.530 seconds
+[2019.09.23-13.44.33:488][584]Warning: HotReload failed, recompile failed
+[2019.09.23-13.44.33:493][584]Warning: RebindPackages failed because compilation failed.
+[2019.09.23-13.44.42:087][584]LogSlate: Window 'Message' being destroyed
+[2019.09.23-13.44.42:091][584]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.23-13.44.43:328][732]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2019.09.23-13.44.43:332][732]Candidate modules for hot reload:
+[2019.09.23-13.44.43:332][732]  Physics
+[2019.09.23-13.44.43:332][732]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,9740 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.44.43:333][732]Warning: Starting HotReload took  0.0s.
+[2019.09.23-13.45.08:459][590]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:45:08 AM
+[2019.09.23-13.45.08:459][590]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.45.08:459][590]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.45.08:459][590]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.45.08:459][590]CompilerResultsLog: Reflection code generated for PhysicsEditor in 7.3215608 seconds
+[2019.09.23-13.45.08:459][590]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.45.08:459][590]CompilerResultsLog: Building 4 actions with 8 processes...
+[2019.09.23-13.45.08:459][590]CompilerResultsLog:   [1/4] Particle2D.cpp
+[2019.09.23-13.45.08:459][590]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(74): warning C4458: declaration of 'force' hides class member
+[2019.09.23-13.45.08:459][590]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\Particle2D.h(90): note: see declaration of 'AParticle2D::force'
+[2019.09.23-13.45.08:459][590]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(103) : error C2059: syntax error: '}'
+[2019.09.23-13.45.08:459][590]LogMainFrame: MainFrame: Module compiling took 25.131 seconds
+[2019.09.23-13.45.08:459][590]Warning: HotReload failed, recompile failed
+[2019.09.23-13.45.38:990][190]Candidate modules for hot reload:
+[2019.09.23-13.45.38:990][190]  Physics
+[2019.09.23-13.45.38:990][190]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,7137 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.45.38:991][190]Warning: Starting HotReload took  0.0s.
+[2019.09.23-13.45.40:118][314]LogSlate: Window 'Message Log' being destroyed
+[2019.09.23-13.45.40:123][314]LogSlate: Window 'Message Log' being destroyed
+[2019.09.23-13.45.49:387][528]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:45:49 AM
+[2019.09.23-13.45.49:387][528]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.45.49:387][528]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.45.49:387][528]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.45.49:388][528]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.5614666 seconds
+[2019.09.23-13.45.49:388][528]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.45.49:388][528]CompilerResultsLog: Building 4 actions with 8 processes...
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:   [1/4] Particle2D.cpp
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:   C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(74): warning C4458: declaration of 'force' hides class member
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\Particle2D.h(90): note: see declaration of 'AParticle2D::force'
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:   [2/4] UE4Editor-Physics-7137.lib
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-7137.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-7137.exp
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:   [3/4] UE4Editor-Physics-7137.dll
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-7137.suppressed.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-7137.suppressed.exp
+[2019.09.23-13.45.49:388][528]CompilerResultsLog:   [4/4] PhysicsEditor.target
+[2019.09.23-13.45.49:388][528]CompilerResultsLog: Total time in Parallel executor: 2.26 seconds
+[2019.09.23-13.45.49:388][528]CompilerResultsLog: Total execution time: 10.21 seconds
+[2019.09.23-13.45.49:388][528]LogMainFrame: MainFrame: Module compiling took 10.403 seconds
+[2019.09.23-13.45.49:411][528]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2019.09.23-13.45.49:416][528]LogClass: Could not find existing class CollisionHull2D in package /Script/Physics for HotReload, assuming new class
+[2019.09.23-13.45.49:421][528]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2019.09.23-13.45.49:424][528]Display: HotReload successful (19 functions remapped  0 scriptstructs remapped)
+[2019.09.23-13.45.49:487][528]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2019.09.23-13.45.49:503][528]LogContentBrowser: Native class hierarchy populated in 0.0097 seconds. Added 2868 classes and 684 folders.
+[2019.09.23-13.45.49:504][528]Display: HotReload took 10.5s.
+[2019.09.23-13.46.38:190][544]LogSlate: Took 0.001467 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2019.09.23-13.46.40:501][815]Candidate modules for hot reload:
+[2019.09.23-13.46.40:502][815]  Physics
+[2019.09.23-13.46.40:502][815]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,3498 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.46.40:503][815]Warning: Starting HotReload took  0.0s.
+[2019.09.23-13.46.49:882][658]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:46:49 AM
+[2019.09.23-13.46.49:882][658]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.46.49:882][658]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.46.49:882][658]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.46.49:883][658]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.7519535 seconds
+[2019.09.23-13.46.49:883][658]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.46.49:883][658]CompilerResultsLog: Building 3 actions with 8 processes...
+[2019.09.23-13.46.49:883][658]CompilerResultsLog:   [1/3] UE4Editor-Physics-3498.lib
+[2019.09.23-13.46.49:883][658]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3498.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3498.exp
+[2019.09.23-13.46.49:883][658]CompilerResultsLog:   [2/3] UE4Editor-Physics-3498.dll
+[2019.09.23-13.46.49:884][658]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3498.suppressed.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-3498.suppressed.exp
+[2019.09.23-13.46.49:884][658]CompilerResultsLog:   [3/3] PhysicsEditor.target
+[2019.09.23-13.46.49:884][658]CompilerResultsLog: Total time in Parallel executor: 1.19 seconds
+[2019.09.23-13.46.49:884][658]CompilerResultsLog: Total execution time: 9.22 seconds
+[2019.09.23-13.46.49:884][658]LogMainFrame: MainFrame: Module compiling took 9.387 seconds
+[2019.09.23-13.46.49:906][658]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2019.09.23-13.46.49:916][658]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0003 seconds. Added 4 classes and 2 folders.
+[2019.09.23-13.46.49:919][658]Display: HotReload successful (19 functions remapped  0 scriptstructs remapped)
+[2019.09.23-13.46.49:972][658]LogUObjectHash: Compacting FUObjectHashTables data took   1.44ms
+[2019.09.23-13.46.49:984][658]LogContentBrowser: Native class hierarchy populated in 0.0074 seconds. Added 2868 classes and 684 folders.
+[2019.09.23-13.46.49:984][658]Display: HotReload took  9.5s.
+[2019.09.23-13.48.52:575][ 39]Candidate modules for hot reload:
+[2019.09.23-13.48.52:575][ 39]  Physics
+[2019.09.23-13.48.52:575][ 39]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,4933 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.49.03:027][ 39]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:49:03 AM
+[2019.09.23-13.49.03:027][ 39]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.49.03:027][ 39]CompilerResultsLog: Invalidating makefile for PhysicsEditor (source file added)
+[2019.09.23-13.49.03:027][ 39]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.49.03:028][ 39]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.49.03:028][ 39]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.0061947 seconds
+[2019.09.23-13.49.03:028][ 39]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog: Building 8 actions with 8 processes...
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog:   [1/8] CircleCollisionHull2D.cpp
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog:   [2/8] Physics.init.gen.cpp
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog:   [3/8] CollisionHull2D.cpp
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog:   [4/8] CollisionHull2D.gen.cpp
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog:   [5/8] CircleCollisionHull2D.gen.cpp
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog:   [6/8] UE4Editor-Physics-4933.lib
+[2019.09.23-13.49.03:029][ 39]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-4933.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-4933.exp
+[2019.09.23-13.49.03:030][ 39]CompilerResultsLog:   [7/8] UE4Editor-Physics-4933.dll
+[2019.09.23-13.49.03:030][ 39]CompilerResultsLog:      Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-4933.suppressed.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-4933.suppressed.exp
+[2019.09.23-13.49.03:031][ 39]CompilerResultsLog:   [8/8] PhysicsEditor.target
+[2019.09.23-13.49.03:031][ 39]CompilerResultsLog: Total time in Parallel executor: 2.08 seconds
+[2019.09.23-13.49.03:031][ 39]CompilerResultsLog: Total execution time: 10.36 seconds
+[2019.09.23-13.49.03:031][ 39]LogMainFrame: MainFrame: Module compiling took 10.460 seconds
+[2019.09.23-13.49.03:056][ 39]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2019.09.23-13.49.03:060][ 39]LogClass: Could not find existing class CircleCollisionHull2D in package /Script/Physics for HotReload, assuming new class
+[2019.09.23-13.49.03:060][ 39]LogClass: Could not find existing class CollisionHull2D in package /Script/Physics for HotReload, assuming new class
+[2019.09.23-13.49.03:067][ 39]LogHotReload: Re-instancing CollisionHull2D after hot-reload.
+[2019.09.23-13.49.03:146][ 39]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0003 seconds. Added 5 classes and 2 folders.
+[2019.09.23-13.49.03:148][ 39]Display: HotReload successful (19 functions remapped  0 scriptstructs remapped)
+[2019.09.23-13.49.03:203][ 39]LogUObjectHash: Compacting FUObjectHashTables data took   1.60ms
+[2019.09.23-13.49.03:218][ 39]LogContentBrowser: Native class hierarchy populated in 0.0089 seconds. Added 2869 classes and 684 folders.
+[2019.09.23-13.49.03:218][ 39]Display: HotReload took 10.7s.
+[2019.09.23-13.49.03:220][ 39]Warning: HotReload operation took 10.7s.
+[2019.09.23-13.49.03:314][ 39]LogVSAccessor: Warning: Couldn't goto line number '1' in 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Source/Physics/CircleCollisionHull2D.h'
+[2019.09.23-13.49.03:406][ 39]LogVSAccessor: Warning: Couldn't goto line number '1' in 'C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Source/Physics/CircleCollisionHull2D.cpp'
+[2019.09.23-13.49.03:414][ 39]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.23-13.49.03:423][ 39]LogHotReload: New module detected: UE4Editor-Physics-4933.dll
+[2019.09.23-13.49.03:444][ 40]LogHotReload: Starting Hot-Reload from IDE
+[2019.09.23-13.49.03:490][ 40]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2019.09.23-13.49.03:494][ 40]LogContentBrowser: Native class hierarchy updated for 'Physics' in 0.0004 seconds. Added 5 classes and 2 folders.
+[2019.09.23-13.49.03:496][ 40]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2019.09.23-13.49.03:518][ 40]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2019.09.23-13.49.03:532][ 40]LogContentBrowser: Native class hierarchy populated in 0.0093 seconds. Added 2869 classes and 684 folders.
+[2019.09.23-13.49.03:536][ 40]Display: HotReload took  0.1s.
+[2019.09.23-13.57.34:494][596]Candidate modules for hot reload:
+[2019.09.23-13.57.34:494][596]  Physics
+[2019.09.23-13.57.34:495][596]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,1485 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.57.43:906][596]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:57:43 AM
+[2019.09.23-13.57.43:906][596]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.57.43:906][596]CompilerResultsLog: Invalidating makefile for PhysicsEditor (source file added)
+[2019.09.23-13.57.43:906][596]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.57.43:906][596]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.57.43:907][596]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.1802854 seconds
+[2019.09.23-13.57.43:907][596]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.57.43:907][596]CompilerResultsLog: Building 10 actions with 8 processes...
+[2019.09.23-13.57.43:907][596]CompilerResultsLog:   [1/10] AABBCollisionHull2D.cpp
+[2019.09.23-13.57.43:907][596]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.57.43:907][596]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\AABBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.57.43:908][596]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.57.43:908][596]CompilerResultsLog:   [2/10] CollisionHull2D.cpp
+[2019.09.23-13.57.43:908][596]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.57.43:908][596]CompilerResultsLog:   [3/10] CircleCollisionHull2D.cpp
+[2019.09.23-13.57.43:908][596]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CircleCollisionHull2D.h(18) : error C2061: syntax error: identifier 'UAxisAlignedBoundingBoxCollisionHull2D'
+[2019.09.23-13.57.43:909][596]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CircleCollisionHull2D.h(19) : error C2061: syntax error: identifier 'UObjectBoundingBoxCollisionHull2D'
+[2019.09.23-13.57.43:909][596]CompilerResultsLog:   [4/10] CollisionHull2D.gen.cpp
+[2019.09.23-13.57.43:909][596]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.57.43:909][596]CompilerResultsLog:   [5/10] AABBCollisionHull2D.gen.cpp
+[2019.09.23-13.57.43:909][596]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.57.43:910][596]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/AABBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.57.43:910][596]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.57.43:910][596]CompilerResultsLog:   [6/10] CircleCollisionHull2D.gen.cpp
+[2019.09.23-13.57.43:910][596]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/CircleCollisionHull2D.h(18) : error C2061: syntax error: identifier 'UAxisAlignedBoundingBoxCollisionHull2D'
+[2019.09.23-13.57.43:910][596]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/CircleCollisionHull2D.h(19) : error C2061: syntax error: identifier 'UObjectBoundingBoxCollisionHull2D'
+[2019.09.23-13.57.43:911][596]CompilerResultsLog:   [7/10] Physics.init.gen.cpp
+[2019.09.23-13.57.43:911][596]LogMainFrame: MainFrame: Module compiling took 9.420 seconds
+[2019.09.23-13.57.43:911][596]Warning: HotReload failed, recompile failed
+[2019.09.23-13.57.43:914][596]Warning: RebindPackages failed because compilation failed.
+[2019.09.23-13.57.52:125][596]LogSlate: Window 'Message' being destroyed
+[2019.09.23-13.57.52:130][596]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.23-13.58.12:156][581]Candidate modules for hot reload:
+[2019.09.23-13.58.12:156][581]  Physics
+[2019.09.23-13.58.12:156][581]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,2884 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.58.22:063][581]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:58:22 AM
+[2019.09.23-13.58.22:063][581]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.58.22:063][581]CompilerResultsLog: Invalidating makefile for PhysicsEditor (source file added)
+[2019.09.23-13.58.22:063][581]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.58.22:063][581]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.58.22:064][581]CompilerResultsLog: Reflection code generated for PhysicsEditor in 6.2170619 seconds
+[2019.09.23-13.58.22:064][581]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.58.22:064][581]CompilerResultsLog: Building 12 actions with 8 processes...
+[2019.09.23-13.58.22:064][581]CompilerResultsLog:   [1/12] CollisionHull2D.cpp
+[2019.09.23-13.58.22:065][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.58.22:065][581]CompilerResultsLog:   [2/12] AABBCollisionHull2D.gen.cpp
+[2019.09.23-13.58.22:065][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.58.22:066][581]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/AABBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.58.22:066][581]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.58.22:066][581]CompilerResultsLog:   [3/12] OBBCollisionHull2D.cpp
+[2019.09.23-13.58.22:066][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.58.22:067][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\OBBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.58.22:067][581]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.58.22:067][581]CompilerResultsLog:   [4/12] CircleCollisionHull2D.gen.cpp
+[2019.09.23-13.58.22:067][581]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/CircleCollisionHull2D.h(18) : error C2061: syntax error: identifier 'UAABBCollisionHull2D'
+[2019.09.23-13.58.22:068][581]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/CircleCollisionHull2D.h(19) : error C2061: syntax error: identifier 'UOBBCollisionHull2D'
+[2019.09.23-13.58.22:068][581]CompilerResultsLog:   [5/12] OBBCollisionHull2D.gen.cpp
+[2019.09.23-13.58.22:068][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.58.22:068][581]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/OBBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.58.22:069][581]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.58.22:069][581]CompilerResultsLog:   [6/12] CollisionHull2D.gen.cpp
+[2019.09.23-13.58.22:069][581]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.58.22:069][581]CompilerResultsLog:   [7/12] CircleCollisionHull2D.cpp
+[2019.09.23-13.58.22:069][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CircleCollisionHull2D.h(18) : error C2061: syntax error: identifier 'UAABBCollisionHull2D'
+[2019.09.23-13.58.22:070][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CircleCollisionHull2D.h(19) : error C2061: syntax error: identifier 'UOBBCollisionHull2D'
+[2019.09.23-13.58.22:070][581]CompilerResultsLog:   [8/12] Physics.init.gen.cpp
+[2019.09.23-13.58.22:070][581]CompilerResultsLog:   [9/12] AABBCollisionHull2D.cpp
+[2019.09.23-13.58.22:070][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.58.22:071][581]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\AABBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.58.22:071][581]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.58.22:071][581]LogMainFrame: MainFrame: Module compiling took 9.919 seconds
+[2019.09.23-13.58.22:071][581]Warning: HotReload failed, recompile failed
+[2019.09.23-13.58.22:074][581]Warning: RebindPackages failed because compilation failed.
+[2019.09.23-13.58.58:408][581]LogSlate: Window 'Message' being destroyed
+[2019.09.23-13.58.58:413][581]LogSlate: Window 'Add C++ Class' being destroyed
+[2019.09.23-13.59.02:885][951]Candidate modules for hot reload:
+[2019.09.23-13.59.02:885][951]  Physics
+[2019.09.23-13.59.02:885][951]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,9808 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-13.59.02:886][951]Warning: Starting HotReload took  0.0s.
+[2019.09.23-13.59.11:206][  7]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 5:59:11 AM
+[2019.09.23-13.59.11:206][  7]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-13.59.11:206][  7]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-13.59.11:207][  7]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-13.59.11:207][  7]CompilerResultsLog: Reflection code generated for PhysicsEditor in 5.7188882 seconds
+[2019.09.23-13.59.11:207][  7]CompilerResultsLog: Using Visual Studio 2017 14.16.27023 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2019.09.23-13.59.11:207][  7]CompilerResultsLog: Building 12 actions with 8 processes...
+[2019.09.23-13.59.11:207][  7]CompilerResultsLog:   [1/12] OBBCollisionHull2D.gen.cpp
+[2019.09.23-13.59.11:208][  7]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.59.11:208][  7]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/OBBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.59.11:208][  7]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.59.11:208][  7]CompilerResultsLog:   [2/12] CollisionHull2D.cpp
+[2019.09.23-13.59.11:208][  7]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.59.11:209][  7]CompilerResultsLog:   [3/12] OBBCollisionHull2D.cpp
+[2019.09.23-13.59.11:209][  7]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.59.11:209][  7]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\OBBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.59.11:209][  7]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.59.11:209][  7]CompilerResultsLog:   [4/12] AABBCollisionHull2D.gen.cpp
+[2019.09.23-13.59.11:210][  7]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.59.11:210][  7]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/AABBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.59.11:210][  7]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.59.11:210][  7]CompilerResultsLog:   [5/12] CollisionHull2D.gen.cpp
+[2019.09.23-13.59.11:210][  7]CompilerResultsLog:    C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Source\Physics/CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.59.11:211][  7]CompilerResultsLog:   [6/12] CircleCollisionHull2D.cpp
+[2019.09.23-13.59.11:211][  7]CompilerResultsLog:   [7/12] Physics.init.gen.cpp
+[2019.09.23-13.59.11:211][  7]CompilerResultsLog:   [8/12] CircleCollisionHull2D.gen.cpp
+[2019.09.23-13.59.11:211][  7]CompilerResultsLog:   [9/12] AABBCollisionHull2D.cpp
+[2019.09.23-13.59.11:211][  7]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(15) : error C2338: You have to define UCollisionHull2D::UCollisionHull2D() or UCollisionHull2D::UCollisionHull2D(const FObjectInitializer&). This is required by UObject system to work correctly.
+[2019.09.23-13.59.11:212][  7]CompilerResultsLog:    c:\users\jacob.biederman\documents\game-physics\physics\source\physics\AABBCollisionHull2D.h(15) : error C2512: 'UCollisionHull2D': no appropriate default constructor available
+[2019.09.23-13.59.11:212][  7]CompilerResultsLog:   c:\users\jacob.biederman\documents\game-physics\physics\source\physics\CollisionHull2D.h(13): note: see declaration of 'UCollisionHull2D'
+[2019.09.23-13.59.11:212][  7]LogMainFrame: MainFrame: Module compiling took 8.332 seconds
+[2019.09.23-13.59.11:212][  7]Warning: HotReload failed, recompile failed
+[2019.09.23-14.01.24:051][624]Candidate modules for hot reload:
+[2019.09.23-14.01.24:051][624]  Physics
+[2019.09.23-14.01.24:051][624]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.23/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Physics,3695 Win64 Development -TargetType=Editor -Project="C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject" "C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Physics.uproject"  -IgnoreJunk]
+[2019.09.23-14.01.24:052][624]Warning: Starting HotReload took  0.0s.
+[2019.09.23-14.01.27:573][996]CompilerResultsLog: New page: Compilation - Sep 23, 2019, 6:01:27 AM
+[2019.09.23-14.01.27:573][996]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\jacob.biederman\Documents\Game-Physics).
+[2019.09.23-14.01.27:574][996]CompilerResultsLog: Parsing headers for PhysicsEditor
+[2019.09.23-14.01.27:574][996]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Physics.uproject" "C:\Users\jacob.biederman\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2019.09.23-14.01.27:574][996]CompilerResultsLog: Error: C:/Users/jacob.biederman/Documents/Game-Physics/Physics/Source/Physics/CircleCollisionHull2D.h(8) : Error: #include found after .generated.h file - the .generated.h file should always be the last #include in a header
+[2019.09.23-14.01.27:574][996]LogMainFrame: MainFrame: Module compiling took 3.527 seconds
+[2019.09.23-14.01.27:575][996]Warning: HotReload failed, recompile failed

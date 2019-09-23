@@ -99,7 +99,7 @@ void AParticle2D::calcMomentOfInertia()
 	// ring 
 		// 1/2 * m *(router^2 + rinner^2)
 	default:
-
+		break;
 	}
 }
 
