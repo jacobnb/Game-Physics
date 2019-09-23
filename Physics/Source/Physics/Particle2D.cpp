@@ -2,6 +2,10 @@
 
 #include "Particle2D.h"
 #include "Kismet/GameplayStatics.h"
+#include "Circle2D.h"
+#include "Ring2D.h"
+#include "Rectangle2D.h"
+#include "Rod2D.h"
 // Sets default values
 AParticle2D::AParticle2D()
 {
@@ -66,8 +70,10 @@ void AParticle2D::updateRotationKinematic(float dt)
 	angular_vel = angular_vel + angular_accel * dt;
 }
 
+
 void AParticle2D::updateAngularAcceleration()
 {
+	//3.2
 	// torque * invMomentOfInertia;
 }
 
@@ -76,31 +82,30 @@ void AParticle2D::applyTorque(FVector2D pf, FVector2D force)
 	// torque = pf X f
 	float local_torque = vector::CrossProduct(pf, force);
 	torque += local_torque * invMomentOfIntertia;
-	// should invMomentOfIntertia be an Inertia Tensor?
 }
 
-void AParticle2D::calcMomentOfInertia()
+void AParticle2D::setMomentOfInertia()
 {
+	// This should be called on start to calculate moment of Inertia. Since it's overriden not sure I really need to worry about cases.
 	// apply enum and calc inverse.
-	switch (shape) {
-	case(SHAPES::PYRAMID):
-		break;
-	case(SHAPES::RECTANGLE):
-		// 1/12 * m(dx^2 + xy^2)
-		break;
-	case(SHAPES::SPHERE):
-		break;
-	case(SHAPES::SQUARE):
-		break;
-	// rod 
-		// 1/12 * m*l^2
-	//disc 
-		// 1/2*m*r^2
-	// ring 
-		// 1/2 * m *(router^2 + rinner^2)
-	default:
-
-	}
+	// equations from book.
+	//switch (shape) {
+	//case(SHAPES::RECTANGLE):
+	//	dynamic_cast<ARectangle2D>(this).setMomentOfInertia();
+	//	break;
+	//case(SHAPES::CIRCLE):
+	//	// call function on subclass. not sure about this.
+	//	dynamic_cast<ACircle2D>(this).setMomentOfInertia();
+	//	break;
+	//case(SHAPES::ROD):
+	//	dynamic_cast<ARod2D>(this).setMomentOfInertia();
+	//	break;
+	//case(SHAPES::RING):
+	//	dynamic_cast<ARing2D>(this).setMomentOfInertia();
+	//	break;
+	//default:
+	//break;
+	//}
 }
 
 // Called every frame

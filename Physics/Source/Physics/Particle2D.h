@@ -38,17 +38,19 @@ public:
 		void AddForce(FVector2D newForce);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void UpdateAcceleration();
-	// lab3.22
+	// lab 3.22
 	float torque;
+
 	enum SHAPES {
-		SQUARE,
 		RECTANGLE,
-		PYRAMID,
-		SPHERE,
+		ROD,
+		RING,
+		CIRCLE
 	};
-	SHAPES shape;
+	
 
 protected:
+	SHAPES shape; // should only be set by subclasses. Used for Moment of Inertia calculations.
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
@@ -77,7 +79,7 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void applyTorque(FVector2D pf, FVector2D force);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
-		void calcMomentOfInertia();
+		virtual void setMomentOfInertia();
 
 	//lab 2 step 1
 	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
