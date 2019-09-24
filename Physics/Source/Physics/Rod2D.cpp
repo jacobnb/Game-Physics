@@ -3,7 +3,7 @@
 
 #include "Rod2D.h"
 ARod2D::ARod2D() {
-	Super::AParticle2D();
+	// Super::AParticle2D();
 	shape = SHAPES::ROD;
 }
 void ARod2D::setMomentOfInertia()

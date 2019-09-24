@@ -11,11 +11,3 @@ D:\ProgramFiles\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc
 d:\programfiles\epic games\ue_4.23\engine\source\runtime\engine\classes\kismet\GameplayStaticsTypes.h
 D:\ProgramFiles\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 D:\ProgramFiles\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
-d:\documents\game-physics\physics\source\physics\Circle2D.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\Circle2D.generated.h
-d:\documents\game-physics\physics\source\physics\Ring2D.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\Ring2D.generated.h
-d:\documents\game-physics\physics\source\physics\Rectangle2D.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\Rectangle2D.generated.h
-d:\documents\game-physics\physics\source\physics\Rod2D.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\Rod2D.generated.h

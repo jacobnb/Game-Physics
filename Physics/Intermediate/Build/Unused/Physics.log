@@ -1,11 +1,9 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\Game-Physics).
   Parsing headers for PhysicsEditor
     Running UnrealHeaderTool "D:\Documents\Game-Physics\Physics\Physics.uproject" "D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for PhysicsEditor in 6.2213503 seconds
-  Deleted hot-reload file: D:\Documents\Game-Physics\Physics\Binaries\Win64\UE4Editor-Physics-0016.dll
-  Deleted hot-reload file: D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-0016.lib
+  Reflection code generated for PhysicsEditor in 6.1517921 seconds
   Using Visual Studio 2017 14.16.27023 toolchain (D:\ProgramFiles\VisualStudio2017\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 3 actions to XGE
+  Distributing 7 actions to XGE
   --------------------Build System Warning---------------------------------------
   License is invalid:
       License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
@@ -13,11 +11,15 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  UE4Editor-Physics.dll (0:01.18 at +0:00)
+  Ring2D.cpp (0:00.75 at +0:00)
+  Rectangle2D.cpp (0:00.73 at +0:00)
+  Circle2D.cpp (0:00.71 at +0:01)
+  Rod2D.cpp (0:00.71 at +0:02)
+  UE4Editor-Physics.dll (0:01.18 at +0:02)
      Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.suppressed.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.suppressed.exp
-  UE4Editor-Physics.lib (0:00.17 at +0:01)
+  UE4Editor-Physics.lib (0:00.17 at +0:04)
      Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.exp
-  PhysicsEditor.target (0:00.17 at +0:01)
+  PhysicsEditor.target (0:00.17 at +0:04)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -25,5 +27,5 @@
   1 build system warning(s):
      - License is invalid
   
-  Total time in XGE executor: 1.76 seconds
-  Total execution time: 8.56 seconds
+  Total time in XGE executor: 4.63 seconds
+  Total execution time: 11.38 seconds

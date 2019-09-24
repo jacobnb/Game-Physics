@@ -4,7 +4,7 @@
 #include "Rectangle2D.h"
 
 ARectangle2D::ARectangle2D() {
-	Super::AParticle2D();
+	// Super::AParticle2D();
 }
 void ARectangle2D::setMomentOfInertia()
 {

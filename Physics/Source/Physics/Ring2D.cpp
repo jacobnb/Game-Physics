@@ -4,7 +4,7 @@
 #include "Ring2D.h"
 
 ARing2D::ARing2D() {
-	Super::AParticle2D();
+	// Super::AParticle2D();
 	shape = SHAPES::RING;
 }
 void ARing2D::setMomentOfInertia()

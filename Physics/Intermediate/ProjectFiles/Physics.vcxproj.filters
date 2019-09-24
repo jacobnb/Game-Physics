@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Physics.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{96BCFBC7-83CE-4A04-81A9-483B48977AF3}</UniqueIdentifier>
+      <UniqueIdentifier>{21DB51B1-AD1B-4471-B31E-D31346CE5266}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Physics.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{252F6CE2-2464-42A9-B5CF-48EF8F7FE241}</UniqueIdentifier>
+      <UniqueIdentifier>{47BDBD26-69A9-4DFF-BC25-75E339AA4945}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Physics">
-      <UniqueIdentifier>{1BFDB50C-E401-4354-8380-8EE1068DE28A}</UniqueIdentifier>
+      <UniqueIdentifier>{82E9315C-6224-4E85-B00B-456DCC94B752}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Physics\Circle2D.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\Circle2D.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Physics\ForceGenerator.cpp">
       <Filter>Source\Physics</Filter>
     </ClCompile>
@@ -53,33 +59,23 @@
     <ClInclude Include="..\..\Source\Physics\PhysicsGameModeBase.h">
       <Filter>Source\Physics</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Physics\Rectangle2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Physics\Circle2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Physics\Rod2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Physics\Ring2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\Source\Physics\Rectangle2D.cpp">
       <Filter>Source\Physics</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Physics\Circle2D.cpp">
+    <ClInclude Include="..\..\Source\Physics\Rectangle2D.h">
       <Filter>Source\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Physics\Rod2D.cpp">
-      <Filter>Source\Physics</Filter>
-    </ClCompile>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Physics\Ring2D.cpp">
       <Filter>Source\Physics</Filter>
     </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\Ring2D.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Physics\Rod2D.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\Rod2D.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

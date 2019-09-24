@@ -4,7 +4,7 @@
 #include "Circle2D.h"
 
 ACircle2D::ACircle2D() {
-	Super::AParticle2D();
+	// Super::AParticle2D();
 	shape = SHAPES::CIRCLE;
 }
 void ACircle2D::setMomentOfInertia()
