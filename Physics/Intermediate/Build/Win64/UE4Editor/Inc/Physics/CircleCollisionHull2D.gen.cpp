@@ -15,7 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeCircleCollisionHull2D() {}
 // Cross Module References
 	PHYSICS_API UClass* Z_Construct_UClass_UCircleCollisionHull2D_NoRegister();
 	PHYSICS_API UClass* Z_Construct_UClass_UCircleCollisionHull2D();
-	ENGINE_API UClass* Z_Construct_UClass_UBlueprintFunctionLibrary();
+	PHYSICS_API UClass* Z_Construct_UClass_UCollisionHull2D();
 	UPackage* Z_Construct_UPackage__Script_Physics();
 // End Cross Module References
 	void UCircleCollisionHull2D::StaticRegisterNativesUCircleCollisionHull2D()
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeCircleCollisionHull2D() {}
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UCircleCollisionHull2D_Statics::DependentSingletons[])() = {
-		(UObject* (*)())Z_Construct_UClass_UBlueprintFunctionLibrary,
+		(UObject* (*)())Z_Construct_UClass_UCollisionHull2D,
 		(UObject* (*)())Z_Construct_UPackage__Script_Physics,
 	};
 #if WITH_METADATA
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeCircleCollisionHull2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCircleCollisionHull2D, 2941847870);
+	IMPLEMENT_CLASS(UCircleCollisionHull2D, 3258612056);
 	template<> PHYSICS_API UClass* StaticClass<UCircleCollisionHull2D>()
 	{
 		return UCircleCollisionHull2D::StaticClass();

@@ -1,11 +1,10 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (D:\Documents\Game-Physics).
+  Creating makefile for PhysicsEditor (no existing makefile)
   Parsing headers for PhysicsEditor
     Running UnrealHeaderTool "D:\Documents\Game-Physics\Physics\Physics.uproject" "D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\PhysicsEditor\Development\PhysicsEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
-  Reflection code generated for PhysicsEditor in 6.2213503 seconds
-  Deleted hot-reload file: D:\Documents\Game-Physics\Physics\Binaries\Win64\UE4Editor-Physics-0016.dll
-  Deleted hot-reload file: D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics-0016.lib
+  Reflection code generated for PhysicsEditor in 6.132012 seconds
   Using Visual Studio 2017 14.16.27023 toolchain (D:\ProgramFiles\VisualStudio2017\VC\Tools\MSVC\14.16.27023) and Windows 10.0.16299.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 3 actions to XGE
+  Distributing 21 actions to XGE
   --------------------Build System Warning---------------------------------------
   License is invalid:
       License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
@@ -13,11 +12,31 @@
   
   -------------------------------------------------------------------------------
   --------------------Project: Default-------------------------------------------
-  UE4Editor-Physics.dll (0:01.18 at +0:00)
+  SharedPCH.Engine.cpp (0:21.78 at +0:00)
+  PhysicsGameModeBase.cpp (0:00.68 at +0:21)
+  AABBCollisionHull2D.cpp (0:00.95 at +0:22)
+  CircleCollisionHull2D.cpp (0:00.64 at +0:23)
+  CollisionHull2D.cpp (0:00.81 at +0:24)
+  ForceGenerator.cpp (0:00.89 at +0:24)
+  OBBCollisionHull2D.cpp (0:00.56 at +0:25)
+  Physics.cpp (0:00.76 at +0:26)
+  Particle2D.cpp (0:01.03 at +0:27)
+D:\Documents\Game-Physics\Physics\Source\Physics\Particle2D.cpp(74): warning C4458: declaration of 'force' hides class member
+  d:\documents\game-physics\physics\source\physics\Particle2D.h(90): note: see declaration of 'AParticle2D::force'
+  AABBCollisionHull2D.gen.cpp (0:00.75 at +0:28)
+  CollisionHull2D.gen.cpp (0:00.92 at +0:28)
+  ForceGenerator.gen.cpp (0:00.70 at +0:29)
+  OBBCollisionHull2D.gen.cpp (0:00.98 at +0:30)
+  Particle2D.gen.cpp (0:00.98 at +0:31)
+  Physics.init.gen.cpp (0:00.57 at +0:32)
+  PhysicsGameModeBase.gen.cpp (0:00.79 at +0:33)
+  CircleCollisionHull2D.gen.cpp (0:00.67 at +0:33)
+  Default.rc2 (0:00.09 at +0:34)
+  UE4Editor-Physics.dll (0:01.00 at +0:34)
      Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.suppressed.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.suppressed.exp
-  UE4Editor-Physics.lib (0:00.17 at +0:01)
+  UE4Editor-Physics.lib (0:00.18 at +0:35)
      Creating library D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.lib and object D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\UE4Editor-Physics.exp
-  PhysicsEditor.target (0:00.17 at +0:01)
+  PhysicsEditor.target (0:00.18 at +0:35)
   ---------------------- Done ----------------------
   
       Rebuild All: 1 succeeded, 0 failed, 0 skipped
@@ -25,5 +44,5 @@
   1 build system warning(s):
      - License is invalid
   
-  Total time in XGE executor: 1.76 seconds
-  Total execution time: 8.56 seconds
+  Total time in XGE executor: 36.23 seconds
+  Total execution time: 44.56 seconds

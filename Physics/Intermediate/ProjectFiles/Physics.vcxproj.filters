@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Physics.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A5A4D885-73BC-4051-B656-C048BA765A20}</UniqueIdentifier>
+      <UniqueIdentifier>{612B4DCF-0EE6-42AD-9831-8EFCA2C35FA3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Physics.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{D6669BD0-AD63-4172-A66D-369E5B43844E}</UniqueIdentifier>
+      <UniqueIdentifier>{97703FBD-0EE2-41B1-9972-34EA9F5DB651}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,8 +24,20 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Physics">
-      <UniqueIdentifier>{30E15CCC-1E40-4A8A-8DDD-0307AA828AF0}</UniqueIdentifier>
+      <UniqueIdentifier>{1E097D39-9DBD-41BD-9D92-F059884CF69E}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Physics\AABBCollisionHull2D.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\AABBCollisionHull2D.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Physics\CircleCollisionHull2D.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\CircleCollisionHull2D.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Physics\CollisionHull2D.cpp">
       <Filter>Source\Physics</Filter>
     </ClCompile>
@@ -36,6 +48,12 @@
       <Filter>Source\Physics</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Physics\ForceGenerator.h">
+      <Filter>Source\Physics</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Physics\OBBCollisionHull2D.cpp">
+      <Filter>Source\Physics</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Physics\OBBCollisionHull2D.h">
       <Filter>Source\Physics</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Physics\Particle2D.cpp">
@@ -59,27 +77,5 @@
     <ClInclude Include="..\..\Source\Physics\PhysicsGameModeBase.h">
       <Filter>Source\Physics</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Physics\CircleCollisionHull2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Physics\AABBCollisionHull2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\Physics\OBBCollisionHull2D.h">
-      <Filter>Source\Physics</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Physics\CircleCollisionHull2D.cpp">
-      <Filter>Source\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Physics\AABBCollisionHull2D.cpp">
-      <Filter>Source\Physics</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Physics\OBBCollisionHull2D.cpp">
-      <Filter>Source\Physics</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

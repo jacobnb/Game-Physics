@@ -40,7 +40,6 @@ void EmptyLinkFunctionForGeneratedCodeOBBCollisionHull2D() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UOBBCollisionHull2D_Statics::Class_MetaDataParams[] = {
-		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "OBBCollisionHull2D.h" },
 		{ "ModuleRelativePath", "OBBCollisionHull2D.h" },
 	};
@@ -72,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeOBBCollisionHull2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UOBBCollisionHull2D, 4060140200);
+	IMPLEMENT_CLASS(UOBBCollisionHull2D, 2223330067);
 	template<> PHYSICS_API UClass* StaticClass<UOBBCollisionHull2D>()
 	{
 		return UOBBCollisionHull2D::StaticClass();

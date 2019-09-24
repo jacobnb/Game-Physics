@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PHYSICS_AABBCollisionHull2D_generated_h
 
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_RPC_WRAPPERS
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_INCLASS_NO_PURE_DECLS \
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_RPC_WRAPPERS
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_RPC_WRAPPERS_NO_PURE_DECLS
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUAABBCollisionHull2D(); \
 	friend struct Z_Construct_UClass_UAABBCollisionHull2D_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(UAABBCollisionHull2D)
 
 
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_INCLASS \
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_INCLASS \
 private: \
 	static void StaticRegisterNativesUAABBCollisionHull2D(); \
 	friend struct Z_Construct_UClass_UAABBCollisionHull2D_Statics; \
@@ -33,7 +33,7 @@ public: \
 	DECLARE_SERIALIZER(UAABBCollisionHull2D)
 
 
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_STANDARD_CONSTRUCTORS \
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAABBCollisionHull2D(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UAABBCollisionHull2D) \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_ENHANCED_CONSTRUCTORS \
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UAABBCollisionHull2D() { }; \
 private: \
@@ -59,26 +59,26 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UAABBCollisionHull2D); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UAABBCollisionHull2D)
 
 
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_PRIVATE_PROPERTY_OFFSET
-#define Physics_Source_Physics_AABBCollisionHull2D_h_12_PROLOG
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_GENERATED_BODY_LEGACY \
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_PRIVATE_PROPERTY_OFFSET
+#define Physics_Source_Physics_AABBCollisionHull2D_h_13_PROLOG
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_PRIVATE_PROPERTY_OFFSET \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_RPC_WRAPPERS \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_INCLASS \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_STANDARD_CONSTRUCTORS \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_PRIVATE_PROPERTY_OFFSET \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_RPC_WRAPPERS \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_INCLASS \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Physics_Source_Physics_AABBCollisionHull2D_h_15_GENERATED_BODY \
+#define Physics_Source_Physics_AABBCollisionHull2D_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_PRIVATE_PROPERTY_OFFSET \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_INCLASS_NO_PURE_DECLS \
-	Physics_Source_Physics_AABBCollisionHull2D_h_15_ENHANCED_CONSTRUCTORS \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_PRIVATE_PROPERTY_OFFSET \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_INCLASS_NO_PURE_DECLS \
+	Physics_Source_Physics_AABBCollisionHull2D_h_16_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

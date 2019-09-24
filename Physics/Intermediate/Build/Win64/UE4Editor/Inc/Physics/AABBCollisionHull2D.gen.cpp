@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeAABBCollisionHull2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UAABBCollisionHull2D, 2143619201);
+	IMPLEMENT_CLASS(UAABBCollisionHull2D, 543520234);
 	template<> PHYSICS_API UClass* StaticClass<UAABBCollisionHull2D>()
 	{
 		return UAABBCollisionHull2D::StaticClass();

@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define PHYSICS_CollisionHull2D_generated_h
 
-#define Physics_Source_Physics_CollisionHull2D_h_15_RPC_WRAPPERS
-#define Physics_Source_Physics_CollisionHull2D_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define Physics_Source_Physics_CollisionHull2D_h_15_INCLASS_NO_PURE_DECLS \
+#define Physics_Source_Physics_CollisionHull2D_h_20_RPC_WRAPPERS
+#define Physics_Source_Physics_CollisionHull2D_h_20_RPC_WRAPPERS_NO_PURE_DECLS
+#define Physics_Source_Physics_CollisionHull2D_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUCollisionHull2D(); \
 	friend struct Z_Construct_UClass_UCollisionHull2D_Statics; \
@@ -24,7 +24,7 @@ public: \
 	DECLARE_SERIALIZER(UCollisionHull2D)
 
 
-#define Physics_Source_Physics_CollisionHull2D_h_15_INCLASS \
+#define Physics_Source_Physics_CollisionHull2D_h_20_INCLASS \
 private: \
 	static void StaticRegisterNativesUCollisionHull2D(); \
 	friend struct Z_Construct_UClass_UCollisionHull2D_Statics; \
@@ -33,9 +33,9 @@ public: \
 	DECLARE_SERIALIZER(UCollisionHull2D)
 
 
-#define Physics_Source_Physics_CollisionHull2D_h_15_STANDARD_CONSTRUCTORS \
+#define Physics_Source_Physics_CollisionHull2D_h_20_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UCollisionHull2D(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API UCollisionHull2D(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UCollisionHull2D) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UCollisionHull2D); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCollisionHull2D); \
@@ -46,7 +46,7 @@ private: \
 public:
 
 
-#define Physics_Source_Physics_CollisionHull2D_h_15_ENHANCED_CONSTRUCTORS \
+#define Physics_Source_Physics_CollisionHull2D_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UCollisionHull2D(UCollisionHull2D&&); \
@@ -54,29 +54,29 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UCollisionHull2D); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UCollisionHull2D); \
-	DEFINE_FORBIDDEN_DEFAULT_CONSTRUCTOR_CALL(UCollisionHull2D)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UCollisionHull2D)
 
 
-#define Physics_Source_Physics_CollisionHull2D_h_15_PRIVATE_PROPERTY_OFFSET
-#define Physics_Source_Physics_CollisionHull2D_h_12_PROLOG
-#define Physics_Source_Physics_CollisionHull2D_h_15_GENERATED_BODY_LEGACY \
+#define Physics_Source_Physics_CollisionHull2D_h_20_PRIVATE_PROPERTY_OFFSET
+#define Physics_Source_Physics_CollisionHull2D_h_17_PROLOG
+#define Physics_Source_Physics_CollisionHull2D_h_20_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Physics_Source_Physics_CollisionHull2D_h_15_PRIVATE_PROPERTY_OFFSET \
-	Physics_Source_Physics_CollisionHull2D_h_15_RPC_WRAPPERS \
-	Physics_Source_Physics_CollisionHull2D_h_15_INCLASS \
-	Physics_Source_Physics_CollisionHull2D_h_15_STANDARD_CONSTRUCTORS \
+	Physics_Source_Physics_CollisionHull2D_h_20_PRIVATE_PROPERTY_OFFSET \
+	Physics_Source_Physics_CollisionHull2D_h_20_RPC_WRAPPERS \
+	Physics_Source_Physics_CollisionHull2D_h_20_INCLASS \
+	Physics_Source_Physics_CollisionHull2D_h_20_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Physics_Source_Physics_CollisionHull2D_h_15_GENERATED_BODY \
+#define Physics_Source_Physics_CollisionHull2D_h_20_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Physics_Source_Physics_CollisionHull2D_h_15_PRIVATE_PROPERTY_OFFSET \
-	Physics_Source_Physics_CollisionHull2D_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Physics_Source_Physics_CollisionHull2D_h_15_INCLASS_NO_PURE_DECLS \
-	Physics_Source_Physics_CollisionHull2D_h_15_ENHANCED_CONSTRUCTORS \
+	Physics_Source_Physics_CollisionHull2D_h_20_PRIVATE_PROPERTY_OFFSET \
+	Physics_Source_Physics_CollisionHull2D_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+	Physics_Source_Physics_CollisionHull2D_h_20_INCLASS_NO_PURE_DECLS \
+	Physics_Source_Physics_CollisionHull2D_h_20_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

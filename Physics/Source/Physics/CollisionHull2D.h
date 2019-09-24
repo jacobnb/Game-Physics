@@ -24,15 +24,16 @@ public:
 		hull_aabb,
 		hull_obb
 	};
-	static bool TestCollision(UCollisionHull2D a, UCollisionHull2D b); //get type, pick collision test
+	//static bool TestCollision(UCollisionHull2D a, UCollisionHull2D b); //get type, pick collision test
 	// virtual void BeginPlay() override; //get component
 	
-	virtual bool TestCollisionVsCircle(UCircleCollisionHull2D other);
-	virtual bool TestCollisionVsAABB(UAABBCollisionHull2D other);
-	virtual bool TestCollisionVsOBB(UOBBCollisionHull2D other);
+	//virtual bool TestCollisionVsCircle(UCircleCollisionHull2D other);
+	//virtual bool TestCollisionVsAABB(UAABBCollisionHull2D other);
+	//virtual bool TestCollisionVsOBB(UOBBCollisionHull2D other);
 
 protected:
 	UCollisionHull2D(CollisionHullType2D type_set);
+	UCollisionHull2D() {};
 	
 private:
 	CollisionHullType2D type;

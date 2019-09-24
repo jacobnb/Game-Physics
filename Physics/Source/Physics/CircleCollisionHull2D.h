@@ -4,8 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "Kismet/BlueprintFunctionLibrary.h"
-#include "CircleCollisionHull2D.generated.h"
 #include "CollisionHull2D.h"
+#include "CircleCollisionHull2D.generated.h"
+
 /**
  * 
  */
@@ -17,7 +18,7 @@ class PHYSICS_API UCircleCollisionHull2D : public UCollisionHull2D
 {
 	GENERATED_BODY()
 public:
-	UCircleCollisionHull2D();//  : base(CollisionHullType2D.hull_circle) {};
+	UCircleCollisionHull2D() {};//  : base(CollisionHullType2D.hull_circle) {};
 
 	float radius;
 	FVector2D position; // this should inherit from particle 2d?
