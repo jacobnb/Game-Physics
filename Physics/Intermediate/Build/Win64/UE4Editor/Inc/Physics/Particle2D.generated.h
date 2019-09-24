@@ -14,7 +14,7 @@ struct FVector2D;
 #endif
 #define PHYSICS_Particle2D_generated_h
 
-#define Physics_Source_Physics_Particle2D_h_15_RPC_WRAPPERS \
+#define Physics_Source_Physics_Particle2D_h_23_RPC_WRAPPERS \
  \
 	DECLARE_FUNCTION(execsetMomentOfInertia) \
 	{ \
@@ -113,7 +113,7 @@ struct FVector2D;
 	}
 
 
-#define Physics_Source_Physics_Particle2D_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
+#define Physics_Source_Physics_Particle2D_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
  \
 	DECLARE_FUNCTION(execsetMomentOfInertia) \
 	{ \
@@ -212,7 +212,7 @@ struct FVector2D;
 	}
 
 
-#define Physics_Source_Physics_Particle2D_h_15_INCLASS_NO_PURE_DECLS \
+#define Physics_Source_Physics_Particle2D_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAParticle2D(); \
 	friend struct Z_Construct_UClass_AParticle2D_Statics; \
@@ -221,7 +221,7 @@ public: \
 	DECLARE_SERIALIZER(AParticle2D)
 
 
-#define Physics_Source_Physics_Particle2D_h_15_INCLASS \
+#define Physics_Source_Physics_Particle2D_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesAParticle2D(); \
 	friend struct Z_Construct_UClass_AParticle2D_Statics; \
@@ -230,7 +230,7 @@ public: \
 	DECLARE_SERIALIZER(AParticle2D)
 
 
-#define Physics_Source_Physics_Particle2D_h_15_STANDARD_CONSTRUCTORS \
+#define Physics_Source_Physics_Particle2D_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AParticle2D(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AParticle2D) \
@@ -243,7 +243,7 @@ private: \
 public:
 
 
-#define Physics_Source_Physics_Particle2D_h_15_ENHANCED_CONSTRUCTORS \
+#define Physics_Source_Physics_Particle2D_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AParticle2D(AParticle2D&&); \
@@ -254,7 +254,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AParticle2D); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AParticle2D)
 
 
-#define Physics_Source_Physics_Particle2D_h_15_PRIVATE_PROPERTY_OFFSET \
+#define Physics_Source_Physics_Particle2D_h_23_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__position() { return STRUCT_OFFSET(AParticle2D, position); } \
 	FORCEINLINE static uint32 __PPO__velocity() { return STRUCT_OFFSET(AParticle2D, velocity); } \
 	FORCEINLINE static uint32 __PPO__acceleration() { return STRUCT_OFFSET(AParticle2D, acceleration); } \
@@ -267,25 +267,25 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AParticle2D); \
 	FORCEINLINE static uint32 __PPO__centerOfMass() { return STRUCT_OFFSET(AParticle2D, centerOfMass); }
 
 
-#define Physics_Source_Physics_Particle2D_h_12_PROLOG
-#define Physics_Source_Physics_Particle2D_h_15_GENERATED_BODY_LEGACY \
+#define Physics_Source_Physics_Particle2D_h_20_PROLOG
+#define Physics_Source_Physics_Particle2D_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Physics_Source_Physics_Particle2D_h_15_PRIVATE_PROPERTY_OFFSET \
-	Physics_Source_Physics_Particle2D_h_15_RPC_WRAPPERS \
-	Physics_Source_Physics_Particle2D_h_15_INCLASS \
-	Physics_Source_Physics_Particle2D_h_15_STANDARD_CONSTRUCTORS \
+	Physics_Source_Physics_Particle2D_h_23_PRIVATE_PROPERTY_OFFSET \
+	Physics_Source_Physics_Particle2D_h_23_RPC_WRAPPERS \
+	Physics_Source_Physics_Particle2D_h_23_INCLASS \
+	Physics_Source_Physics_Particle2D_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Physics_Source_Physics_Particle2D_h_15_GENERATED_BODY \
+#define Physics_Source_Physics_Particle2D_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Physics_Source_Physics_Particle2D_h_15_PRIVATE_PROPERTY_OFFSET \
-	Physics_Source_Physics_Particle2D_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	Physics_Source_Physics_Particle2D_h_15_INCLASS_NO_PURE_DECLS \
-	Physics_Source_Physics_Particle2D_h_15_ENHANCED_CONSTRUCTORS \
+	Physics_Source_Physics_Particle2D_h_23_PRIVATE_PROPERTY_OFFSET \
+	Physics_Source_Physics_Particle2D_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	Physics_Source_Physics_Particle2D_h_23_INCLASS_NO_PURE_DECLS \
+	Physics_Source_Physics_Particle2D_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -295,5 +295,14 @@ template<> PHYSICS_API UClass* StaticClass<class AParticle2D>();
 #undef CURRENT_FILE_ID
 #define CURRENT_FILE_ID Physics_Source_Physics_Particle2D_h
 
+
+#define FOREACH_ENUM_SHAPES(op) \
+	op(SHAPES::RECTANGLE) \
+	op(SHAPES::ROD) \
+	op(SHAPES::RING) \
+	op(SHAPES::CIRCLE) 
+
+enum class SHAPES : uint8;
+template<> PHYSICS_API UEnum* StaticEnum<SHAPES>();
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -10,7 +10,7 @@
 AParticle2D::AParticle2D()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	// PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = true;
 
 }
 
@@ -77,10 +77,10 @@ void AParticle2D::updateAngularAcceleration()
 	// torque * invMomentOfInertia;
 }
 
-void AParticle2D::applyTorque(FVector2D pf, FVector2D force)
+void AParticle2D::applyTorque(FVector2D pf, FVector2D newForce)
 {
 	// torque = pf X f
-	float local_torque = vector::CrossProduct(pf, force);
+	float local_torque = vector::CrossProduct(pf, newForce);
 	torque += local_torque * invMomentOfIntertia;
 }
 
@@ -89,30 +89,33 @@ void AParticle2D::setMomentOfInertia()
 	// This should be called on start to calculate moment of Inertia. Since it's overriden not sure I really need to worry about cases.
 	// apply enum and calc inverse.
 	// equations from book.
-	//switch (shape) {
-	//case(SHAPES::RECTANGLE):
-	//	dynamic_cast<ARectangle2D>(this).setMomentOfInertia();
-	//	break;
-	//case(SHAPES::CIRCLE):
-	//	// call function on subclass. not sure about this.
-	//	dynamic_cast<ACircle2D>(this).setMomentOfInertia();
-	//	break;
-	//case(SHAPES::ROD):
-	//	dynamic_cast<ARod2D>(this).setMomentOfInertia();
-	//	break;
-	//case(SHAPES::RING):
-	//	dynamic_cast<ARing2D>(this).setMomentOfInertia();
-	//	break;
-	//default:
-	//break;
-	//}
+	switch (shape) {
+	case(SHAPES::RECTANGLE):
+		// 1/12 * m(dx^2 + xy^2)
+		momentOfInertia = 1 / 12 * mass*rect_width*rect_width*rect_height*rect_height;       
+		break;
+	case(SHAPES::CIRCLE):
+		// 1/2*m*r^2
+		momentOfInertia = 0.5*mass*circle_radius*circle_radius;
+		break;
+	case(SHAPES::ROD):
+		// 1/12 * m*l^2
+		momentOfInertia = 1 / 12 * mass*rod_length*rod_length;
+		break;
+	case(SHAPES::RING):
+		// 1/2 * m *(router^2 + rinner^2)
+		momentOfInertia = 0.5*mass*ring_rad_inner*ring_rad_inner*ring_rad_outer*ring_rad_outer;
+		break;
+	default:
+	break;
+	}
 }
 
 // Called every frame
 void AParticle2D::Tick(float DeltaTime)
 {
 	//UWorld* world = GetWorld();
-	// Super::Tick(DeltaTime);
+	 Super::Tick(DeltaTime);
 	//updatePositionsExplicitEuler(DeltaTime);
 	//float realtimeSeconds = UGameplayStatics::GetTimeSeconds(dynamic_cast<UObject*>(world));
 	//acceleration.X = 200 * sin(realtimeSeconds);

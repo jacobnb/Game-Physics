@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeRectangle2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARectangle2D, 35892976);
+	IMPLEMENT_CLASS(ARectangle2D, 717894262);
 	template<> PHYSICS_API UClass* StaticClass<ARectangle2D>()
 	{
 		return ARectangle2D::StaticClass();

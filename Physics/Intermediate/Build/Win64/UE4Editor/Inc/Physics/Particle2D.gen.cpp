@@ -13,10 +13,11 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 // Cross Module References
+	PHYSICS_API UEnum* Z_Construct_UEnum_Physics_SHAPES();
+	UPackage* Z_Construct_UPackage__Script_Physics();
 	PHYSICS_API UClass* Z_Construct_UClass_AParticle2D_NoRegister();
 	PHYSICS_API UClass* Z_Construct_UClass_AParticle2D();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
-	UPackage* Z_Construct_UPackage__Script_Physics();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_AddForce();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector2D();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_applyTorque();
@@ -30,6 +31,63 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_updateRotationEulerExplicit();
 	PHYSICS_API UFunction* Z_Construct_UFunction_AParticle2D_updateRotationKinematic();
 // End Cross Module References
+	static UEnum* SHAPES_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_Physics_SHAPES, Z_Construct_UPackage__Script_Physics(), TEXT("SHAPES"));
+		}
+		return Singleton;
+	}
+	template<> PHYSICS_API UEnum* StaticEnum<SHAPES>()
+	{
+		return SHAPES_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_SHAPES(SHAPES_StaticEnum, TEXT("/Script/Physics"), TEXT("SHAPES"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_Physics_SHAPES_Hash() { return 4218278050U; }
+	UEnum* Z_Construct_UEnum_Physics_SHAPES()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_Physics();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("SHAPES"), 0, Get_Z_Construct_UEnum_Physics_SHAPES_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "SHAPES::RECTANGLE", (int64)SHAPES::RECTANGLE },
+				{ "SHAPES::ROD", (int64)SHAPES::ROD },
+				{ "SHAPES::RING", (int64)SHAPES::RING },
+				{ "SHAPES::CIRCLE", (int64)SHAPES::CIRCLE },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "BlueprintType", "true" },
+				{ "CIRCLE.Name", "SHAPES::CIRCLE" },
+				{ "ModuleRelativePath", "Particle2D.h" },
+				{ "RECTANGLE.Name", "SHAPES::RECTANGLE" },
+				{ "RING.Name", "SHAPES::RING" },
+				{ "ROD.Name", "SHAPES::ROD" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_Physics,
+				nullptr,
+				"SHAPES",
+				"SHAPES",
+				Enumerators,
+				ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::EnumClass,
+				METADATA_PARAMS(Enum_MetaDataParams, ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	void AParticle2D::StaticRegisterNativesAParticle2D()
 	{
 		UClass* Class = AParticle2D::StaticClass();
@@ -441,6 +499,35 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_position;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_shape_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FEnumPropertyParams NewProp_shape;
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_shape_Underlying;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_circle_radius_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_circle_radius;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ring_rad_outer_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ring_rad_outer;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ring_rad_inner_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ring_rad_inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rod_length_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_rod_length;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rect_height_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_rect_height;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rect_width_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_rect_width;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_startingMass_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_startingMass;
@@ -548,6 +635,58 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_position = { "position", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, position), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_position_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_position_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_shape_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_shape = { "shape", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, shape), Z_Construct_UEnum_Physics_SHAPES, METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_shape_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_shape_MetaData)) };
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_shape_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_circle_radius_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_circle_radius = { "circle_radius", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, circle_radius), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_circle_radius_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_circle_radius_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_outer_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_outer = { "ring_rad_outer", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, ring_rad_outer), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_outer_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_outer_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_inner_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_inner = { "ring_rad_inner", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, ring_rad_inner), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_inner_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_inner_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_rod_length_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_rod_length = { "rod_length", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, rod_length), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_rod_length_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_rod_length_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_height_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_height = { "rect_height", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, rect_height), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_height_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_height_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "Comment", "// values for individual shapes. Might be better to subclass\n" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+		{ "ToolTip", "values for individual shapes. Might be better to subclass" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width = { "rect_width", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, rect_width), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_startingMass_MetaData[] = {
 		{ "Category", "Particle2D" },
 		{ "Comment", "//lab 2 step 1\n" },
@@ -567,6 +706,14 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_acceleration,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_velocity,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_position,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_shape,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_shape_Underlying,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_circle_radius,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_outer,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_ring_rad_inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_rod_length,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_height,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_startingMass,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AParticle2D_Statics::StaticCppClassTypeInfo = {
@@ -596,7 +743,7 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AParticle2D, 3069941279);
+	IMPLEMENT_CLASS(AParticle2D, 2243453692);
 	template<> PHYSICS_API UClass* StaticClass<AParticle2D>()
 	{
 		return AParticle2D::StaticClass();
