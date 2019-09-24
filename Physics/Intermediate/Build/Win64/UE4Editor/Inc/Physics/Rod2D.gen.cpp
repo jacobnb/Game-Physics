@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeRod2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARod2D, 2011117072);
+	IMPLEMENT_CLASS(ARod2D, 3809494203);
 	template<> PHYSICS_API UClass* StaticClass<ARod2D>()
 	{
 		return ARod2D::StaticClass();

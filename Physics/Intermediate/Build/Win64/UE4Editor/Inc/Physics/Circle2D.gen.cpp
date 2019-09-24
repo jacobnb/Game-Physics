@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeCircle2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ACircle2D, 1739500753);
+	IMPLEMENT_CLASS(ACircle2D, 1555163560);
 	template<> PHYSICS_API UClass* StaticClass<ACircle2D>()
 	{
 		return ACircle2D::StaticClass();

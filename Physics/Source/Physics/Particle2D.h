@@ -41,6 +41,7 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void UpdateAcceleration();
 	// lab 3.22
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float torque;
 	// values for individual shapes. Might be better to subclass
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
@@ -91,10 +92,11 @@ protected:
 		virtual void setMomentOfInertia();
 
 	//lab 2 step 1
+	// force setMass();
 	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float mass;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
-		float massInv;
+	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+	float massInv;
 
 	//lab2 2
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
@@ -103,7 +105,7 @@ protected:
 	// lab3.1
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		float momentOfInertia;
-	float invMomentOfIntertia;
+	float invMomentOfInertia;
 	// TODO: lab3 implement enum for shapes and inertia values from book.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		FVector2D centerOfMass;

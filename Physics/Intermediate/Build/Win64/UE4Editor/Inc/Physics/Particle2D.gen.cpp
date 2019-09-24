@@ -471,10 +471,6 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_force;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_massInv_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_massInv;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_angular_accel_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_angular_accel;
@@ -527,6 +523,10 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_rect_width_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_rect_width;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_torque_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_torque;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_startingMass_MetaData[];
 #endif
@@ -585,13 +585,6 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_force = { "force", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, force), Z_Construct_UScriptStruct_FVector2D, METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_force_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_force_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_massInv_MetaData[] = {
-		{ "Category", "Particle2D" },
-		{ "ModuleRelativePath", "Particle2D.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_massInv = { "massInv", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, massInv), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_massInv_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_massInv_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel_MetaData[] = {
 		{ "Category", "Particle2D" },
@@ -687,6 +680,15 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width = { "rect_width", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, rect_width), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_torque_MetaData[] = {
+		{ "Category", "Particle2D" },
+		{ "Comment", "// lab 3.22\n" },
+		{ "ModuleRelativePath", "Particle2D.h" },
+		{ "ToolTip", "lab 3.22" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AParticle2D_Statics::NewProp_torque = { "torque", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AParticle2D, torque), METADATA_PARAMS(Z_Construct_UClass_AParticle2D_Statics::NewProp_torque_MetaData, ARRAY_COUNT(Z_Construct_UClass_AParticle2D_Statics::NewProp_torque_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AParticle2D_Statics::NewProp_startingMass_MetaData[] = {
 		{ "Category", "Particle2D" },
 		{ "Comment", "//lab 2 step 1\n" },
@@ -699,7 +701,6 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_centerOfMass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_momentOfInertia,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_force,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_massInv,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_accel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_angular_vel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_rotation,
@@ -714,6 +715,7 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_rod_length,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_height,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_rect_width,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_torque,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AParticle2D_Statics::NewProp_startingMass,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AParticle2D_Statics::StaticCppClassTypeInfo = {
@@ -743,7 +745,7 @@ void EmptyLinkFunctionForGeneratedCodeParticle2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AParticle2D, 2243453692);
+	IMPLEMENT_CLASS(AParticle2D, 518425544);
 	template<> PHYSICS_API UClass* StaticClass<AParticle2D>()
 	{
 		return AParticle2D::StaticClass();

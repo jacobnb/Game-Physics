@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeRing2D() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ARing2D, 1035521081);
+	IMPLEMENT_CLASS(ARing2D, 222327616);
 	template<> PHYSICS_API UClass* StaticClass<ARing2D>()
 	{
 		return ARing2D::StaticClass();
