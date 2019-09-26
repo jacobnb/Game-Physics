@@ -9,16 +9,18 @@
 #define vector FVector2D
 #define matrix FVector
 
+UENUM(BlueprintType)
+enum class SHAPES: uint8 {
+	RECTANGLE,
+	ROD,
+	RING,
+	CIRCLE
+};
+
 UCLASS()
 class PHYSICS_API AParticle2D : public AActor
 {
 	GENERATED_BODY()
-		//TODO
-	/* Write a force generator class that generates / calculates forces
-	 - In force generator class add more generators.
-	 - Make variables exposed in editor to save compile time.
-	 - Move inline functions
-	*/
 
 public:
 	// Sets default values for this actor's properties
@@ -38,17 +40,27 @@ public:
 		void AddForce(FVector2D newForce);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void UpdateAcceleration();
-	// lab3.22
+	// lab 3.22
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float torque;
-	enum SHAPES {
-		SQUARE,
-		RECTANGLE,
-		PYRAMID,
-		SPHERE,
-	};
-	SHAPES shape;
+	// values for individual shapes. Might be better to subclass
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		float rect_width;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		float rect_height;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		float rod_length;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		float ring_rad_inner;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		float ring_rad_outer;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		float circle_radius;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+		SHAPES shape;
 
 protected:
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
@@ -77,12 +89,13 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void applyTorque(FVector2D pf, FVector2D force);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
-		void calcMomentOfInertia();
+		virtual void setMomentOfInertia();
 
 	//lab 2 step 1
+	// force setMass();
 	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
-		float mass;
-	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
+	float mass;
+	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float massInv;
 
 	//lab2 2
@@ -91,8 +104,8 @@ protected:
 
 	// lab3.1
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
-	float momentOfInertia;
-	float invMomentOfIntertia;
+		float momentOfInertia;
+	float invMomentOfInertia;
 	// TODO: lab3 implement enum for shapes and inertia values from book.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		FVector2D centerOfMass;
