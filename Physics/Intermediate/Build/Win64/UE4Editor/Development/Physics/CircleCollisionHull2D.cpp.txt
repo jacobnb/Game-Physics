@@ -1,9 +1,0 @@
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\Definitions.Physics.h
-d:\documents\game-physics\physics\source\physics\CircleCollisionHull2D.h
-d:\documents\game-physics\physics\source\physics\CollisionHull2D.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\CollisionHull2D.generated.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\CircleCollisionHull2D.generated.h
-d:\documents\game-physics\physics\source\physics\AABBCollisionHull2D.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\AABBCollisionHull2D.generated.h
-d:\documents\game-physics\physics\source\physics\OBBCollisionHull2D.h
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Inc\Physics\OBBCollisionHull2D.generated.h
