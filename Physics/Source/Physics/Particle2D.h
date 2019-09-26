@@ -39,7 +39,7 @@ public:
 		void AddForce(FVector2D newForce);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void UpdateAcceleration();
-	// lab 3.22
+	// ============= lab 3.22 ===============
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float torque;
 	// values for individual shapes. Might be better to subclass
@@ -82,7 +82,7 @@ protected:
 		void updateRotationEulerExplicit(float dt);
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void updateRotationKinematic(float dt);
-	// lab3.2
+	// ========= lab3.2 ==========
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
 		void updateAngularAcceleration();
 	UFUNCTION(BlueprintCallable, Category = "Particle2D")
@@ -98,7 +98,7 @@ protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		FVector2D force;
 
-	// lab3.1
+	// =========== lab3.2 ==========
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		float momentOfInertia;
 	float invMomentOfInertia;

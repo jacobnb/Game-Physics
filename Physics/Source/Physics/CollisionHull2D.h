@@ -20,16 +20,15 @@ class PHYSICS_API UCollisionHull2D : public UBlueprintFunctionLibrary
 	GENERATED_BODY()
 public:
 	enum CollisionHullType2D {
-		cull_circle,
+		hull_circle,
 		hull_aabb,
 		hull_obb
 	};
-	//static bool TestCollision(UCollisionHull2D a, UCollisionHull2D b); //get type, pick collision test
-	// virtual void BeginPlay() override; //get component
+	static bool TestCollision(UCollisionHull2D a, UCollisionHull2D b); //get type, pick collision test
 	
-	//virtual bool TestCollisionVsCircle(UCircleCollisionHull2D other);
-	//virtual bool TestCollisionVsAABB(UAABBCollisionHull2D other);
-	//virtual bool TestCollisionVsOBB(UOBBCollisionHull2D other);
+	virtual bool TestCollisionVsCircle(UCircleCollisionHull2D other);
+	virtual bool TestCollisionVsAABB(UAABBCollisionHull2D other);
+	virtual bool TestCollisionVsOBB(UOBBCollisionHull2D other);
 
 protected:
 	UCollisionHull2D(CollisionHullType2D type_set);

@@ -72,7 +72,9 @@ void AParticle2D::updateAngularAcceleration()
 void AParticle2D::applyTorque(FVector2D pf, FVector2D newForce)
 {
 	// torque = pf X f from assignment
-	float local_torque = vector::CrossProduct(pf, newForce);
+	float local_torque;// = vector::CrossProduct(pf, newForce); // hard implement
+	FVector2D moment_arm = pf - centerOfMass;
+	local_torque = moment_arm.X*newForce.Y - pf.Y*newForce.X;
 	torque += local_torque; 
 }
 

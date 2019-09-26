@@ -18,10 +18,9 @@ class PHYSICS_API UCircleCollisionHull2D : public UCollisionHull2D
 {
 	GENERATED_BODY()
 public:
-	UCircleCollisionHull2D() {};//  : base(CollisionHullType2D.hull_circle) {};
-
+	UCircleCollisionHull2D();
 	float radius;
-	FVector2D position; // this should inherit from particle 2d?
+	FVector2D position; // this should be set from particle 2D.
 
 	bool TestCollisionVsCircle(UCircleCollisionHull2D other);
 	bool TestCollisionVsAABB(UAABBCollisionHull2D other);
