@@ -1,3 +1,0 @@
-D:\Documents\Game-Physics\Physics\Source\Physics\Physics.Build.cs
-D:\Documents\Game-Physics\Physics\Source\Physics.Target.cs
-D:\Documents\Game-Physics\Physics\Source\PhysicsEditor.Target.cs

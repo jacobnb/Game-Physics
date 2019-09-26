@@ -1,9 +1,0 @@
-D:\Documents\Game-Physics\Physics\Intermediate\Build\Win64\UE4Editor\Development\Physics\Definitions.Physics.h
-D:\ProgramFiles\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-D:\ProgramFiles\Epic Games\UE_4.23\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-D:\Documents\Game-Physics\Physics\Source\Physics/PhysicsGameModeBase.h
-D:\ProgramFiles\Epic Games\UE_4.23\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
-D:\ProgramFiles\Epic Games\UE_4.23\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
-D:\ProgramFiles\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
-D:\ProgramFiles\Epic Games\UE_4.23\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
-d:\documents\game-physics\physics\intermediate\build\win64\ue4editor\inc\physics\PhysicsGameModeBase.generated.h

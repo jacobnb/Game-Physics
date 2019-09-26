@@ -2,15 +2,12 @@
 
 #include "Particle2D.h"
 #include "Kismet/GameplayStatics.h"
-//#include "Circle2D.h"
-//#include "Ring2D.h"
-//#include "Rectangle2D.h"
-//#include "Rod2D.h"
 // Sets default values
 AParticle2D::AParticle2D()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
+
 }
 
 void AParticle2D::SetMass(float newMass)
@@ -69,48 +66,41 @@ void AParticle2D::updateRotationKinematic(float dt)
 	angular_vel = angular_vel + angular_accel * dt;
 }
 
-
 void AParticle2D::updateAngularAcceleration()
 {
-	//3.2
-	// equation from book.
-	angular_accel = torque * invMomentOfInertia;
-	torque = 0;
+	// torque * invMomentOfInertia;
 }
 
-void AParticle2D::applyTorque(FVector2D pf, FVector2D newForce)
+void AParticle2D::applyTorque(FVector2D pf, FVector2D force)
 {
-	// torque = pf X f from assignment
-	float local_torque = vector::CrossProduct(pf, newForce);
-	torque += local_torque; 
+	// torque = pf X f
+	float local_torque = vector::CrossProduct(pf, force);
+	torque += local_torque * invMomentOfIntertia;
+	// should invMomentOfIntertia be an Inertia Tensor?
 }
 
-void AParticle2D::setMomentOfInertia()
+void AParticle2D::calcMomentOfInertia()
 {
-	// This should be called on start to calculate moment of Inertia. 
 	// apply enum and calc inverse.
-	// equations from book.
 	switch (shape) {
+	case(SHAPES::PYRAMID):
+		break;
 	case(SHAPES::RECTANGLE):
 		// 1/12 * m(dx^2 + xy^2)
-		momentOfInertia = (mass*rect_width*rect_width*rect_height*rect_height) / 12.0;
 		break;
-	case(SHAPES::CIRCLE):
-		// 1/2*m*r^2
-		momentOfInertia = mass*circle_radius*circle_radius*0.5;
+	case(SHAPES::SPHERE):
 		break;
-	case(SHAPES::ROD):
+	case(SHAPES::SQUARE):
+		break;
+	// rod 
 		// 1/12 * m*l^2
-		momentOfInertia = mass*rod_length*rod_length / 12.0;
-		break;
-	case(SHAPES::RING):
+	//disc 
+		// 1/2*m*r^2
+	// ring 
 		// 1/2 * m *(router^2 + rinner^2)
-		momentOfInertia = mass*(ring_rad_inner*ring_rad_inner+ring_rad_outer*ring_rad_outer) * 0.5;
-		break;
 	default:
 		break;
 	}
-	invMomentOfInertia = 1 / momentOfInertia;
 }
 
 // Called every frame
