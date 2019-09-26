@@ -23,7 +23,6 @@ class PHYSICS_API AParticle2D : public AActor
 	GENERATED_BODY()
 
 public:
-	// Sets default values for this actor's properties
 	AParticle2D();
 	//lab 2 step 1
 	UPROPERTY(BlueprintReadWrite, EditAnywhere)
@@ -92,10 +91,7 @@ protected:
 		virtual void setMomentOfInertia();
 
 	//lab 2 step 1
-	// force setMass();
-	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float mass;
-	//UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 	float massInv;
 
 	//lab2 2
@@ -106,7 +102,6 @@ protected:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		float momentOfInertia;
 	float invMomentOfInertia;
-	// TODO: lab3 implement enum for shapes and inertia values from book.
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Particle2D")
 		FVector2D centerOfMass;
 public:

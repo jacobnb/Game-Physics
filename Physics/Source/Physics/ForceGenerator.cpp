@@ -1,11 +1,6 @@
 // Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "ForceGenerator.h"
 
-// ==================== IMPORTANT ===========================//
-// Formula's might be the magnitude of the force rather than direction.
-// ==========================================================//
 FVector2D UForceGenerator::Vector2DProj(FVector2D vec1, FVector2D vec2)
 {
 	// project v1 onto v2
@@ -36,12 +31,10 @@ FVector2D UForceGenerator::GenerateForce_sliding(FVector2D f_gravity, FVector2D 
 
 FVector2D UForceGenerator::GenerateForce_friction_static(FVector2D f_normal, FVector2D f_opposing, float frictionCoefficient_static)
 {
-	// currently this would convert to kinetic friction.
 	// f_friction_s = -f_opposing if less than max, else -coeff*f_normal (max amount is coeff*|f_normal|)
 	FVector2D f_op_norm = f_opposing;
 	f_op_norm.Normalize();
 	return (f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing : f_op_norm * -frictionCoefficient_static * f_normal.Size());
-	// code for this in bp return f_opposing.Size() < frictionCoefficient_static * f_normal.Size() ? -f_opposing :  FVector2D(0,0);
 }
 
 FVector2D UForceGenerator::GenerateForce_friction_kinetic(FVector2D f_normal, FVector2D particleVelocity, float frictionCoefficient_kinetic)
@@ -56,7 +49,6 @@ FVector2D UForceGenerator::GenerateForce_drag(FVector2D particleVelocity, FVecto
 	// https://www.grc.nasa.gov/WWW/k-12/airplane/drageq.html drag = co * density * velocity squred / 2.0 * area
 	// f_drag = (p * u^2 * area * coeff)/2 (+fluid velocity?)
 
-	// TODO: replace particle velocity with diff of particle velocity and fluid velocity
 	FVector2D vel_diff = particleVelocity - fluidVelocity;
 	float vel_diff_sqr_mag = FVector2D::DotProduct(vel_diff, vel_diff); // b/c dan says size_squared doesn't work.
 	FVector2D vel_diff_norm = vel_diff;

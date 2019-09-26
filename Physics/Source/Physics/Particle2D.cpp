@@ -2,11 +2,7 @@
 
 #include "Particle2D.h"
 #include "Kismet/GameplayStatics.h"
-//#include "Circle2D.h"
-//#include "Ring2D.h"
-//#include "Rectangle2D.h"
-//#include "Rod2D.h"
-// Sets default values
+
 AParticle2D::AParticle2D()
 {
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
@@ -35,11 +31,6 @@ void AParticle2D::UpdateAcceleration()
 void AParticle2D::BeginPlay()
 {
 	Super::BeginPlay();
-	// Hardcoded start.
-	//rotation = 0;
-	//position = FVector2D(this->GetActorLocation());
-
-	//velocity.X = -200;
 }
 
 void AParticle2D::updatePositionsExplicitEuler(float dt)
@@ -116,17 +107,8 @@ void AParticle2D::setMomentOfInertia()
 // Called every frame
 void AParticle2D::Tick(float DeltaTime)
 {
-	//UWorld* world = GetWorld();
 	Super::Tick(DeltaTime);
-	//updatePositionsExplicitEuler(DeltaTime);
-	//float realtimeSeconds = UGameplayStatics::GetTimeSeconds(dynamic_cast<UObject*>(world));
-	//acceleration.X = 200 * sin(realtimeSeconds);
-	//this->SetActorLocationAndRotation(FVector(position, 10), FRotator(0, 0, rotation));
 
-
-	////lab 2 test
-	//FVector2D f_gravity = mass * FVector2D(0.0, -9.8);
-	//AddForce(f_gravity);
 }
 
 
