@@ -13,7 +13,7 @@ public class CollisionManager2D : MonoBehaviour
         return instance;
     }
 
-    private List<CollisionHull2D> collisionHulls;
+    public List<CollisionHull2D> collisionHulls;
 
     private void Awake()
     {
@@ -26,10 +26,22 @@ public class CollisionManager2D : MonoBehaviour
             instance = this;
         }
     }
+    private void Update()
+    {
+        // test each collision
+        for (int outer = 0; outer < collisionHulls.Count; outer++)
+        {
+            for (int inner = outer + 1; inner < collisionHulls.Count; inner++)
+            {
+                CollisionHull2D.TestCollision(collisionHulls[outer], collisionHulls[inner]);
+            }
+        }
+    }
     public void addCollisionHull(CollisionHull2D hull)
     {
+        Debug.Log(hull);
         // don't need ref because classes are already references... hopefully
-        collisionHulls.Add(hull);
+        //collisionHulls.Add(hull);
     }
 
 }

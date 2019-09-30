@@ -9,17 +9,20 @@ public class CircleCollisionHull2D : CollisionHull2D
 
     private void Start()
     {
-        type = CollisionHullType2D.hull_circle;
+        fake_constructor(CollisionHullType2D.hull_circle, this);
         position = GetComponent<Particle2D>().getPosition();
     }
 
     public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
     {
+        // TODO: Position doesn't update lol
+        asdfasdfasdf
         // could use dot product
         float sqrDistance = (position - other.position).SqrMagnitude(); //not sure this works for distance.
         float sqrRadii = radius + other.radius;
         sqrRadii *= sqrRadii;
-        return sqrDistance <= sqrRadii;
+        Debug.Log(sqrRadii + " , "+ sqrDistance);
+        return sqrDistance >= sqrRadii;
     }
 
     public override bool TestCollisionVsAABB(AABBCollisionHull2D other)

@@ -12,9 +12,15 @@ public class CollisionHull2D : MonoBehaviour
     };
     public static bool TestCollision(CollisionHull2D a, CollisionHull2D b)
     {
-        //get type, pick collision test
-
-        return false;
+        bool collisionStatus = false;
+        if(a.type == CollisionHullType2D.hull_circle)
+        {
+            if(b.type == CollisionHullType2D.hull_circle)
+            {
+                (a as CircleCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D);
+            }
+        }
+        return collisionStatus;
     }
 
     public virtual bool TestCollisionVsCircle(CircleCollisionHull2D other)
@@ -30,9 +36,9 @@ public class CollisionHull2D : MonoBehaviour
         return false;
     }
 
-    protected void fake_constructor(CollisionHullType2D type_set)
+    protected void fake_constructor(CollisionHullType2D type_set, CollisionHull2D self)
     {
-        CollisionManager2D.getInstance().addCollisionHull(this);
+        CollisionManager2D.getInstance().addCollisionHull(self);
         type = type_set;
     }
 	//CollisionHull2D(CollisionHullType2D type_set)
