@@ -19,5 +19,6 @@ class PHYSICS_API ACircle2D : public AParticle2D
 public:
 	ACircle2D();
 	CircleCollisionHull2D* ColliderHull;
-
+	UFUNCTION(BlueprintCallable, Category = "Collider2D")
+	void setColliderRadius(float newRadius);
 };

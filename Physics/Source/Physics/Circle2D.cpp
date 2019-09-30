@@ -5,4 +5,10 @@
 
 ACircle2D::ACircle2D() {
 	ColliderHull = new CircleCollisionHull2D();
+	ColliderHull->position = position;
+}
+
+void ACircle2D::setColliderRadius(float radius)
+{
+	ColliderHull->radius = radius;
 }
