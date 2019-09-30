@@ -8,24 +8,24 @@
 #include "OBBCollisionHull2D.h"
 
 
-bool UCollisionHull2D::TestCollision(UCollisionHull2D a, UCollisionHull2D b)
+bool UCollisionHull2D::TestCollision(UCollisionHull2D a, UCollisionHull2D b, Collision& c)
 {
 	//get type, pick collision test
 
 	return false;
 }
 
-bool UCollisionHull2D::TestCollisionVsCircle(CircleCollisionHull2D other)
+bool UCollisionHull2D::TestCollisionVsCircle(CircleCollisionHull2D other, Collision& c)
 {
 	return false;
 }
 
-bool UCollisionHull2D::TestCollisionVsAABB(UAABBCollisionHull2D other)
+bool UCollisionHull2D::TestCollisionVsAABB(UAABBCollisionHull2D other, Collision& c)
 {
 	return false;
 }
 
-bool UCollisionHull2D::TestCollisionVsOBB(UOBBCollisionHull2D other)
+bool UCollisionHull2D::TestCollisionVsOBB(UOBBCollisionHull2D other, Collision& c)
 {
 	return false;
 }
