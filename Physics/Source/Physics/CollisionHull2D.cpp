@@ -10,6 +10,8 @@
 
 bool UCollisionHull2D::TestCollision(UCollisionHull2D a, UCollisionHull2D b)
 {
+	//get type, pick collision test
+
 	return false;
 }
 

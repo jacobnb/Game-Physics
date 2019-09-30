@@ -18,11 +18,15 @@ class PHYSICS_API UCircleCollisionHull2D : public UCollisionHull2D
 {
 	GENERATED_BODY()
 public:
-	UCircleCollisionHull2D();
+	UCircleCollisionHull2D(const FObjectInitializer& ObjectInitializer);
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	float radius;
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
 	FVector2D position; // this should be set from particle 2D.
-
-	bool TestCollisionVsCircle(UCircleCollisionHull2D other);
-	bool TestCollisionVsAABB(UAABBCollisionHull2D other);
-	bool TestCollisionVsOBB(UOBBCollisionHull2D other);
+	UFUNCTION(BlueprintCallable, Category = "Collision2D")
+	bool TestCollisionVsCircle(UCircleCollisionHull2D* other);
+	UFUNCTION(BlueprintCallable, Category = "Collision2D")
+	bool TestCollisionVsAABB(UAABBCollisionHull2D* other);
+	UFUNCTION(BlueprintCallable, Category = "Collision2D")
+	bool TestCollisionVsOBB(UOBBCollisionHull2D* other);
 };

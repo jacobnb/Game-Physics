@@ -24,7 +24,7 @@ public:
 		hull_aabb,
 		hull_obb
 	};
-	static bool TestCollision(UCollisionHull2D a, UCollisionHull2D b); //get type, pick collision test
+	static bool TestCollision(UCollisionHull2D a, UCollisionHull2D b); 
 	
 	virtual bool TestCollisionVsCircle(UCircleCollisionHull2D other);
 	virtual bool TestCollisionVsAABB(UAABBCollisionHull2D other);
