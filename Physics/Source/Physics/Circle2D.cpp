@@ -6,6 +6,9 @@
 ACircle2D::ACircle2D() {
 	ColliderHull = new CircleCollisionHull2D();
 	ColliderHull->position = position;
+
+	// TODO: figure out how to attach mesh.
+	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("<name>"));
 }
 
 void ACircle2D::setColliderRadius(float radius)

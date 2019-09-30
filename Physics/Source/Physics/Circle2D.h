@@ -21,4 +21,6 @@ public:
 	CircleCollisionHull2D* ColliderHull;
 	UFUNCTION(BlueprintCallable, Category = "Collider2D")
 	void setColliderRadius(float newRadius);
+	UPROPERTY(EditAnywhere)
+		UStaticMeshComponent* MeshComponent;
 };
