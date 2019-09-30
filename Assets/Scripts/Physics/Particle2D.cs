@@ -21,7 +21,11 @@ public class Particle2D : MonoBehaviour
     
     [SerializeField]
     protected Algorithm algorithm, secondAlgorithm;
-    
+
+    public Vector2 getPosition()
+    {
+        return position;
+    }
     // 2
     void updatePositionsExplicitEuler(float dt)
     {
