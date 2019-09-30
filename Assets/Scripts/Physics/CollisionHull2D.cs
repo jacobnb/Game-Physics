@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class CollisionHull2D : MonoBehaviour
 {
+    protected Vector2 position; // this should be set from particle 2D.
+    private Particle2D particle2D;
+    virtual protected void Start()
+    {
+        particle2D = GetComponent<Particle2D>();
+    }
+    protected void updatePosition()
+    {
+        position = particle2D.getPosition();
+    }
     public enum CollisionHullType2D
     {
         hull_circle,

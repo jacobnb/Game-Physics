@@ -5,28 +5,26 @@ using UnityEngine;
 public class CircleCollisionHull2D : CollisionHull2D
 {
     public float radius;
-    private Vector2 position; // this should be set from particle 2D.
 
-    private void Start()
+    override protected void Start()
     {
+        base.Start();
         fake_constructor(CollisionHullType2D.hull_circle, this);
-        position = GetComponent<Particle2D>().getPosition();
     }
-
+    
     public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
     {
-        // TODO: Position doesn't update lol
-        asdfasdfasdf
+        updatePosition();
         // could use dot product
         float sqrDistance = (position - other.position).SqrMagnitude(); //not sure this works for distance.
         float sqrRadii = radius + other.radius;
         sqrRadii *= sqrRadii;
-        Debug.Log(sqrRadii + " , "+ sqrDistance);
-        return sqrDistance >= sqrRadii;
+        return sqrDistance <= sqrRadii;
     }
 
     public override bool TestCollisionVsAABB(AABBCollisionHull2D other)
     {
+        updatePosition();
         // find the closest point to the circle on the box.
         // - Clamp the center of the circle to be in dimensions of box, gets closest point?
         Vector2 closest_point;
@@ -40,6 +38,7 @@ public class CircleCollisionHull2D : CollisionHull2D
 
     public override bool TestCollisionVsOBB(OBBCollisionHull2D other)
     {
+        updatePosition();
         // same as above, but first
         // multiply circle center by invs world matrix of box to move to box space
         // 
