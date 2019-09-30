@@ -2,22 +2,16 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "Kismet/BlueprintFunctionLibrary.h"
-#include "CollisionHull2D.generated.h"
-
 /**
  * 
  */
 
-class UCircleCollisionHull2D;
+class CircleCollisionHull2D;
 class UAABBCollisionHull2D;
 class UOBBCollisionHull2D;
 
-UCLASS()
-class PHYSICS_API UCollisionHull2D : public UBlueprintFunctionLibrary
+class UCollisionHull2D
 {
-	GENERATED_BODY()
 public:
 	enum CollisionHullType2D {
 		hull_circle,
@@ -26,7 +20,7 @@ public:
 	};
 	static bool TestCollision(UCollisionHull2D a, UCollisionHull2D b); 
 	
-	virtual bool TestCollisionVsCircle(UCircleCollisionHull2D other);
+	virtual bool TestCollisionVsCircle(CircleCollisionHull2D other);
 	virtual bool TestCollisionVsAABB(UAABBCollisionHull2D other);
 	virtual bool TestCollisionVsOBB(UOBBCollisionHull2D other);
 

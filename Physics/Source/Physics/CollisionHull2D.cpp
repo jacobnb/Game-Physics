@@ -15,7 +15,7 @@ bool UCollisionHull2D::TestCollision(UCollisionHull2D a, UCollisionHull2D b)
 	return false;
 }
 
-bool UCollisionHull2D::TestCollisionVsCircle(UCircleCollisionHull2D other)
+bool UCollisionHull2D::TestCollisionVsCircle(CircleCollisionHull2D other)
 {
 	return false;
 }

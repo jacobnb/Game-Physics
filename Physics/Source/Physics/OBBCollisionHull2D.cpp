@@ -5,7 +5,7 @@
 #include "CircleCollisionHull2D.h"
 
 
-bool UOBBCollisionHull2D::TestCollisionVsCircle(UCircleCollisionHull2D other)
+bool UOBBCollisionHull2D::TestCollisionVsCircle(CircleCollisionHull2D other)
 {
 	// see circle
 	return false;
