@@ -15,6 +15,7 @@ public class CircleCollisionHull2D : CollisionHull2D
     public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
     {
         updatePosition();
+        other.updatePosition();
         // could use dot product
         float sqrDistance = (position - other.position).SqrMagnitude(); //not sure this works for distance.
         float sqrRadii = radius + other.radius;
@@ -25,15 +26,19 @@ public class CircleCollisionHull2D : CollisionHull2D
     public override bool TestCollisionVsAABB(AABBCollisionHull2D other)
     {
         updatePosition();
+        other.updatePosition();
         // find the closest point to the circle on the box.
         // - Clamp the center of the circle to be in dimensions of box, gets closest point?
         Vector2 closest_point;
-        
-        closest_point.x = Mathf.Clamp(position.x, other.botLeftCorner.x, other.topRightCorner.x);
-        closest_point.y = Mathf.Clamp(position.y, other.botLeftCorner.y, other.topRightCorner.y);
+        Vector2 blc = Vector2.zero, trc = Vector2.zero; // bot left and top right of AABB
+        other.getDimensions(ref blc, ref trc);
+        closest_point.x = Mathf.Clamp(position.x, blc.x, trc.x);
+        closest_point.y = Mathf.Clamp(position.y, blc.y, trc.y);
 
         // if closest point is within circle, pass. (point vs circle test). square for efficiency
-        return (position - closest_point).SqrMagnitude() < radius * radius;
+        bool isColiding = (position - closest_point).SqrMagnitude() < radius * radius; ;
+
+        return isColiding;
     }
 
     public override bool TestCollisionVsOBB(OBBCollisionHull2D other)

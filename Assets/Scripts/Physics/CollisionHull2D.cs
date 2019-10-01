@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class CollisionHull2D : MonoBehaviour
 {
-    protected Vector2 position; // this should be set from particle 2D.
+    public Vector2 position; // this should be set from particle 2D.
     private Particle2D particle2D;
+    protected LineRenderer lr;
     virtual protected void Start()
     {
         particle2D = GetComponent<Particle2D>();
+        lr = GetComponent<LineRenderer>();
     }
-    protected void updatePosition()
+    public void updatePosition()
     {
         position = particle2D.getPosition();
     }
@@ -28,6 +30,21 @@ public class CollisionHull2D : MonoBehaviour
             if(b.type == CollisionHullType2D.hull_circle)
             {
                 (a as CircleCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D);
+            }
+            else if (b.type == CollisionHullType2D.hull_aabb)
+            {
+                (a as CircleCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D);
+            }
+        }
+        else if (a.type == CollisionHullType2D.hull_aabb)
+        {
+            if (b.type == CollisionHullType2D.hull_circle)
+            {
+                (a as AABBCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D);
+            }
+            else if (b.type == CollisionHullType2D.hull_aabb)
+            {
+                (a as AABBCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D);
             }
         }
         return collisionStatus;

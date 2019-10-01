@@ -31,8 +31,16 @@ public class CollisionManager2D : MonoBehaviour
         // test each collision
         for (int outer = 0; outer < collisionHulls.Count; outer++)
         {
-            for (int inner = outer + 1; inner < collisionHulls.Count; inner++)
-            {
+            for (int inner = 0; inner < collisionHulls.Count; inner++)
+            { // test each hull vs all others so all store colision data.
+                if(inner == outer)
+                {
+                    inner++;
+                    if(inner >= collisionHulls.Count)
+                    {
+                        break;
+                    }
+                }
                 CollisionHull2D.TestCollision(collisionHulls[outer], collisionHulls[inner]);
             }
         }
