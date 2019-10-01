@@ -11,15 +11,30 @@ public class AABBCollisionHull2D :CollisionHull2D
     {
         base.Start();
         fake_constructor(CollisionHullType2D.hull_aabb, this);
+        initLineRenderer();
     }
 
-    private void initLineRenderer()
+    override protected void initLineRenderer()
     {
-        lr.positionCount = 4; // box corners
+        lr.positionCount = 5; // box corners
+        base.initLineRenderer();
     }
+
     private void Update()
     {
-        
+        // == Line Renderer for collider== //
+        // get corners
+        Vector2 trc = Vector2.zero;
+        Vector2 blc = Vector2.zero;
+        getDimensions(ref blc, ref trc);
+        Vector3[] positions = new Vector3[5];
+        // clockwise from bottom left coner
+        positions[0] = new Vector3(blc.x, blc.y, 0);
+        positions[1] = new Vector3(blc.x, trc.y, 0);
+        positions[2] = new Vector3(trc.x, trc.y, 0);
+        positions[3] = new Vector3(trc.x, blc.y, 0);
+        positions[4] = new Vector3(blc.x, blc.y, 0);
+        lr.SetPositions(positions);
     }
     // Start is called before the first frame update
     public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
@@ -41,6 +56,7 @@ public class AABBCollisionHull2D :CollisionHull2D
 
     public void getDimensions(ref Vector2 botLeft, ref Vector2 topRight)
     {
+        updatePosition();
         botLeft = botLeftCorner + position;
         topRight = topRightCorner + position;
     }
@@ -95,12 +111,8 @@ public class AABBCollisionHull2D :CollisionHull2D
         passOnY = oTRC.y >= myBLC.y && passOnY;
 
 
-        // if passes (collides) in bother directions then overlapping.
-        if (passOnY && passOnX)
-        {
-            Debug.Log(position);
-        }
-        return passOnX && passOnY;
+        bool isColiding = passOnX && passOnY;
+        return isColiding;
     }
 
     public override bool TestCollisionVsOBB(OBBCollisionHull2D other)

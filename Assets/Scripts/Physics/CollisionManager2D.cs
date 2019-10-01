@@ -13,7 +13,7 @@ public class CollisionManager2D : MonoBehaviour
         return instance;
     }
 
-    public List<CollisionHull2D> collisionHulls;
+    public CollisionHull2D[] collisionHulls;
 
     private void Awake()
     {
@@ -26,17 +26,22 @@ public class CollisionManager2D : MonoBehaviour
             instance = this;
         }
     }
+    private void Start()
+    {
+        collisionHulls = GameObject.FindObjectsOfType<CollisionHull2D>();
+    }
     private void Update()
     {
         // test each collision
-        for (int outer = 0; outer < collisionHulls.Count; outer++)
+        for (int outer = 0; outer < collisionHulls.Length; outer++)
         {
-            for (int inner = 0; inner < collisionHulls.Count; inner++)
+            collisionHulls[outer].setCollisionStatus(false);
+            for (int inner = 0; inner < collisionHulls.Length; inner++)
             { // test each hull vs all others so all store colision data.
                 if(inner == outer)
                 {
                     inner++;
-                    if(inner >= collisionHulls.Count)
+                    if (inner >= collisionHulls.Length)
                     {
                         break;
                     }
