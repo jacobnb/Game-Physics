@@ -120,7 +120,14 @@ public class AABBCollisionHull2D :CollisionHull2D
         // same as above, but first...
         // take axis extents of non-axis aligned box (make a bigger aabb) and run above test.
         // then, transform AABB into OBB's space, find max extents, run above test.
-        // 1. .........
+        // 1. get obb min / max
+        // 2. transform obb min / max - breaks encapsulation?
+        // 3. do AABB vs AABB
+        // 4. if false RETURN
+        // 5. transform ABB into OBB's space
+        // 6. find max extents
+        // 7. Run AABB vs AABB
+
         return false;
     }
 }
