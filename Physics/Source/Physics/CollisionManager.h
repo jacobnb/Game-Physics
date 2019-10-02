@@ -17,7 +17,6 @@ class PHYSICS_API UCollisionManager : public USceneComponent
 public:	
 	// Sets default values for this component's properties
 	UCollisionManager();
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Collider2D")
 	TArray<ACircle2D* > Colliders;
 	
 	// Called every frame

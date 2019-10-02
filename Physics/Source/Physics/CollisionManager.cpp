@@ -2,6 +2,7 @@
 
 
 #include "CollisionManager.h"
+#include "StaticConector.h"
 
 // Sets default values for this component's properties
 UCollisionManager::UCollisionManager()
@@ -10,6 +11,7 @@ UCollisionManager::UCollisionManager()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 	// MeshComponent->SetupAttachment();
+	StaticConector::getInstance()->setCollisionManager(this);
 }
 
 
