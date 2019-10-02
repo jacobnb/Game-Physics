@@ -55,7 +55,11 @@ public class OBBCollisionHull2D : CollisionHull2D
         botLeft = botLeftCorner;
         topRight = topRightCorner;
 
-        // Any of these work as transforms. 
+
+
+        // === Here are all the transforms that I tried in the wrong location. 
+        // I think all of them are correct === //
+
         //Vector4 botLeft4 = new Vector4(botLeftCorner.x, botLeftCorner.y, 1, 1);
         //Vector4 topRight4 = new Vector4(topRightCorner.x, topRightCorner.y, 1, 1);
 
@@ -90,8 +94,21 @@ public class OBBCollisionHull2D : CollisionHull2D
 
     override public bool TestCollisionVsCircle(CircleCollisionHull2D other)
     {
-        // see circle
-        return false;
+        // See circle
+        updatePosition();
+        other.updatePosition();
+        // same as above, but first
+        // multiply circle center by invs world matrix of box to move to box space
+        Vector2 transformedPosition = transform.localToWorldMatrix.inverse * other.position;
+        Vector2 closest_point;
+        Vector2 blc = Vector2.zero, trc = Vector2.zero; // bot left and top right of AABB
+        getDimensions(ref blc, ref trc);
+        closest_point.x = Mathf.Clamp(transformedPosition.x, blc.x, trc.x);
+        closest_point.y = Mathf.Clamp(transformedPosition.y, blc.y, trc.y);
+
+        // if closest point is within circle, pass. (point vs circle test). square for efficiency
+        bool isColiding = (transformedPosition - closest_point).SqrMagnitude() < other.radius * other.radius; ;
+        return isColiding;
     }
 
     override public bool TestCollisionVsAABB(AABBCollisionHull2D other)
