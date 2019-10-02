@@ -160,14 +160,56 @@ public class OBBCollisionHull2D : CollisionHull2D
 
     override public bool TestCollisionVsAABB(AABBCollisionHull2D other)
     {
-        // See AABB
-        return false;
+        // Might regret this in next lab
+        
+        return other.TestCollisionVsOBB(this);
     }
 
     override public bool TestCollisionVsOBB(OBBCollisionHull2D other)
     {
+        updatePosition();
+        other.updatePosition();
+
         // same as AABB-OBB part2, twice
-        // 1. .....
-        return false;
+        Vector2 oXminYmin = other.xyMin();
+        Vector2 oXmaxYmax = other.xyMax();
+        Vector2 oXminYMax = new Vector2(oXminYmin.x, oXmaxYmax.y);
+        Vector2 oXmaxYmin = new Vector2(oXmaxYmax.x, oXminYmin.y);
+
+        // internal function to project corners onto given axis
+        bool projectCornersOnAxis(Vector2 axis)
+        {
+            Vector2 oXminYminProj = project(oXminYmin, axis);
+            Vector2 oXmaxYmaxProj = project(oXmaxYmax, axis);
+            Vector2 oXminYmaxProj = project(oXminYMax, axis);
+            Vector2 oXmaxYminProj = project(oXmaxYmin, axis);
+            // get min / max
+            float yMin = Mathf.Min(oXminYminProj.y, oXmaxYmaxProj.y, oXminYmaxProj.y, oXmaxYminProj.y);
+            float yMax = Mathf.Max(oXminYminProj.y, oXmaxYmaxProj.y, oXminYmaxProj.y, oXmaxYminProj.y);
+            float xMin = Mathf.Min(oXminYminProj.x, oXmaxYmaxProj.x, oXminYmaxProj.x, oXmaxYminProj.x);
+            float xMax = Mathf.Max(oXminYminProj.x, oXmaxYmaxProj.x, oXminYmaxProj.x, oXmaxYminProj.x);
+
+            // convert to terms to test in checkOverlap function
+            Vector2 oXYMax = new Vector2(xMax, yMax);
+            Vector2 oXYMin = new Vector2(xMin, yMin);
+            return AABBCollisionHull2D.checkOverlap(oXYMax, oXYMin, xyMax(), xyMin());
+        };
+
+        // 1. project others corners onto this up axis
+        bool isCollidingOnThisUpAxis = projectCornersOnAxis(transform.up);
+
+        // 2. project others corners onto this right axis
+        bool isCollidingOnThisRightAxis = projectCornersOnAxis(transform.right);
+
+        // 3. project this corners onto others up axis
+        bool isCollidingOnOtherUpAxis = projectCornersOnAxis(other.transform.up);
+
+        // 4. project this corners onto others right axis
+        bool isCollidingOnOtherRightAxis = projectCornersOnAxis(other.transform.right);
+
+        // TODO: short circuit if false;
+
+        return isCollidingOnThisUpAxis && isCollidingOnThisRightAxis && isCollidingOnOtherUpAxis && isCollidingOnOtherRightAxis;
     }
+
 }

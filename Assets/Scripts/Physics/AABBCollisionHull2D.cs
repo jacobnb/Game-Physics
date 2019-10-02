@@ -191,7 +191,7 @@ public class AABBCollisionHull2D :CollisionHull2D
         return isColiding;
     }
 
-    public bool checkOverlap(Vector2 mTopRight, Vector2 mBotLeft, Vector2 oTopRight, Vector2 oBotLeft)
+    public static bool checkOverlap(Vector2 mTopRight, Vector2 mBotLeft, Vector2 oTopRight, Vector2 oBotLeft)
     {
 
         bool passOnX = false;
