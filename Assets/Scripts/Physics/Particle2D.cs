@@ -83,6 +83,8 @@ public class Particle2D : MonoBehaviour
         {
             position = gameObject.transform.position;
         }
+
+        rotation = transform.rotation.eulerAngles.z;
     }
 
     void FixedUpdate()
