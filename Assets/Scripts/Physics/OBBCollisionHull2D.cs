@@ -172,15 +172,15 @@ public class OBBCollisionHull2D : CollisionHull2D
         // can't just move both to origin
 
         // same as AABB-OBB part2, twice
-        Vector2 XminYmin = other.xyMin();
-        Vector2 XmaxYmax = other.xyMax();
-        Vector2 XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
-        Vector2 XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
-        Vector2 XYMax;
-        Vector2 XYMin;
+        Vector2 XminYmin;
+        Vector2 XmaxYmax;
+        Vector2 XminYMax;
+        Vector2 XmaxYmin;
+        Vector2 oXYMax = Vector2.zero, oXYMin = Vector2.zero;
+        Vector2 mXYMax = Vector2.zero, mXYMin = Vector2.zero;
+
         // internal function to project corners onto given axis
-        // SETS XYMax, XYMin
-        void projectCornersOnAxis(Vector2 axis)
+        void projectCornersOnAxis(Vector2 axis, ref Vector2 XYMax, ref Vector2 XYMin)
         {
             Vector2 oXminYminProj = project(XminYmin, axis);
             Vector2 oXmaxYmaxProj = project(XmaxYmax, axis);
@@ -198,29 +198,73 @@ public class OBBCollisionHull2D : CollisionHull2D
         };
 
         // 1. project others corners onto this up axis
-        projectCornersOnAxis(transform.up);
-        bool isCollidingOnThisUpAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, xyMax(), xyMin());
+        XminYmin = other.xyMin();
+        XmaxYmax = other.xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(transform.up, ref oXYMax, ref oXYMin);
 
-
-        // 2. project others corners onto this right axis
-        projectCornersOnAxis(transform.right);
-        bool isCollidingOnThisRightAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, xyMax(), xyMin());
-
-        // Set corners for this
+        // project this corners onto this up axis
         XminYmin = xyMin();
         XmaxYmax = xyMax();
         XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
         XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(transform.up, ref mXYMax, ref mXYMin);
+        // check for overlap
+        bool isCollidingOnThisUpAxis = AABBCollisionHull2D.checkOverlap(oXYMax, oXYMin, mXYMax, mXYMin);
 
-        // 3. project this corners onto others up axis
-        projectCornersOnAxis(other.transform.up);
-        bool isCollidingOnOtherUpAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, other.xyMax(), other.xyMin());
 
-        // 4. project this corners onto others right axis
-        projectCornersOnAxis(other.transform.up);
-        bool isCollidingOnOtherRightAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, other.xyMax(), other.xyMin());
+        // 2. project others corners onto this right axis
+        XminYmin = other.xyMin();
+        XmaxYmax = other.xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(transform.right, ref oXYMax, ref oXYMin);
+
+        //project this corners onto this right axis
+        XminYmin = xyMin();
+        XmaxYmax = xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(transform.right, ref mXYMax, ref mXYMin);
+        // check for overlap
+        bool isCollidingOnThisRightAxis = AABBCollisionHull2D.checkOverlap(oXYMax, oXYMin, mXYMax, mXYMin);
+
+
+        // 3. project others corners onto others up axis
+        XminYmin = other.xyMin();
+        XmaxYmax = other.xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(other.transform.up, ref oXYMax, ref oXYMin);
+
+        // project this corners onto others up axis
+        XminYmin = xyMin();
+        XmaxYmax = xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(other.transform.up, ref mXYMax, ref mXYMin);
+
+        bool isCollidingOnOtherUpAxis = AABBCollisionHull2D.checkOverlap(oXYMax, oXYMin, mXYMax, mXYMin);
+
+        // 4. project others corners onto others right axis
+        XminYmin = other.xyMin();
+        XmaxYmax = other.xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(other.transform.right, ref oXYMax, ref oXYMin);
+
+        // project this corners onto others right axis
+        XminYmin = xyMin();
+        XmaxYmax = xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        projectCornersOnAxis(other.transform.right, ref mXYMax, ref mXYMin);
+
+        bool isCollidingOnOtherRightAxis = AABBCollisionHull2D.checkOverlap(oXYMax, oXYMin, mXYMax, mXYMin);
 
         // TODO: short circuit if false;
+        // Also get rid of repeated assigns to XminYmin etc.
 
         return isCollidingOnThisUpAxis && isCollidingOnThisRightAxis && isCollidingOnOtherUpAxis && isCollidingOnOtherRightAxis;
     }
