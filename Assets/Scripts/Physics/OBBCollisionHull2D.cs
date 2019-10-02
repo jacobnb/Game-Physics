@@ -24,29 +24,76 @@ public class OBBCollisionHull2D : CollisionHull2D
     // Update is called once per frame
     void Update()
     {
-         // == Line Renderer for collider== //
+        // == Line Renderer for collider== //
         // get corners
         Vector2 trc = Vector2.zero;
         Vector2 blc = Vector2.zero;
         getDimensions(ref blc, ref trc);
 
         // just go along up / right axis because it's a square. 
-       // Vector2 topRight = position + (Vector2)(transform.up * topRightCorner.y + transform.right * topRightCorner.x);
-       // Vector2 botLeft = position + (Vector2)(transform.up * botLeftCorner.y + transform.right * botLeftCorner.x);
+        // Vector2 topRight = position + (Vector2)(transform.up * topRightCorner.y + transform.right * topRightCorner.x);
+        // Vector2 botLeft = position + (Vector2)(transform.up * botLeftCorner.y + transform.right * botLeftCorner.x);
 
         Vector3[] positions = new Vector3[4];
         // clockwise 
-        // Translate top right corner
-        positions[0] = position + (Vector2)(transform.up * topRightCorner.y + transform.right * topRightCorner.x);
-        // Translate bot right corner
-        positions[1] = position + (Vector2)(transform.up * botLeftCorner.y + transform.right * topRightCorner.x);
-        // Translate bot left corner
-        positions[2] = position + (Vector2)(transform.up * botLeftCorner.y + transform.right * botLeftCorner.x);
-        // Translate top left corner
-        positions[3] = position + (Vector2)(transform.up * topRightCorner.y + transform.right * botLeftCorner.x);
-        lr.SetPositions(positions);       
+        positions[0] = topRightTranslated();
+        positions[1] = botRightTranslated();
+        positions[2] = botLeftTranslated();
+        positions[3] = topLeftTranslated();
+        lr.SetPositions(positions);
+    }
+    public Vector2 xyMax()
+    {
+        Vector2 xymax;
+        xymax.x = Mathf.Max(topRightTranslated().x
+            , botRightTranslated().x
+            , botLeftTranslated().x
+            , topLeftTranslated().x);
+
+        xymax.y = Mathf.Max(topRightTranslated().y
+            , botRightTranslated().y
+            , botLeftTranslated().y
+            , topLeftTranslated().y);
+        return xymax;
+    }
+    public Vector2 xyMin()
+    {
+        Vector2 xymin;
+        xymin.x = Mathf.Min(topRightTranslated().x
+            , botRightTranslated().x
+            , botLeftTranslated().x
+            , topLeftTranslated().x);
+
+        xymin.y = Mathf.Min(topRightTranslated().y
+            , botRightTranslated().y
+            , botLeftTranslated().y
+            , topLeftTranslated().y);
+        return xymin;
+    }
+    public Vector2 topRightTranslated()
+    {
+        return position + (Vector2)(transform.up * topRightCorner.y + transform.right * topRightCorner.x);
+    }
+    public Vector2 botRightTranslated()
+    {
+        return position + (Vector2)(transform.up * botLeftCorner.y + transform.right * topRightCorner.x);
+    }
+    public Vector2 botLeftTranslated()
+    {
+        return position + (Vector2)(transform.up * botLeftCorner.y + transform.right * botLeftCorner.x);
+    }
+    public Vector2 topLeftTranslated()
+    {
+        return position + (Vector2)(transform.up * topRightCorner.y + transform.right * botLeftCorner.x);
     }
 
+    public Vector2 project(Vector2 a, Vector2 onto)
+    {
+        onto.Normalize();
+        // equation from slides
+        // get magnitude of A in onto direction, multiply by onto.
+        return Vector2.Dot(a, onto) * onto;
+    }
     // THIS DOES NOT TRANSFORM DIMENSIONS
         public void getDimensions(ref Vector2 botLeft, ref Vector2 topRight)
     {
