@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class OBBCollisionHull2D : CollisionHull2D
 {
@@ -10,13 +8,13 @@ public class OBBCollisionHull2D : CollisionHull2D
 
     // treat box as aligned to objects position / rotation.
     // Start is called before the first frame update
-    override protected void Start()
+    protected override void Start()
     {
         base.Start();
         fake_constructor(CollisionHullType2D.hull_obb, this);
         initLineRenderer();
     }
-    override protected void initLineRenderer()
+    protected override void initLineRenderer()
     {
         lr.positionCount = 4; // box corners
         base.initLineRenderer();
@@ -95,7 +93,7 @@ public class OBBCollisionHull2D : CollisionHull2D
         return Vector2.Dot(a, onto) * onto;
     }
     // THIS DOES NOT TRANSFORM DIMENSIONS
-        public void getDimensions(ref Vector2 botLeft, ref Vector2 topRight)
+    public void getDimensions(ref Vector2 botLeft, ref Vector2 topRight)
     {
         updatePosition();
 
@@ -118,8 +116,8 @@ public class OBBCollisionHull2D : CollisionHull2D
         //topRight += position;
 
         // just go along up / right axis because it's a square. 
-       // topRight = position + (Vector2)(transform.up * topRightCorner.y + transform.right * topRightCorner.x);
-       // botLeft = position + (Vector2)(transform.up * botLeftCorner.y + transform.right * botLeftCorner.x);
+        // topRight = position + (Vector2)(transform.up * topRightCorner.y + transform.right * topRightCorner.x);
+        // botLeft = position + (Vector2)(transform.up * botLeftCorner.y + transform.right * botLeftCorner.x);
 
         // Rotate to match object
         //float theta = transform.rotation.eulerAngles.z;
@@ -139,7 +137,7 @@ public class OBBCollisionHull2D : CollisionHull2D
         //newBLC.y = Mathf.Sin(theta) * trc.x + Mathf.Cos(theta) * trc.y;
     }
 
-    override public bool TestCollisionVsCircle(CircleCollisionHull2D other)
+    public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
     {
         // See circle
         updatePosition();
@@ -158,31 +156,36 @@ public class OBBCollisionHull2D : CollisionHull2D
         return isColiding;
     }
 
-    override public bool TestCollisionVsAABB(AABBCollisionHull2D other)
+    public override bool TestCollisionVsAABB(AABBCollisionHull2D other)
     {
-        // Might regret this in next lab
-        
+        // Might have to code this out for next lab
+
         return other.TestCollisionVsOBB(this);
     }
 
-    override public bool TestCollisionVsOBB(OBBCollisionHull2D other)
+    public override bool TestCollisionVsOBB(OBBCollisionHull2D other)
     {
         updatePosition();
         other.updatePosition();
+        // TODO: Something about this is position dependent.
+        // When this is on axis, registers collision mostly correctly.
+        // can't just move both to origin
 
         // same as AABB-OBB part2, twice
-        Vector2 oXminYmin = other.xyMin();
-        Vector2 oXmaxYmax = other.xyMax();
-        Vector2 oXminYMax = new Vector2(oXminYmin.x, oXmaxYmax.y);
-        Vector2 oXmaxYmin = new Vector2(oXmaxYmax.x, oXminYmin.y);
-
+        Vector2 XminYmin = other.xyMin();
+        Vector2 XmaxYmax = other.xyMax();
+        Vector2 XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        Vector2 XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
+        Vector2 XYMax;
+        Vector2 XYMin;
         // internal function to project corners onto given axis
-        bool projectCornersOnAxis(Vector2 axis)
+        // SETS XYMax, XYMin
+        void projectCornersOnAxis(Vector2 axis)
         {
-            Vector2 oXminYminProj = project(oXminYmin, axis);
-            Vector2 oXmaxYmaxProj = project(oXmaxYmax, axis);
-            Vector2 oXminYmaxProj = project(oXminYMax, axis);
-            Vector2 oXmaxYminProj = project(oXmaxYmin, axis);
+            Vector2 oXminYminProj = project(XminYmin, axis);
+            Vector2 oXmaxYmaxProj = project(XmaxYmax, axis);
+            Vector2 oXminYmaxProj = project(XminYMax, axis);
+            Vector2 oXmaxYminProj = project(XmaxYmin, axis);
             // get min / max
             float yMin = Mathf.Min(oXminYminProj.y, oXmaxYmaxProj.y, oXminYmaxProj.y, oXmaxYminProj.y);
             float yMax = Mathf.Max(oXminYminProj.y, oXmaxYmaxProj.y, oXminYmaxProj.y, oXmaxYminProj.y);
@@ -190,22 +193,32 @@ public class OBBCollisionHull2D : CollisionHull2D
             float xMax = Mathf.Max(oXminYminProj.x, oXmaxYmaxProj.x, oXminYmaxProj.x, oXmaxYminProj.x);
 
             // convert to terms to test in checkOverlap function
-            Vector2 oXYMax = new Vector2(xMax, yMax);
-            Vector2 oXYMin = new Vector2(xMin, yMin);
-            return AABBCollisionHull2D.checkOverlap(oXYMax, oXYMin, xyMax(), xyMin());
+            XYMax = new Vector2(xMax, yMax);
+            XYMin = new Vector2(xMin, yMin);
         };
 
         // 1. project others corners onto this up axis
-        bool isCollidingOnThisUpAxis = projectCornersOnAxis(transform.up);
+        projectCornersOnAxis(transform.up);
+        bool isCollidingOnThisUpAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, xyMax(), xyMin());
+
 
         // 2. project others corners onto this right axis
-        bool isCollidingOnThisRightAxis = projectCornersOnAxis(transform.right);
+        projectCornersOnAxis(transform.right);
+        bool isCollidingOnThisRightAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, xyMax(), xyMin());
+
+        // Set corners for this
+        XminYmin = xyMin();
+        XmaxYmax = xyMax();
+        XminYMax = new Vector2(XminYmin.x, XmaxYmax.y);
+        XmaxYmin = new Vector2(XmaxYmax.x, XminYmin.y);
 
         // 3. project this corners onto others up axis
-        bool isCollidingOnOtherUpAxis = projectCornersOnAxis(other.transform.up);
+        projectCornersOnAxis(other.transform.up);
+        bool isCollidingOnOtherUpAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, other.xyMax(), other.xyMin());
 
         // 4. project this corners onto others right axis
-        bool isCollidingOnOtherRightAxis = projectCornersOnAxis(other.transform.right);
+        projectCornersOnAxis(other.transform.up);
+        bool isCollidingOnOtherRightAxis = AABBCollisionHull2D.checkOverlap(XYMax, XYMin, other.xyMax(), other.xyMin());
 
         // TODO: short circuit if false;
 
