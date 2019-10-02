@@ -72,9 +72,26 @@ public class CollisionHull2D : MonoBehaviour
             {
                 a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D);
             }
-            // TODO OBB
+            else if (b.type == CollisionHullType2D.hull_obb)
+            {
+                a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D);
+            }
         }
-        //TODO Hull OBB
+        else if (a.type == CollisionHullType2D.hull_obb)
+        {
+            if (b.type == CollisionHullType2D.hull_circle)
+            {
+                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D);
+            }
+            else if (b.type == CollisionHullType2D.hull_aabb)
+            {
+                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D);
+            }
+            else if (b.type == CollisionHullType2D.hull_obb)
+            {
+                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D);
+            }
+        }
 
         a.setLineColor(a.collisionStatus);
         return a.collisionStatus;
