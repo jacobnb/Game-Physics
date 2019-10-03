@@ -33,13 +33,13 @@ public class CollisionManager2D : MonoBehaviour
     private void Update()
     {
         // TODO: finish collision
-        CollisionHull2D.Collision c = new CollisionHull2D.Collision();
+        CollisionHull2D.Collision c;
         c.contactCount = 4;
         c.contacts = new CollisionHull2D.Collision.Contact[c.contactCount];
         c.closingVelocity = new Vector2(1, 1);
         c.status = false;
-        c.a = new CollisionHull2D();
-        c.b = new CollisionHull2D();
+        c.a =null;
+        c.b = null;
         // test each collision
         for (int outer = 0; outer < collisionHulls.Length; outer++)
         {
@@ -58,11 +58,4 @@ public class CollisionManager2D : MonoBehaviour
             }
         }
     }
-    public void addCollisionHull(CollisionHull2D hull)
-    {
-        Debug.Log(hull);
-        // don't need ref because classes are already references... hopefully
-        //collisionHulls.Add(hull);
-    }
-
 }

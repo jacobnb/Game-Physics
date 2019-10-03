@@ -126,7 +126,6 @@ public class CollisionHull2D : MonoBehaviour
 
     protected void fake_constructor(CollisionHullType2D type_set, CollisionHull2D self)
     {
-        CollisionManager2D.getInstance().addCollisionHull(self);
         type = type_set;
     }
 	//CollisionHull2D(CollisionHullType2D type_set)
