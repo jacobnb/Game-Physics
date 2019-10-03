@@ -41,7 +41,7 @@ public class CircleCollisionHull2D : CollisionHull2D
         lr.positionCount = pointsInCircle; // Circle
         base.initLineRenderer();
     }
-    public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
+    public override bool TestCollisionVsCircle(CircleCollisionHull2D other, ref Collision c)
     {
         // check if sqr distance between the center is less that the square of the radii
         updatePosition();
@@ -55,7 +55,7 @@ public class CircleCollisionHull2D : CollisionHull2D
         return isColiding;
     }
 
-    public override bool TestCollisionVsAABB(AABBCollisionHull2D other)
+    public override bool TestCollisionVsAABB(AABBCollisionHull2D other, ref Collision c)
     {
         updatePosition();
         other.updatePosition();
@@ -72,9 +72,9 @@ public class CircleCollisionHull2D : CollisionHull2D
         return isColiding;
     }
 
-    public override bool TestCollisionVsOBB(OBBCollisionHull2D other)
+    public override bool TestCollisionVsOBB(OBBCollisionHull2D other, ref Collision c)
     {
-        return other.TestCollisionVsCircle(this);
+        return other.TestCollisionVsCircle(this, ref c);
         //updatePosition();
         //other.updatePosition();
         //// same as above, but first

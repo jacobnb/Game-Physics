@@ -32,6 +32,14 @@ public class CollisionManager2D : MonoBehaviour
     }
     private void Update()
     {
+        // TODO: finish collision
+        CollisionHull2D.Collision c = new CollisionHull2D.Collision();
+        c.contactCount = 4;
+        c.contacts = new CollisionHull2D.Collision.Contact[c.contactCount];
+        c.closingVelocity = new Vector2(1, 1);
+        c.status = false;
+        c.a = new CollisionHull2D();
+        c.b = new CollisionHull2D();
         // test each collision
         for (int outer = 0; outer < collisionHulls.Length; outer++)
         {
@@ -46,7 +54,7 @@ public class CollisionManager2D : MonoBehaviour
                         break;
                     }
                 }
-                CollisionHull2D.TestCollision(collisionHulls[outer], collisionHulls[inner]);
+                CollisionHull2D.TestCollision(collisionHulls[outer], collisionHulls[inner], ref c);
             }
         }
     }

@@ -137,7 +137,7 @@ public class OBBCollisionHull2D : CollisionHull2D
         //newBLC.y = Mathf.Sin(theta) * trc.x + Mathf.Cos(theta) * trc.y;
     }
 
-    public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
+    public override bool TestCollisionVsCircle(CircleCollisionHull2D other, ref Collision c)
     {
         // See circle
         updatePosition();
@@ -202,7 +202,7 @@ public class OBBCollisionHull2D : CollisionHull2D
         return isCollidingOnRight && isCollidingOnUp;
     }
 
-    public override bool TestCollisionVsAABB(AABBCollisionHull2D other)
+    public override bool TestCollisionVsAABB(AABBCollisionHull2D other, ref Collision c)
     {
         updatePosition();
         other.updatePosition();
@@ -281,7 +281,7 @@ public class OBBCollisionHull2D : CollisionHull2D
         return isColidingOnRight && isColidingOnUp;
     }
 
-    public override bool TestCollisionVsOBB(OBBCollisionHull2D other)
+    public override bool TestCollisionVsOBB(OBBCollisionHull2D other, ref Collision c)
     {
         if (pauseForDebug)
         {
@@ -303,7 +303,6 @@ public class OBBCollisionHull2D : CollisionHull2D
 
 
         // 1. project others corners onto this up axis
-        // These aren't the corners.
         XminYmin = other.topRightTranslated();
         XmaxYmax = other.botRightTranslated();
         XminYMax = other.botLeftTranslated();

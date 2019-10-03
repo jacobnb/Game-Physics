@@ -37,7 +37,7 @@ public class AABBCollisionHull2D :CollisionHull2D
         lr.SetPositions(positions);
     }
     // Start is called before the first frame update
-    public override bool TestCollisionVsCircle(CircleCollisionHull2D other)
+    public override bool TestCollisionVsCircle(CircleCollisionHull2D other, ref Collision c)
     {
         updatePosition();
         other.updatePosition();
@@ -60,7 +60,7 @@ public class AABBCollisionHull2D :CollisionHull2D
         botLeft = botLeftCorner + position;
         topRight = topRightCorner + position;
     }
-    public override bool TestCollisionVsAABB(AABBCollisionHull2D other)
+    public override bool TestCollisionVsAABB(AABBCollisionHull2D other, ref Collision c)
     {
         updatePosition();
         other.updatePosition();
@@ -117,9 +117,9 @@ public class AABBCollisionHull2D :CollisionHull2D
         return isColiding;
     }
 
-    public override bool TestCollisionVsOBB(OBBCollisionHull2D other)
+    public override bool TestCollisionVsOBB(OBBCollisionHull2D other, ref Collision c)
     {
-        return other.TestCollisionVsAABB(this);
+        return other.TestCollisionVsAABB(this, ref c);
         //updatePosition();
         //other.updatePosition();
         //// init corners. 

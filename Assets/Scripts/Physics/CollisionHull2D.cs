@@ -4,6 +4,20 @@ using UnityEngine;
 
 public class CollisionHull2D : MonoBehaviour
 {
+    public struct Collision
+    {
+        public struct Contact
+        {
+            Vector2 point;
+            Vector2 normal;
+            float restitution;
+        };
+        public CollisionHull2D a, b; // was circle hull in unreal?
+        public bool status; // Did they collide?
+        public Vector2 closingVelocity;
+        public Contact[] contacts; // 4
+        public int contactCount;
+    }
     public Vector2 position; // this should be set from particle 2D.
     private Particle2D particle2D;
     protected LineRenderer lr;
@@ -45,51 +59,51 @@ public class CollisionHull2D : MonoBehaviour
     {
         collisionStatus = status;
     }
-    public static bool TestCollision(CollisionHull2D a, CollisionHull2D b)
+    public static bool TestCollision(CollisionHull2D a, CollisionHull2D b, ref Collision c)
     {
         if(a.type == CollisionHullType2D.hull_circle)
         {
             if(b.type == CollisionHullType2D.hull_circle)
             {
-                a.collisionStatus = a.collisionStatus || (a as CircleCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as CircleCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D, ref c);
             }
             else if (b.type == CollisionHullType2D.hull_aabb)
             {
-                a.collisionStatus = a.collisionStatus || (a as CircleCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as CircleCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D, ref c);
             }
             else if(b.type == CollisionHullType2D.hull_obb)
             {
-                a.collisionStatus = a.collisionStatus || (a as CircleCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as CircleCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D, ref  c);
             }
         }
         else if (a.type == CollisionHullType2D.hull_aabb)
         {
             if (b.type == CollisionHullType2D.hull_circle)
             {
-                a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D, ref c);
             }
             else if (b.type == CollisionHullType2D.hull_aabb)
             {
-                a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D, ref c);
             }
             else if (b.type == CollisionHullType2D.hull_obb)
             {
-                a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as AABBCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D, ref c);
             }
         }
         else if (a.type == CollisionHullType2D.hull_obb)
         {
             if (b.type == CollisionHullType2D.hull_circle)
             {
-                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsCircle(b as CircleCollisionHull2D, ref c);
             }
             else if (b.type == CollisionHullType2D.hull_aabb)
             {
-                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsAABB(b as AABBCollisionHull2D, ref c);
             }
             else if (b.type == CollisionHullType2D.hull_obb)
             {
-                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D);
+                a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D, ref c);
             }
         }
 
@@ -97,15 +111,15 @@ public class CollisionHull2D : MonoBehaviour
         return a.collisionStatus;
     }
 
-    public virtual bool TestCollisionVsCircle(CircleCollisionHull2D other)
+    public virtual bool TestCollisionVsCircle(CircleCollisionHull2D other, ref Collision c)
     {
         return false;
     }
-    public virtual bool TestCollisionVsAABB(AABBCollisionHull2D other)
+    public virtual bool TestCollisionVsAABB(AABBCollisionHull2D other, ref Collision c)
     {
         return false;
     }
-    public virtual bool TestCollisionVsOBB(OBBCollisionHull2D other)
+    public virtual bool TestCollisionVsOBB(OBBCollisionHull2D other, ref Collision c)
     {
         return false;
     }
