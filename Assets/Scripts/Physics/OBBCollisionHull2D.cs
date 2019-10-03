@@ -144,23 +144,141 @@ public class OBBCollisionHull2D : CollisionHull2D
         other.updatePosition();
         // same as above, but first
         // multiply circle center by invs world matrix of box to move to box space
-        Vector2 transformedPosition = transform.localToWorldMatrix.inverse * other.position;
-        Vector2 closest_point;
-        Vector2 blc = Vector2.zero, trc = Vector2.zero; // bot left and top right of AABB
-        getDimensions(ref blc, ref trc);
-        closest_point.x = Mathf.Clamp(transformedPosition.x, blc.x, trc.x);
-        closest_point.y = Mathf.Clamp(transformedPosition.y, blc.y, trc.y);
 
-        // if closest point is within circle, pass. (point vs circle test). square for efficiency
-        bool isColiding = (transformedPosition - closest_point).SqrMagnitude() < other.radius * other.radius; ;
-        return isColiding;
+        // neither of the these work.
+        // Vector2 transformedPosition = transform.localToWorldMatrix.inverse * other.position;
+        //Matrix4x4 trs = Matrix4x4.TRS(transform.position, transform.rotation, Vector3.one);
+        // Vector2 transformedPosition = (trs* new Vector4(other.position.x, other.position.y, 0, 0));
+        // Vector2 transformedPosition = other.position;
+
+        // Vector2 closest_point;
+        // Vector2 blc = Vector2.zero, trc = Vector2.zero; // bot left and top right of OBB
+        // getDimensions(ref blc, ref trc);
+
+        // //With above code works except for position and rotation.
+        // //blc += position;
+        // //trc += position;
+
+        // // This fixes position but not rotation.
+        //// blc = botLeftTranslated();
+        // // trc = topRightTranslated();
+        // // These aren't the right corners?
+
+        // closest_point.x = Mathf.Clamp(transformedPosition.x, blc.x, trc.x);
+        // closest_point.y = Mathf.Clamp(transformedPosition.y, blc.y, trc.y);
+
+        // // if closest point is within circle, pass. (point vs circle test). square for efficiency
+        // bool isColiding = (transformedPosition - closest_point).SqrMagnitude() < other.radius * other.radius; ;
+        // return isColiding;
+
+        // =========== Attempt 2 ============= //
+        //  project circle center and this points onto axii
+        // if circle point is within radius of point on both axii then true, else false.
+        // can use clamp here too
+
+        // Project circle and corners onto up axis
+        Vector2 circleProj = project(other.position, transform.up);
+        Vector2 corner1 = topRightTranslated(); 
+        Vector2 corner2 = botRightTranslated();
+        // should be able to ignore other two corners along axis because they'll be the same.
+        Vector2 c1proj = project(corner1, transform.up);
+        Vector2 c2proj = project(corner2, transform.up);
+        // clamp circle proj to get closest point
+        Vector2 closestPoint;
+        closestPoint.x = Mathf.Clamp(circleProj.x, Mathf.Min(c1proj.x, c2proj.x), Mathf.Max(c1proj.x, c2proj.x));
+        closestPoint.y = Mathf.Clamp(circleProj.y, Mathf.Min(c1proj.y, c2proj.y), Mathf.Max(c1proj.y, c2proj.y));
+        // compare closest point to projected point.
+        bool isCollidingOnUp = (circleProj - closestPoint).SqrMagnitude() < other.radius * other.radius;
+
+        // repeat for right axis
+        circleProj = project(other.position, transform.right);
+        corner1 = topLeftTranslated();
+        corner2 = topRightTranslated();
+        c1proj = project(corner1, transform.right);
+        c2proj = project(corner2, transform.right);
+        closestPoint.x = Mathf.Clamp(circleProj.x, Mathf.Min(c1proj.x, c2proj.x), Mathf.Max(c1proj.x, c2proj.x));
+        closestPoint.y = Mathf.Clamp(circleProj.y, Mathf.Min(c1proj.y, c2proj.y), Mathf.Max(c1proj.y, c2proj.y));
+        bool isCollidingOnRight = (circleProj - closestPoint).SqrMagnitude() < other.radius * other.radius;
+        return isCollidingOnRight && isCollidingOnUp;
     }
 
     public override bool TestCollisionVsAABB(AABBCollisionHull2D other)
     {
-        // Might have to code this out for next lab
+        updatePosition();
+        other.updatePosition();
+        // init corners. 
+        Vector2 oBLC = Vector2.zero;
+        Vector2 oTRC = oBLC;
 
-        return other.TestCollisionVsOBB(this);
+        other.getDimensions(ref oBLC, ref oTRC);
+        // not needed other.getDimensions(ref oBLC, ref oTRC);
+        // same as above, but first...
+        // take axis extents of non-axis aligned box (make a bigger aabb) and run above test.
+        // then, transform AABB into OBB's space, find max extents, run above test.
+        // 1. get obb min / max
+        // 2. transform obb min / max - breaks encapsulation?
+        // 3. do AABB vs AABB
+        // 4. if false RETURN
+
+        // 1 & 2 & 3
+        bool isColiding = AABBCollisionHull2D.checkOverlap(oTRC, oBLC, xyMax(), xyMin());
+        // if not possibly colliding
+        if (!isColiding)
+        {
+            // 4
+            // return isColiding;
+        }
+        // 5
+        // project AABB and OBB onto axii
+        // check overlap on each axii
+        
+        // set up last two corners
+        Vector2 oBRC = new Vector2(oTRC.x, oBLC.y);
+        Vector2 oTLC = new Vector2(oBLC.x, oTRC.y);
+
+        // project other on Up
+        Vector2 oProj1 = project(oBLC, transform.up);
+        Vector2 oProj2 = project(oBRC, transform.up);
+        Vector2 oProj3 = project(oTRC, transform.up);
+        Vector2 oProj4 = project(oTLC, transform.up);
+        //Find min / max points
+        Vector2 oMin, oMax;
+        oMin.x = Mathf.Min(oProj1.x, oProj2.x, oProj3.x, oProj4.x);
+        oMin.y = Mathf.Min(oProj1.y, oProj2.y, oProj3.y, oProj4.y);
+        oMax.x = Mathf.Max(oProj1.x, oProj2.x, oProj3.x, oProj4.x);
+        oMax.y = Mathf.Max(oProj1.y, oProj2.y, oProj3.y, oProj4.y);
+        // project this on Up.
+        Vector2 mProj1 = project(topLeftTranslated(), transform.up);
+        Vector2 mProj2 = project(botLeftTranslated(), transform.up);
+        Vector2 min, max;
+        min.x = Mathf.Min(mProj1.x, mProj2.x);
+        min.y = Mathf.Min(mProj1.y, mProj2.y);
+        max.x = Mathf.Max(mProj1.x, mProj2.x);
+        max.y = Mathf.Max(mProj1.y, mProj2.y);
+        //if it doesn't work add in the last two corners and find min / max for this.
+        bool isColidingOnUp = AABBCollisionHull2D.checkOverlap(max, min, oMax, oMin);
+
+        //project other on Right
+        oProj1 = project(oBLC, transform.right);
+        oProj2 = project(oBRC, transform.right);
+        oProj3 = project(oTRC, transform.right);
+        oProj4 = project(oTLC, transform.right);
+        //Find min / max points
+        oMin.x = Mathf.Min(oProj1.x, oProj2.x, oProj3.x, oProj4.x);
+        oMin.y = Mathf.Min(oProj1.y, oProj2.y, oProj3.y, oProj4.y);
+        oMax.x = Mathf.Max(oProj1.x, oProj2.x, oProj3.x, oProj4.x);
+        oMax.y = Mathf.Max(oProj1.y, oProj2.y, oProj3.y, oProj4.y);
+        // project this on Right.
+        mProj1 = project(topLeftTranslated(), transform.right);
+        mProj2 = project(botRightTranslated(), transform.right);
+        min.x = Mathf.Min(mProj1.x, mProj2.x);
+        min.y = Mathf.Min(mProj1.y, mProj2.y);
+        max.x = Mathf.Max(mProj1.x, mProj2.x);
+        max.y = Mathf.Max(mProj1.y, mProj2.y);
+
+        bool isColidingOnRight = AABBCollisionHull2D.checkOverlap(max, min, oMax, oMin);
+
+        return isColidingOnRight && isColidingOnUp;
     }
 
     public override bool TestCollisionVsOBB(OBBCollisionHull2D other)
@@ -171,8 +289,8 @@ public class OBBCollisionHull2D : CollisionHull2D
         }
         updatePosition();
         other.updatePosition();
-        // TODO: Corner collisions are off.
-
+        // TODO: remove extra OBB corners when projecting onto axis where they'll be duplicated.
+        // see vs Circle
 
         // same as AABB-OBB part2, twice
         Vector2 XminYmin=Vector2.zero;
@@ -259,6 +377,8 @@ public class OBBCollisionHull2D : CollisionHull2D
             Vector2 oXminYmaxProj = project(XminYMax, axis);
             Vector2 oXmaxYminProj = project(XmaxYmin, axis);
             // get min / max
+            // TODO: I'm not sure just taking the min is right, but it might work anyway.
+            // it might not actually be a point on the axis.
             float yMin = Mathf.Min(oXminYminProj.y, oXmaxYmaxProj.y, oXminYmaxProj.y, oXmaxYminProj.y);
             float yMax = Mathf.Max(oXminYminProj.y, oXmaxYmaxProj.y, oXminYmaxProj.y, oXmaxYminProj.y);
             float xMin = Mathf.Min(oXminYminProj.x, oXmaxYmaxProj.x, oXminYmaxProj.x, oXmaxYminProj.x);

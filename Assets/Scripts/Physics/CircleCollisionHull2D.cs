@@ -74,20 +74,23 @@ public class CircleCollisionHull2D : CollisionHull2D
 
     public override bool TestCollisionVsOBB(OBBCollisionHull2D other)
     {
-        updatePosition();
-        other.updatePosition();
-        // same as above, but first
-        // multiply circle center by invs world matrix of box to move to box space
-        Vector2 transformedPosition = other.transform.localToWorldMatrix.inverse * position;
-        Vector2 closest_point;
-        Vector2 blc = Vector2.zero, trc = Vector2.zero; // bot left and top right of AABB
-        other.getDimensions(ref blc, ref trc); 
-        closest_point.x = Mathf.Clamp(transformedPosition.x, blc.x, trc.x);
-        closest_point.y = Mathf.Clamp(transformedPosition.y, blc.y, trc.y);
+        return other.TestCollisionVsCircle(this);
+        //updatePosition();
+        //other.updatePosition();
+        //// same as above, but first
+        //// multiply circle center by invs world matrix of box to move to box space
+        //Vector2 transformedPosition = other.transform.localToWorldMatrix.inverse * position;
+        //Vector2 closest_point;
+        //Vector2 blc = Vector2.zero, trc = Vector2.zero; // bot left and top right of OBB
+        ////Dimensions aren't transformed
+        //other.getDimensions(ref blc, ref trc); 
 
-        // if closest point is within circle, pass. (point vs circle test). square for efficiency
-        bool isColiding = (transformedPosition - closest_point).SqrMagnitude() < radius * radius; ;
-        return isColiding;
+        //closest_point.x = Mathf.Clamp(transformedPosition.x, blc.x, trc.x);
+        //closest_point.y = Mathf.Clamp(transformedPosition.y, blc.y, trc.y);
+
+        //// if closest point is within circle, pass. (point vs circle test). square for efficiency
+        //bool isColiding = (transformedPosition - closest_point).SqrMagnitude() < radius * radius; ;
+        //return isColiding;
     }
 
 }
