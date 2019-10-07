@@ -43,6 +43,12 @@ public class CircleCollisionHull2D : CollisionHull2D
     }
     public override bool TestCollisionVsCircle(CircleCollisionHull2D other, ref Collision c)
     {
+        c.a = this;
+        c.b = other;
+       // c.closingVelocity;
+       // c.contactCount
+       // c.contacts
+       // c.status
         // check if sqr distance between the center is less that the square of the radii
         updatePosition();
         other.updatePosition();

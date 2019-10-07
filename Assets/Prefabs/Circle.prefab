@@ -110,7 +110,7 @@ MonoBehaviour:
   shouldFollowSine_X: 0
   shouldFollowSine_Y: 0
   position: {x: 0, y: 0}
-  velocity: {x: -2, y: 0}
+  velocity: {x: 0, y: 0}
   acceleration: {x: 0, y: 0}
   rotation: 0
   angular_vel: 0
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
+  collisionStatus: 0
   radius: 2
 --- !u!120 &909335200
 LineRenderer:
