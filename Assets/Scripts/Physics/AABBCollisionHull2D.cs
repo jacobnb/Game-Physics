@@ -64,8 +64,6 @@ public class AABBCollisionHull2D :CollisionHull2D
     {
         updatePosition();
         other.updatePosition();
-        bool passOnX = false;
-        bool passOnY = false;
         // init corners. 
         Vector2 myBLC = Vector2.zero;
         Vector2 myTRC = myBLC;
@@ -75,43 +73,6 @@ public class AABBCollisionHull2D :CollisionHull2D
         getDimensions(ref myBLC, ref myTRC);
         other.getDimensions(ref oBLC, ref oTRC);
 
-        // check X
-        // This assumes that the bounding box includes the position (center)
-        //if(position.x < other.position.x)
-        //{
-        //    // this is to the left of other
-        //    // if max >= min then pass.
-        //    passOnX = myTRC.x >= oBLC.x;
-        //}
-        //else
-        //{
-        //    // this is to the right of the other
-        //    // if other max >= my min
-        //    passOnX = oTRC.x >= myBLC.x;
-        //}
-
-        ////check Y
-        //if(position.y < other.position.y)
-        //{
-        //    // this is below other
-        //    //if my max >= other min then pass.
-        //    passOnY = myTRC.y >= oBLC.y;
-        //}
-        //else
-        //{
-        //    // this is above other
-        //    // if other max >= my min then pass.
-        //    passOnY = oTRC.y >= myBLC.y;
-        //}
-
-        // I think this does it better because no assumption required.
-        //passOnX = myTRC.x >= oBLC.x;
-        //passOnX = oTRC.x >= myBLC.x && passOnX;
-        //passOnY = myTRC.y >= oBLC.y;
-        //passOnY = oTRC.y >= myBLC.y && passOnY;
-
-
-        //bool isColiding = passOnX && passOnY;
 
         bool isColiding = checkOverlap(myTRC, myBLC, oTRC, oBLC);
         return isColiding;

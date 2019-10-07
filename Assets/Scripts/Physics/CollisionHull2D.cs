@@ -15,7 +15,7 @@ public class CollisionHull2D : MonoBehaviour
         public CollisionHull2D a, b; // was circle hull in unreal?
         public bool status; // Did they collide?
         public Vector2 closingVelocity;
-        public Contact[] contacts; // 4
+        public Contact[] contacts; // up to 4
         public int contactCount;
     }
     public Vector2 position; // this should be set from particle 2D.

@@ -60,7 +60,22 @@ public class CircleCollisionHull2D : CollisionHull2D
         bool isColiding = sqrDistance <= sqrRadii;
         return isColiding;
     }
+    public void getContactPoints(CircleCollisionHull2D other)
+    {
+        // http://paulbourke.net/geometry/circlesphere/
+        Vector2 difference = other.position - position; //from position to other.position
+        float distance = difference.magnitude;
+        float radii = radius + other.radius;
+        // distance = radii
+        // Vector2 contact = position + difference;
 
+        // Get point halfway between two centers.
+        Vector2 contact = position + difference * .5f; // position difference.normalized * .5f * distance; should be same.
+        Vector2 normal = (position - contact).normalized; // vector from contact to center
+        float overlap = radii - distance; // not sure we need this.
+
+        // edge cases - circles overlap completely, or one inside the other.
+    }
     public override bool TestCollisionVsAABB(AABBCollisionHull2D other, ref Collision c)
     {
         updatePosition();
@@ -74,29 +89,22 @@ public class CircleCollisionHull2D : CollisionHull2D
         closest_point.y = Mathf.Clamp(position.y, blc.y, trc.y);
 
         // if closest point is within circle, pass. (point vs circle test). square for efficiency
-        bool isColiding = (position - closest_point).SqrMagnitude() < radius * radius; ;
+        bool isColiding = (position - closest_point).SqrMagnitude() < radius * radius;
+
+        // Contact Points
+        Vector2 contact = closest_point;
+        // Normal should still go to center of circle.
+        Vector2 normal = (position - contact).normalized;
+
         return isColiding;
     }
 
     public override bool TestCollisionVsOBB(OBBCollisionHull2D other, ref Collision c)
     {
         return other.TestCollisionVsCircle(this, ref c);
-        //updatePosition();
-        //other.updatePosition();
-        //// same as above, but first
-        //// multiply circle center by invs world matrix of box to move to box space
-        //Vector2 transformedPosition = other.transform.localToWorldMatrix.inverse * position;
-        //Vector2 closest_point;
-        //Vector2 blc = Vector2.zero, trc = Vector2.zero; // bot left and top right of OBB
-        ////Dimensions aren't transformed
-        //other.getDimensions(ref blc, ref trc); 
-
-        //closest_point.x = Mathf.Clamp(transformedPosition.x, blc.x, trc.x);
-        //closest_point.y = Mathf.Clamp(transformedPosition.y, blc.y, trc.y);
-
-        //// if closest point is within circle, pass. (point vs circle test). square for efficiency
-        //bool isColiding = (transformedPosition - closest_point).SqrMagnitude() < radius * radius; ;
-        //return isColiding;
+        // TODO: modify c to get right contact data.
+        // contact points will be the same
+        // normals will be in opposite direction.
     }
 
 }
