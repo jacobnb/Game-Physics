@@ -8,6 +8,7 @@ public class CollisionManager2D : MonoBehaviour
     // test all collisions
 
     private static CollisionManager2D instance;
+    private Queue<CollisionHull2D.Collision> collisionQ = new Queue<CollisionHull2D.Collision>();
     public static CollisionManager2D getInstance()
     {
         return instance;
@@ -48,7 +49,18 @@ public class CollisionManager2D : MonoBehaviour
                 }
                 var c = CollisionHull2D.getNewCollisionStruct();
                 CollisionHull2D.TestCollision(collisionHulls[outer], collisionHulls[inner], ref c);
+                if (c.status)
+                {
+                    collisionQ.Enqueue(c);
+                }
             }
+        }
+        
+        // resolve collisions
+        foreach (var c in collisionQ)
+        {
+            // TODO: Multiple contact points
+            c.a.particle2D.setVelocity(-c.closingVelocity * c.contacts[0].restitution);
         }
     }
 }

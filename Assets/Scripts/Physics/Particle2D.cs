@@ -30,6 +30,10 @@ public class Particle2D : MonoBehaviour
     {
         return velocity;
     }
+    public void setVelocity(Vector2 vel)
+    {
+        velocity = vel;
+    }
     // 2
     void updatePositionsExplicitEuler(float dt)
     {
