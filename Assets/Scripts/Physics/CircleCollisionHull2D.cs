@@ -45,9 +45,6 @@ public class CircleCollisionHull2D : CollisionHull2D
     {
         c.a = this;
         c.b = other;
-       // c.closingVelocity;
-       // c.contactCount
-       // c.contacts
        // c.status
         // check if sqr distance between the center is less that the square of the radii
         updatePosition();
@@ -58,10 +55,8 @@ public class CircleCollisionHull2D : CollisionHull2D
         sqrRadii *= sqrRadii;
 
         bool isColiding = sqrDistance <= sqrRadii;
-        return isColiding;
-    }
-    public void getContactPoints(CircleCollisionHull2D other)
-    {
+        if(!isColiding) { return isColiding; }
+        //contact point
         // http://paulbourke.net/geometry/circlesphere/
         Vector2 difference = other.position - position; //from position to other.position
         float distance = difference.magnitude;
@@ -73,9 +68,25 @@ public class CircleCollisionHull2D : CollisionHull2D
         Vector2 contact = position + difference * .5f; // position difference.normalized * .5f * distance; should be same.
         Vector2 normal = (position - contact).normalized; // vector from contact to center
         float overlap = radii - distance; // not sure we need this.
-
         // edge cases - circles overlap completely, or one inside the other.
+
+        c.contactCount = 1;
+        c.contacts = new CollisionHull2D.Collision.Contact[c.contactCount];
+        c.contacts[0].point = contact;
+        c.contacts[0].normal = normal;
+        c.contacts[0].restitution = 0.5f; // TODO: Is this coefficient or actual number?
+
+
+        // closing velocity 
+        // https://gamedev.stackexchange.com/questions/118162/how-to-calculate-the-closing-speed-of-two-objects
+        Vector2 diff = other.position - position;
+        Vector2 velDiff = other.particle2D.getVelocity() - particle2D.getVelocity();
+        c.closingVelocity = Vector2.Dot(velDiff, diff) / diff.magnitude *normal;
+
+        c.status = isColiding;
+        return isColiding;
     }
+
     public override bool TestCollisionVsAABB(AABBCollisionHull2D other, ref Collision c)
     {
         updatePosition();

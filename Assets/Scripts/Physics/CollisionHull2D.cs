@@ -8,18 +8,18 @@ public class CollisionHull2D : MonoBehaviour
     {
         public struct Contact
         {
-            Vector2 point;
-            Vector2 normal;
-            float restitution;
+            public Vector2 point;
+            public Vector2 normal;
+            public float restitution;
         };
-        public CollisionHull2D a, b; // was circle hull in unreal?
+        public CollisionHull2D a, b; 
         public bool status; // Did they collide?
         public Vector2 closingVelocity;
         public Contact[] contacts; // up to 4
         public int contactCount;
     }
     public Vector2 position; // this should be set from particle 2D.
-    private Particle2D particle2D;
+    public Particle2D particle2D;
     protected LineRenderer lr;
     [SerializeField]
     bool collisionStatus = false;
@@ -27,6 +27,18 @@ public class CollisionHull2D : MonoBehaviour
     {
         particle2D = GetComponent<Particle2D>();
         lr = GetComponent<LineRenderer>();
+    }
+    public static Collision getNewCollisionStruct()
+    {
+        // TODO: finish collision
+        CollisionHull2D.Collision c;
+        c.contactCount = 0;
+        c.contacts = null;// new CollisionHull2D.Collision.Contact[c.contactCount];
+        c.closingVelocity = Vector2.zero;
+        c.status = false;
+        c.a = null;
+        c.b = null;
+        return c;
     }
     public void updatePosition()
     {
@@ -128,11 +140,6 @@ public class CollisionHull2D : MonoBehaviour
     {
         type = type_set;
     }
-	//CollisionHull2D(CollisionHullType2D type_set)
- //   {
- //       type = type_set;
- //   }
- //  protected CollisionHull2D() { }
 
     protected CollisionHullType2D type;
 }
