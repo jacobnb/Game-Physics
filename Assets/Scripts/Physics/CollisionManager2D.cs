@@ -50,5 +50,19 @@ public class CollisionManager2D : MonoBehaviour
                 CollisionHull2D.TestCollision(collisionHulls[outer], collisionHulls[inner], ref c);
             }
         }
+        foreach (var c in collisionHulls)
+        {
+            // do response.
+            // relativeVel = a.velocity
+            // relativeVel -= b.velocity;
+            // seperatingVel = relativeVel*normal
+            // if sepVel > 0
+            // newSepVel = -seperatingVel * restitution
+            // deltaVel = newSepVel - seperatingVel
+            // totalInverseMass = a.mass+b.mass
+            // impulse = deltaVelocity / totalInverseMass;
+            // ImpulsePerIMass = normal * impulse;
+            // a.velocity = a.velocity+impulsePerIMass*a.inversMass
+        }
     }
 }
