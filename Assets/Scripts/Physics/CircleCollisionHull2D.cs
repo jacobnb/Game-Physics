@@ -5,6 +5,7 @@ using UnityEngine;
 public class CircleCollisionHull2D : CollisionHull2D
 {
     public float radius;
+    public float restitution = 0.8f;
     private int pointsInCircle = 18;
     Vector3[] circlePoints;
     override protected void Start()
@@ -66,7 +67,7 @@ public class CircleCollisionHull2D : CollisionHull2D
 
         // Get point halfway between two centers.
         Vector2 contact = position + difference * .5f; // position difference.normalized * .5f * distance; should be same.
-        Vector2 normal = (position - contact).normalized; // vector from contact to center
+        Vector2 normal = (position-contact).normalized; // vector from contact to center
         float overlap = radii - distance; // not sure we need this.
         // edge cases - circles overlap completely, or one inside the other.
 
@@ -74,7 +75,7 @@ public class CircleCollisionHull2D : CollisionHull2D
         c.contacts = new CollisionHull2D.Collision.Contact[c.contactCount];
         c.contacts[0].point = contact;
         c.contacts[0].normal = normal;
-        c.contacts[0].restitution = 1f; // TODO: Is this coefficient or actual number?
+        c.contacts[0].restitution = restitution; // TODO: Is this coefficient or actual number?
 
 
         // closing velocity 
@@ -83,13 +84,13 @@ public class CircleCollisionHull2D : CollisionHull2D
         //Vector2 velDiff = other.particle2D.getVelocity() - particle2D.getVelocity();
         //float closingSpeed = Vector2.Dot(velDiff, diff) / diff.magnitude;
         //Relative velocity from book
-        Vector2 relativeVelocity = particle2D.getVelocity() - other.getParticle2D().getVelocity();
-        var separatingVel = relativeVelocity * normal;
+        Vector2 relativeVelocity = particle2D.getVelocity()-other.getParticle2D().getVelocity();
+        float separatingVel = Vector2.Dot(relativeVelocity, normal); // relativeVelocity * normal
         // https://math.stackexchange.com/questions/13261/how-to-get-a-reflection-vector
         // this would simulate hitting a hard object w/ no velocity loss.
         // Vector2 velReflectedOverN = particle2D.getVelocity() - 2 * Vector2.Dot(particle2D.getVelocity(), normal) * normal;
         // c.closingVelocity =  closingSpeed*velReflectedOverN.normalized;
-        c.closingVelocity = -separatingVel;
+        c.closingVelocity = -separatingVel*normal; //was -seperatingVel
         c.status = isColiding;
         return isColiding;
     }

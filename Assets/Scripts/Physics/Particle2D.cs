@@ -44,17 +44,19 @@ public class Particle2D : MonoBehaviour
         //var relativeVelocity = c.a.getParticle2D().getVelocity();
         //relativeVelocity -= c.b.getParticle2D().getVelocity();
         //var separatingVel = relativeVelocity * c.contacts[index].normal;
-        var separatingVel = -c.closingVelocity;
-        if(separatingVel.magnitude > 0)
+        float separatingVel = -c.closingVelocity.magnitude; //
+        if(separatingVel < 0)
         {
-            // TODO: clean this up and see if it works
-            var newSeperatingVel = -separatingVel * c.contacts[index].restitution;
-            var deltaVel = newSeperatingVel - separatingVel;
-            var totalInverseMass = c.a.getParticle2D().getInverseMass() + c.b.getParticle2D().getInverseMass();
-            var impulse = deltaVel / totalInverseMass;
+            // closing velocity modified by restitution
+            float newSeperatingVel = -separatingVel * c.contacts[index].restitution;
+            // difference between closing velocity*restitution and seperating velocity.
+            float deltaVel = newSeperatingVel - separatingVel;
+            float totalInverseMass = c.a.getParticle2D().getInverseMass() + c.b.getParticle2D().getInverseMass();
+            float impulse = deltaVel / totalInverseMass;
             // impulse per unit of mass.
-            var impulsePerIMass = c.contacts[index].normal * impulse;
-            setVelocity(velocity + impulsePerIMass * inverseMass);
+            Vector2 impulsePerIMass = c.contacts[index].normal * impulse;
+            Vector2 newVel = velocity + impulsePerIMass * inverseMass; // This cancels out at 45 degrees
+            setVelocity(newVel);
             //c.b.getParticle2D().velocity = c.b.getParticle2D().velocity + impulsePerIMass * c.b.getParticle2D().getInverseMass();
         }
             
