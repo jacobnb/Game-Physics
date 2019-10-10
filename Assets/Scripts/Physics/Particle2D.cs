@@ -22,6 +22,9 @@ public class Particle2D : MonoBehaviour
     [SerializeField]
     protected Algorithm algorithm, secondAlgorithm;
 
+    // TODO: actually port code from unreal
+    private float inverseMass = 0.1f;
+
     public Vector2 getPosition()
     {
         return position;
@@ -33,6 +36,28 @@ public class Particle2D : MonoBehaviour
     public void setVelocity(Vector2 vel)
     {
         velocity = vel;
+    }
+    public float getInverseMass() { return inverseMass; }
+    public void CollisionImpulse(CollisionHull2D.Collision c)
+    {
+        var index = 0;
+        //var relativeVelocity = c.a.getParticle2D().getVelocity();
+        //relativeVelocity -= c.b.getParticle2D().getVelocity();
+        //var separatingVel = relativeVelocity * c.contacts[index].normal;
+        var separatingVel = -c.closingVelocity;
+        if(separatingVel.magnitude > 0)
+        {
+            // TODO: clean this up and see if it works
+            var newSeperatingVel = -separatingVel * c.contacts[index].restitution;
+            var deltaVel = newSeperatingVel - separatingVel;
+            var totalInverseMass = c.a.getParticle2D().getInverseMass() + c.b.getParticle2D().getInverseMass();
+            var impulse = deltaVel / totalInverseMass;
+            // impulse per unit of mass.
+            var impulsePerIMass = c.contacts[index].normal * impulse;
+            setVelocity(velocity + impulsePerIMass * inverseMass);
+            //c.b.getParticle2D().velocity = c.b.getParticle2D().velocity + impulsePerIMass * c.b.getParticle2D().getInverseMass();
+        }
+            
     }
     // 2
     void updatePositionsExplicitEuler(float dt)

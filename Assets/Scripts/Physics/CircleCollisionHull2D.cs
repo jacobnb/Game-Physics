@@ -74,18 +74,22 @@ public class CircleCollisionHull2D : CollisionHull2D
         c.contacts = new CollisionHull2D.Collision.Contact[c.contactCount];
         c.contacts[0].point = contact;
         c.contacts[0].normal = normal;
-        c.contacts[0].restitution = 0.8f; // TODO: Is this coefficient or actual number?
+        c.contacts[0].restitution = 1f; // TODO: Is this coefficient or actual number?
 
 
         // closing velocity 
         // https://gamedev.stackexchange.com/questions/118162/how-to-calculate-the-closing-speed-of-two-objects
-        Vector2 diff = other.position - position;
-        Vector2 velDiff = other.particle2D.getVelocity() - particle2D.getVelocity();
-        float closingSpeed = Vector2.Dot(velDiff, diff) / diff.magnitude;
+        //Vector2 diff = other.position - position;
+        //Vector2 velDiff = other.particle2D.getVelocity() - particle2D.getVelocity();
+        //float closingSpeed = Vector2.Dot(velDiff, diff) / diff.magnitude;
+        //Relative velocity from book
+        Vector2 relativeVelocity = particle2D.getVelocity() - other.getParticle2D().getVelocity();
+        var separatingVel = relativeVelocity * normal;
         // https://math.stackexchange.com/questions/13261/how-to-get-a-reflection-vector
-        Vector2 velReflectedOverN = particle2D.getVelocity() - 2 * Vector2.Dot(particle2D.getVelocity(), normal) * normal;
-        c.closingVelocity =  closingSpeed*velReflectedOverN.normalized;
-
+        // this would simulate hitting a hard object w/ no velocity loss.
+        // Vector2 velReflectedOverN = particle2D.getVelocity() - 2 * Vector2.Dot(particle2D.getVelocity(), normal) * normal;
+        // c.closingVelocity =  closingSpeed*velReflectedOverN.normalized;
+        c.closingVelocity = -separatingVel;
         c.status = isColiding;
         return isColiding;
     }

@@ -226,12 +226,12 @@ PrefabInstance:
     - target: {fileID: 1449646244810548511, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.59
+      value: 5.42
       objectReference: {fileID: 0}
     - target: {fileID: 1449646244810548511, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.65
+      value: 14.72
       objectReference: {fileID: 0}
     - target: {fileID: 1449646244810548511, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
@@ -291,12 +291,12 @@ PrefabInstance:
     - target: {fileID: 1449646244810548507, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: velocity.x
-      value: 0
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 1449646244810548507, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: velocity.y
-      value: 3
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd562efc1d0fb9409cef2a09337cea2, type: 3}
@@ -467,12 +467,12 @@ PrefabInstance:
     - target: {fileID: 1449646244810548511, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.84
+      value: -12.43
       objectReference: {fileID: 0}
     - target: {fileID: 1449646244810548511, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.92
+      value: -7.28
       objectReference: {fileID: 0}
     - target: {fileID: 1449646244810548511, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
@@ -532,12 +532,12 @@ PrefabInstance:
     - target: {fileID: 1449646244810548507, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: velocity.x
-      value: -3
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1449646244810548507, guid: 8fd562efc1d0fb9409cef2a09337cea2,
         type: 3}
       propertyPath: velocity.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fd562efc1d0fb9409cef2a09337cea2, type: 3}

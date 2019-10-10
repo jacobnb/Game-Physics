@@ -23,6 +23,10 @@ public class CollisionHull2D : MonoBehaviour
     protected LineRenderer lr;
     [SerializeField]
     bool collisionStatus = false;
+    public Particle2D getParticle2D()
+    {
+        return particle2D;
+    }
     virtual protected void Start()
     {
         particle2D = GetComponent<Particle2D>();

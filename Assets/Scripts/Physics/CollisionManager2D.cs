@@ -57,10 +57,25 @@ public class CollisionManager2D : MonoBehaviour
         }
         
         // resolve collisions
-        foreach (var c in collisionQ)
+        //foreach (var c in collisionQ)
+        //{
+        //    // TODO: Multiple contact points
+        //    c.a.particle2D.setVelocity(-c.closingVelocity * c.contacts[0].restitution);
+        while(collisionQ.Count > 0)
         {
-            // TODO: Multiple contact points
-            c.a.particle2D.setVelocity(-c.closingVelocity * c.contacts[0].restitution);
+            var c = collisionQ.Dequeue();
+            // do response.
+            // relativeVel = a.velocity
+            // relativeVel -= b.velocity;
+            // seperatingVel = relativeVel*normal
+            // if sepVel > 0
+            // newSepVel = -seperatingVel * restitution
+            // deltaVel = newSepVel - seperatingVel
+            // totalInverseMass = a.mass+b.mass
+            // impulse = deltaVelocity / totalInverseMass;
+            // ImpulsePerIMass = normal * impulse;
+            // a.velocity = a.velocity+impulsePerIMass*a.inversMass
+            c.a.getParticle2D().CollisionImpulse(c);
         }
     }
 }
