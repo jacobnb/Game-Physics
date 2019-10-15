@@ -8,6 +8,10 @@ public class CircleCollisionHull2D : CollisionHull2D
     public float restitution = 0.8f;
     private int pointsInCircle = 18;
     Vector3[] circlePoints;
+    public void FakeStart()
+    {
+        this.Start();
+    }
     override protected void Start()
     {
         base.Start();
@@ -35,12 +39,19 @@ public class CircleCollisionHull2D : CollisionHull2D
         {
             positions[i] = (circlePoints[i] + new Vector3(position.x, position.y, 0));
         }
-        lr.SetPositions(positions);
+        if (lr)
+        {
+            lr.SetPositions(positions);
+        }
     }
     override protected void initLineRenderer()
     {
-        lr.positionCount = pointsInCircle; // Circle
-        base.initLineRenderer();
+        if (lr)
+        {
+            lr.positionCount = pointsInCircle; // Circle
+            base.initLineRenderer();
+        }
+        
     }
     public override bool TestCollisionVsCircle(CircleCollisionHull2D other, ref Collision c)
     {
@@ -94,7 +105,19 @@ public class CircleCollisionHull2D : CollisionHull2D
         c.status = isColiding;
         return isColiding;
     }
+    public bool TestCollisionVsCircle(CircleCollisionHull2D other)
+    {
+        // check if sqr distance between the center is less that the square of the radii
+        updatePosition();
+        other.updatePosition();
+        // could use dot product
+        float sqrDistance = (position - other.position).SqrMagnitude();
+        float sqrRadii = radius + other.radius;
+        sqrRadii *= sqrRadii;
 
+        bool isColiding = sqrDistance <= sqrRadii;
+        return isColiding;
+    }
     public override bool TestCollisionVsAABB(AABBCollisionHull2D other, ref Collision c)
     {
         updatePosition();

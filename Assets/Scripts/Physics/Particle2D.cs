@@ -23,8 +23,22 @@ public class Particle2D : MonoBehaviour
     protected Algorithm algorithm, secondAlgorithm;
 
     // TODO: actually port code from unreal
-    private float inverseMass = 0.1f;
-
+    public float inverseMass = 0.1f;
+    public void constrainRotTo180ForDan()
+    {
+        if(rotation > 180)
+        {
+            rotation = 180;
+            Mathf.Clamp(angular_accel, -Mathf.Infinity, 0);
+            Mathf.Clamp(angular_vel, -Mathf.Infinity, 0);
+        }
+        if(rotation < -180)
+        {
+            rotation = -180;
+            Mathf.Clamp(angular_accel, 0, Mathf.Infinity);
+            Mathf.Clamp(angular_vel, 0, Mathf.Infinity);
+        }
+    }
     public Vector2 getPosition()
     {
         return position;
@@ -33,9 +47,25 @@ public class Particle2D : MonoBehaviour
     {
         return velocity;
     }
+    public void setAcceleration(Vector2 newAccel)
+    {
+        acceleration = newAccel;
+    }
+    public Vector2 getAcceleration()
+    {
+        return acceleration;
+    }
     public void setVelocity(Vector2 vel)
     {
         velocity = vel;
+    }
+    public void setRotationAccel(float acceleration)
+    {
+        angular_accel = acceleration;
+    }
+    public void setRotationVel(float velocity)
+    {
+        angular_vel = velocity;
     }
     public float getInverseMass() { return inverseMass; }
     public void CollisionImpulse(CollisionHull2D.Collision c)
@@ -92,7 +122,8 @@ public class Particle2D : MonoBehaviour
     // we don't actually need to keep them below 360, but this should keep it to human readable.
     void reduceRotationAngles()
     {
-        rotation = rotation > 360 ? rotation - 360 : rotation;
+        rotation = rotation > 180.1? rotation - 360 : rotation;
+        rotation = rotation < -180.1? rotation + 360 : rotation;
     }
 
     // Start is called before the first frame update

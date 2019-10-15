@@ -68,8 +68,12 @@ public class CollisionHull2D : MonoBehaviour
         }
     }
     virtual protected void initLineRenderer() {
-        setLineColor(false);
-        lr.startWidth = .1f;
+        if (lr)
+        {
+            setLineColor(false);
+            lr.startWidth = .1f;
+        }
+        
     }
     public void setCollisionStatus(bool status)
     {
@@ -122,8 +126,11 @@ public class CollisionHull2D : MonoBehaviour
                 a.collisionStatus = a.collisionStatus || (a as OBBCollisionHull2D).TestCollisionVsOBB(b as OBBCollisionHull2D, ref c);
             }
         }
+        if (a.lr)
+        {
+            a.setLineColor(a.collisionStatus);
 
-        a.setLineColor(a.collisionStatus);
+        }
         return a.collisionStatus;
     }
 

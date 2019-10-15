@@ -26,12 +26,13 @@ public class CollisionManager2D : MonoBehaviour
         {
             instance = this;
         }
+        collisionHulls = GameObject.FindObjectsOfType<CollisionHull2D>();
     }
     private void Start()
     {
-        collisionHulls = GameObject.FindObjectsOfType<CollisionHull2D>();
+       
     }
-    private void Update()
+    private void FixedUpdate()
     {
         // test each collision
         for (int outer = 0; outer < collisionHulls.Length; outer++)
