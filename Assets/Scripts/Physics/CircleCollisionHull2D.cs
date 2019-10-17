@@ -77,7 +77,7 @@ public class CircleCollisionHull2D : CollisionHull2D
         // Vector2 contact = position + difference;
 
         // Get point halfway between two centers.
-        Vector2 contact = position + difference * radius / other.radius; // position difference.normalized * .5f * distance; should be same.
+        Vector2 contact = position + difference * (radius / (radius+other.radius)); //
         Vector2 normal = (position-contact).normalized; // vector from contact to center
         float overlap = radii - distance; // not sure we need this.
         // edge cases - circles overlap completely, or one inside the other.

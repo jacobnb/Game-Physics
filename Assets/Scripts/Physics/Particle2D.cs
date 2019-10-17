@@ -85,7 +85,7 @@ public class Particle2D : MonoBehaviour
             float impulse = deltaVel / totalInverseMass;
             // impulse per unit of mass.
             Vector2 impulsePerIMass = c.contacts[index].normal * impulse;
-            Vector2 newVel = velocity + impulsePerIMass * inverseMass; // This cancels out at 45 degrees
+            Vector2 newVel = velocity + impulsePerIMass * inverseMass; 
             setVelocity(newVel);
             //c.b.getParticle2D().velocity = c.b.getParticle2D().velocity + impulsePerIMass * c.b.getParticle2D().getInverseMass();
         }
