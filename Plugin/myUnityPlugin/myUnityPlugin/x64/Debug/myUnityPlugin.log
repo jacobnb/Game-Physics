@@ -1,0 +1,7 @@
+﻿  pch.cpp
+  dllmain.cpp
+  foo.cpp
+  MyUnityPlugin.cpp
+  Generating Code...
+     Creating library C:\Users\jacob.biederman\Documents\Game-Physics\Plugin\myUnityPlugin\x64\Debug\myUnityPlugin.lib and object C:\Users\jacob.biederman\Documents\Game-Physics\Plugin\myUnityPlugin\x64\Debug\myUnityPlugin.exp
+  myUnityPlugin.vcxproj -> C:\Users\jacob.biederman\Documents\Game-Physics\Plugin\myUnityPlugin\x64\Debug\myUnityPlugin.dll
